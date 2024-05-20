@@ -4,7 +4,7 @@
 
 
 <div class="navi">
-<a class="logo" href="/"><img src="pics/logo.png" alt="logo"  class="logo"/></a>
+  <img class="logo" src="pics/logofinal.png" alt="logo">
 <nav class="navbar">
   <div class="burger-menu">
     <div class="bar"></div>
@@ -14,13 +14,14 @@
 </div>
 
     <ul class="menu-list">
-        <li><a href="/">Frontpage</a></li>
+      <img src="pics/logofinal.png" alt="" class="add">
+        <li class="remove"><a href="/">Frontpage</a></li>
         <li><a href="/program">Shoes</a></li>
         <li><a href="journal">Journal</a></li>
         <li><a href="about">About</a></li>
         <li><a href="kontakt">Cart</a></li>
-        <li><a href="terms">Terms and conditions</a></li>
-        <li><a href="faq">FAQ</a></li>
+        <li class="remove"><a href="terms">Terms and conditions</a></li>
+        <li class="remove"><a href="faq">FAQ</a></li>
     </ul>
 
     <hr>
@@ -28,6 +29,13 @@
 </nav>
 
 <style>
+
+.logo {
+  width: 20%;
+}
+  .add {
+    display: none;
+  }
     hr {
     border: none; /* Fjern standard kant */
     height: 1px; /* Angiv højden på linjen */
@@ -102,10 +110,39 @@
   }
 
   @media (min-width: 800px){
+
+    .logo {
+      display: none;
+    }
+
+    .add {
+      display: block;
+      width: 120px;
+      display: flex;
+      margin-right: auto;
+    }
 .navi {
-    margin-top: -130px;
+    margin-top: -140px;
 }
-  }
+
+.burger-menu{
+  display: none;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: end;
+gap: 40px;
+}
+
+.menu-list a {
+  font-size: 12px;
+}
+
+.remove {
+  display: none;
+}
+}
 </style>
 
 <script>
@@ -122,21 +159,6 @@
           // Burgermenuen er ikke aktiv, fjern "cross" klassen fra alle ".bar" elementer
           menuList.classList.remove("active");
         }
-      });
-    });
-  
-    document.addEventListener("DOMContentLoaded", function () {
-      const daLink = document.querySelector(".da");
-      const enLink = document.querySelector(".en");
-  
-      daLink.addEventListener("click", function () {
-        daLink.classList.add("bold"); // Tilføj klassen 'bold' for at gøre teksten fed
-        enLink.classList.remove("bold"); // Fjern eventuel fed tekst fra den anden link
-      });
-  
-      enLink.addEventListener("click", function () {
-        enLink.classList.add("bold"); // Tilføj klassen 'bold' for at gøre teksten fed
-        daLink.classList.remove("bold"); // Fjern eventuel fed tekst fra den anden link
       });
     });
   </script>

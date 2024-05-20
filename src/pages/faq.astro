@@ -75,12 +75,14 @@ import Layout from "../layouts/Layout.astro";
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const header = document.querySelector(".toggle-header");
-    const content = document.querySelector(".toggle-content");
+    const headers = document.querySelectorAll(".toggle-header");
 
-    header.addEventListener("click", function() {
-        content.classList.toggle("show");
-        header.classList.toggle("clicked"); // Tilføj/fjern klassen 'clicked'
+    headers.forEach(header => {
+        header.addEventListener("click", function() {
+            const content = this.nextElementSibling;
+            content.classList.toggle("show");
+            this.classList.toggle("clicked");
+        });
     });
 });
 </script>
