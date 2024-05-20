@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="container">
+        <h2 class="toggle-header">how can i place an order?</h2>
+        <div class="toggle-content">
+            <p>Dette er den tekst, der foldes ud, når du klikker på overskriften.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="toggle-header">what is the return policy?</h2>
+        <div class="toggle-content">
+            <p>Dette er den tekst, der foldes ud, når du klikker på overskriften.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="toggle-header">how can i track my order?</h2>
+        <div class="toggle-content">
+            <p>Dette er den tekst, der foldes ud, når du klikker på overskriften.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="toggle-header">do you ship worldwide?</h2>
+        <div class="toggle-content">
+            <p>Dette er den tekst, der foldes ud, når du klikker på overskriften.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="toggle-header">What are the available payment options?</h2>
+        <div class="toggle-content">
+            <p>Dette er den tekst, der foldes ud, når du klikker på overskriften.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="toggle-header">How long will they last?</h2>
+        <div class="toggle-content">
+            <p>Dette er den tekst, der foldes ud, når du klikker på overskriften.</p>
+        </div>
+    </div>
+</Layout>
+
+
+
+<style>
+    h2 {
+        margin-top: 40px;
+        text-decoration: underline;
+    }
+
+    .toggle-content {
+    display: none; /* Skjuler indholdet som standard */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+}
+
+.toggle-content.show {
+    display: block; /* Vis indholdet når det er aktivt */
+    max-height: 500px; /* Tilpass denne værdi efter behov */
+}
+
+.toggle-header.clicked {
+    color: #B2113C; /* Skift farven til rød når klassen 'clicked' er tilføjet */
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const header = document.querySelector(".toggle-header");
+    const content = document.querySelector(".toggle-content");
+
+    header.addEventListener("click", function() {
+        content.classList.toggle("show");
+        header.classList.toggle("clicked"); // Tilføj/fjern klassen 'clicked'
+    });
+});
+</script>

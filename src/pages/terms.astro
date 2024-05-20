@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+<h1>Terms and conditions</h1>
+<div class="together">
+    <div class="first_term">
+<div class="term">
+<h2>Flaws and imperfections</h2>
+<p>All vintage items may come with flaws as all items are  pre-loved. This gives the item history and character. We hope that you will cherish and appreciate every detail in the shoes as much as we do. The colour of the product shown on pictures might vary a little compared to the actual color due to lighting. All flaws or imperfections will be in the description or/and visible on the pictures of the item.</p>
+</div>
+
+<div class="term">
+<h2>orders</h2>
+<p>All products are handpicked and carefully curated. We have put lots of love and effort in finding the perfect vintage shoes. Each shoe has its own story. Before purchasing feel free to ask us anything through mail or Instagram DM, to make sure it is a perfect match for you.  Please note that purchasing is binding once you have started that want to buy and the heels are not reserved until payment has been done. Thank you for your understanding.</p>
+</div>
+</div>
+
+<img src="pics/con.png" alt="" class="try">
+</div>
+
+<div class="together_1">
+    <div class="second_term">
+<div class="term">
+<h2>refund</h2>
+<p>We do not offer refund, as we do not want to encourage unnecessary purchase or return.</p>
+</div>
+
+<div class="term">
+<h2>Thank you</h2>
+<p>Thank you so much for supporting Colada Archive. We are so grateful that you love our little love project as much as we do. As a small vintage designer shoe brand, every commitment matters greatly yo us.</p>
+</div>
+</div>
+<div class="pictures">
+<img src="pics/sko.png" alt="" class="sko_billede">
+<img src="pics/sko1.png" alt="" class="sko_billede">
+</div>
+</div>
+
+<img src="pics/con.png" alt="" class="try_1">
+
+</Layout>
+
+<style>
+    .term {
+        margin-bottom: 70px;
+        margin-top: 30px;
+    }
+
+    .try, .sko_billede {
+        display: none;
+    }
+
+
+
+    @media (min-width: 800px){
+        .try {
+            display: block;
+            height: 400px;
+        }
+.try_1 {
+    display: none;
+}
+
+.together, .together_1, .pictures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.together_1 {
+    margin-bottom: 100px;
+}
+
+
+.sko_billede {
+    display: block;
+}
+
+    }
+</style>

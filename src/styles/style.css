@@ -46,6 +46,10 @@ body {
   margin: 0.7rem;
 }
 
+p {
+  font-family: "Inter", sans-serif;
+}
+
 @media (min-width: 800px) {
   body {
     margin: 10rem;
