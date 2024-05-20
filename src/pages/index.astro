@@ -19,12 +19,35 @@ import Layout from "../layouts/Layout.astro";
 
 <h3 class="insta">Find us on Instagram</h3>
 
+<div class="insta_grid">
+	<img src="pics/insta1.png" alt="">
+	<img src="pics/insta2.png" alt="">
+	<img src="pics/insta3.png" alt="">
+	<img src="pics/insta4.png" alt="">
+	<img src="pics/insta5.png" alt="">
+	<img src="pics/insta6.png" alt="">
+	<img src="pics/insta2.png" alt="">
+	<img src="pics/insta8.png" alt="">
+	<img src="pics/insta9.png" alt="">
+</div>
+
 </Layout>
 		
 	</body>
 </html>
 
 <style>
+
+	.insta_grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center; /* Centrerer vandret */
+		gap: 10px;
+	}
+
+	.insta_grid img {
+		width: 100%;
+	}
 	.forside_billede {
 		display: flex;
             justify-content: center; /* Centrerer vandret */
