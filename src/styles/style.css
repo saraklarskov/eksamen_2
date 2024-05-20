@@ -28,6 +28,13 @@ h3 {
   text-transform: uppercase;
 }
 
+h5 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
 body {
   background-color: #fffef9;
   margin: 0.7rem;

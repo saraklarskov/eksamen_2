@@ -1,21 +1,26 @@
 ---
 
 ---
+<hr>
 
 <article class="footer_text">
-    <div class="left_column">
-        <h3>Instagram</h3>
-        <h3>Tiktok</h3>
-        <h3>Email</h3>
-    </div>
+    <ul class="left_column">
+    <li><a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
+    <li><a href="https://www.tiktok.com/@colada_archive?is_from_webapp=1&sender_device=pc">TikTok</a></li>
+    <li><a href="#">Email</a></li>
+    </ul>
 
-    <div class="right_column">
-        <h3>Terms and conditions</h3>
-        <h3>About us</h3>
-        <h3>FAQ</h3>
-    </div>
+    <ul class="right_column">
+        <li><a class="right_text" href="#">Terms and conditions</a></li>
+        <li><a class="right_text" href="#">About us</a> </li>     
+        <li><a class="right_text" href="#">FAQ</a></li>
+    </ul>
 </article>
-<hr>
+
+<div class="container">
+    <img class="right-img" src="pics/logofinal.png" alt="logo">
+</div>
+
 <style>
 hr {
     border: none; /* Fjern standard kant */
@@ -29,6 +34,35 @@ hr {
     }
 .right_column {
     text-align: right;
+}
+
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right-img {
+    max-width: 100%; /* Sikrer at billedet ikke overstiger containerens bredde */
+    height: auto; /* Bevarer billedets proportioner */
+    width: 40%;
+    margin-top: 2rem;
+}
+
+a{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+.right_text{
+    text-decoration: none;
 }
 
 </style>
