@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+<body>
+    <Layout>
+    <article class="forst">
+        <img src="pics/about_img.png" alt="" class="about_1">
+        <div class="text"><h1 class="overskrift">About Colada Archive</h1>
+        <p class="about_text1">We were both going to a wedding last summer, having the classic “what-do-I-wear-and-with-which-shoes”. We texted back and forth, dreaming about the perfect vintage designer heels but also felt overwhelmed by how difficult it was to source the right pair. And then Colada Archive was born.
+        </p>
+        <div>
+        </article>
+
+    <article class="anden">
+        <img src="pics/about_img2.png" alt="" class="about_2">
+        <div class="text2"><h1 class="overskrift">Who are we?</h1>
+        <p class="about_text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam dapibus lorem, in tristique mi. Vivamus eleifend orci at turpis convallis, quis imperdiet augue semper. Vivamus at hendrerit lorem. Maecenas purus nisi, condimentum in velit non, congue efficitur felis. Sed erat ipsum, aliquam eget lorem vitae, mattis suscipit turpis. In malesuada ligula ut arcu mollis, ac pellentesque mi consectetur. Mauris vel viverra arcu. Phasellus dictum iaculis ligula at facilisis. Integer viverra dolor erat, in lobortis est egestas vel. Sed id aliquet erat. Phasellus varius odio vitae dui vehicula, nec maximus mauris gravida.</p>
+        </div>
+    </article>
+    </Layout>
+</body>
+
+<style>
+.about_1, .about_2 {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.about_text1, .about_text2 {
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+@media (min-width: 800px) {
+    .forst, .anden {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 20px;
+    }
+
+    .text {
+        order: 1;
+    }
+
+    .about_1 {
+        order: 2;
+    }
+
+    .about_1, .about_2 {
+        width: 100%;
+        height: auto;
+    }
+
+.text, .text2 {
+    margin-top: 100px;
+}
+
+}
+</style>

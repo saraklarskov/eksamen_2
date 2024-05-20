@@ -13,11 +13,11 @@ import Layout from "../layouts/Layout.astro";
 	<img src="pics/sko_prove.png" alt="" class="forside_1">
 </div>
 
-<h3>View our latest drop</h3>
+<h2 class="drop">View our latest drop</h2>
 
 <img src="pics/logo1.png" alt="" class="forside_logo">
 
-<h3 class="insta">Find us on Instagram</h3>
+<h2 class="insta">Find us on Instagram</h2>
 
 <div class="insta_grid">
 	<img src="pics/insta1.png" alt="">
@@ -49,12 +49,7 @@ import Layout from "../layouts/Layout.astro";
 		width: 100%;
 	}
 	.forside_billede {
-		display: flex;
-            justify-content: center; /* Centrerer vandret */
-            align-items: center; /* Centrerer lodret */
-            flex-direction: column;
-			margin: 0 auto;
-			width: 99%;
+			width: 100%;
 			margin-top: 10px;
 	}
 
@@ -63,8 +58,8 @@ import Layout from "../layouts/Layout.astro";
 	}
 
 	.forside_billeder_1 {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		display: flex;
+
 	}
 
 	.forside_1 {
@@ -80,6 +75,44 @@ import Layout from "../layouts/Layout.astro";
 
 	.insta {
 		color: #B2113C;
+	}
+
+
+	@media (min-width: 800px) {
+
+
+		.holy {
+			text-align: center;
+			font-size: 30px;
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+
+
+		.forside_billeder_1 {
+			display: flex;
+            justify-content: center; /* Centrerer vandret */
+            align-items: center; /* Centrerer lodret */
+			gap: 20px;
+		}
+
+.insta_grid {
+	margin: 200px;
+	margin-top: 20px;
+}
+
+.insta {
+margin-left: 200px;
+}
+
+.drop {
+	margin-top: 20px;
+}
+
+.forside_logo {
+	margin-top: 100px; 
+	margin-bottom: 100px;
+}
 	}
 
 

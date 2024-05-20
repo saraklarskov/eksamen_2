@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+<h1 class="jour">Our journal</h1>
+
+<img src="pics/journal_sko.png" alt="">
+
+<h2>How to style</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam.</p>
+
+
+<div class="journal_grid">
+    <div class="grid_1"><img src="pics/pop_up.png" alt="">
+        <h2>Pop up</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam dapibus lorem.</p>
+    </div>
+
+<div class="grid_1">
+    <img src="pics/cofounders.png" alt="">
+<h2>cofounders</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam dapibus lorem.</p>
+</div>
+</div>
+
+<img src="pics/carrie.png" alt="">
+<h1>Seen on Sex and the city</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam dapibus lorem.</p>
+
+<div class="journal_grid">
+<div class="grid_1">
+<img src="pics/day.png" alt="">
+<h2>A day out</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam dapibus lorem.</p>
+</div>
+<div class="grid_1">
+<img src="pics/night.png" alt="">
+<h2>A night out</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam dapibus lorem.</p>
+</div>
+
+</div>
+</Layout>
+
+<style>
+    .journal_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+  p {
+        margin-bottom: 50px;
+    }
+
+    @media (min-width: 800px){
+.jour {
+    margin-top: 100px;
+}
+
+.grid_1 img {
+height: 700px;
+}
+
+.journal_grid {
+    gap: 30px;
+}
+    }
+
+
+</style>

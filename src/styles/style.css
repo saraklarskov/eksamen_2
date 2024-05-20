@@ -4,17 +4,23 @@
   box-sizing: 0;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 23px;
+  font-size: 26px;
   font-style: normal;
   text-transform: uppercase;
 }
 
 h2 {
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 23px;
   font-style: normal;
   text-transform: uppercase;
@@ -31,4 +37,10 @@ h3 {
 body {
   background-color: #fffef9;
   margin: 0.7rem;
+}
+
+@media (min-width: 800px) {
+  body {
+    margin: 10rem;
+  }
 }
