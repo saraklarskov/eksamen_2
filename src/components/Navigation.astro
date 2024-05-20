@@ -2,6 +2,7 @@
 
 ---
 
+
 <div class="navi">
 <a class="logo" href="/"><img src="pics/logo.png" alt="logo"  class="logo"/></a>
 <nav class="navbar">
@@ -29,9 +30,9 @@
 <style>
     hr {
     border: none; /* Fjern standard kant */
-    height: 1.2px; /* Angiv højden på linjen */
+    height: 1px; /* Angiv højden på linjen */
     background-color: #333; /* Angiv farven på linjen */
-    margin: 10px 0; /* Tilføj noget margin over og under linjen */
+    margin: 5px; /* Tilføj noget margin over og under linjen */
 }
     .navi {
         display: flex;
@@ -47,7 +48,7 @@
     width: 30px;
     height: 2px;
     background-color: black;
-    margin: 5px;
+    margin: 4px;
     transition: transform 0.3s ease; /* Transition for smooth rotation */
     z-index: 100;
   }
@@ -72,15 +73,15 @@
   }
 
   .menu-list.active {
-    position: fixed; /* Positioner burgermenuen fast */
-    width: 100vw; /* Bredde på 100% af viewporten */
-    height: 100vh; /* Højde på 100% af viewporten */
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     background-color: white;
     z-index: 50;
-    margin-top: 60px;
+    margin-top: 10px;
   }
 
   .menu-list li {
@@ -90,7 +91,6 @@
   .menu-list li a {
     text-decoration: none;
     color: black;
-    margin: 8px;
   }
 
   a{
