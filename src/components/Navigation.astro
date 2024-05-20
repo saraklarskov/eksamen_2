@@ -1,0 +1,137 @@
+---
+
+---
+
+<div class="navi">
+<a class="logo" href="/"><img src="pics/logo.png" alt="logo"  class="logo"/></a>
+<nav class="navbar">
+  <div class="burger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</div>
+
+    <ul class="menu-list">
+        <li><a href="/">Frontpage</a></li>
+        <li><a href="/program">Shoes</a></li>
+        <li><a href="/map">Journal</a></li>
+        <li><a href="omos">About</a></li>
+        <li><a href="kontakt">Cart</a></li>
+        <li><a href="/">Terms and conditions</a></li>
+        <li><a href="/">FAQ</a></li>
+    </ul>
+
+    <hr>
+
+</nav>
+
+<style>
+    hr {
+    border: none; /* Fjern standard kant */
+    height: 1.2px; /* Angiv højden på linjen */
+    background-color: #333; /* Angiv farven på linjen */
+    margin: 10px 0; /* Tilføj noget margin over og under linjen */
+}
+    .navi {
+        display: flex;
+        justify-content: space-between;    
+    }
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    margin: 5px;
+    transition: transform 0.3s ease; /* Transition for smooth rotation */
+    z-index: 100;
+  }
+
+  .cross .bar:nth-child(1) {
+    transform: rotate(50deg) translate(4px, 3px);
+  }
+
+  .cross .bar:nth-child(2) {
+    display: none; /* Behold midterlinjen synlig */
+  }
+
+  .cross .bar:nth-child(3) {
+    transform: rotate(-50deg) translate(5px, -5px);
+  }
+
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hide menu list by default */
+  }
+
+  .menu-list.active {
+    position: fixed; /* Positioner burgermenuen fast */
+    width: 100vw; /* Bredde på 100% af viewporten */
+    height: 100vh; /* Højde på 100% af viewporten */
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: white;
+    z-index: 50;
+    margin-top: 60px;
+  }
+
+  .menu-list li {
+    margin: 10px 0;
+  }
+
+  .menu-list li a {
+    text-decoration: none;
+    color: black;
+    margin: 8px;
+  }
+
+  a{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 25px;
+  }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const burgerMenu = document.querySelector(".burger-menu");
+      const menuList = document.querySelector(".menu-list");
+  
+      burgerMenu.addEventListener("click", function () {
+        burgerMenu.classList.toggle("cross");
+        if (burgerMenu.classList.contains("cross")) {
+          // Burgermenuen er aktiv, tilføj "cross" klassen til alle ".bar" elementer
+          menuList.classList.add("active");
+        } else {
+          // Burgermenuen er ikke aktiv, fjern "cross" klassen fra alle ".bar" elementer
+          menuList.classList.remove("active");
+        }
+      });
+    });
+  
+    document.addEventListener("DOMContentLoaded", function () {
+      const daLink = document.querySelector(".da");
+      const enLink = document.querySelector(".en");
+  
+      daLink.addEventListener("click", function () {
+        daLink.classList.add("bold"); // Tilføj klassen 'bold' for at gøre teksten fed
+        enLink.classList.remove("bold"); // Fjern eventuel fed tekst fra den anden link
+      });
+  
+      enLink.addEventListener("click", function () {
+        enLink.classList.add("bold"); // Tilføj klassen 'bold' for at gøre teksten fed
+        daLink.classList.remove("bold"); // Fjern eventuel fed tekst fra den anden link
+      });
+    });
+  </script>
+  
