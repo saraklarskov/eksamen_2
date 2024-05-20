@@ -1,16 +1,64 @@
 ---
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
 ---
+<body>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
+<Layout>
+<img src="pics/forside_sko.png" alt="" class="forside_billede">
+<h1 class="holy">the holy grail of vintage designer shoes</h1>
+
+<div class="forside_billeder_1">
+	<img src="pics/sko_prove.png" alt="" class="forside_1">
+	<img src="pics/sko_prove.png" alt="" class="forside_1">
+	<img src="pics/sko_prove.png" alt="" class="forside_1">
+</div>
+
+<h3>View our latest drop</h3>
+
+<img src="pics/logo1.png" alt="" class="forside_logo">
+
+<h3 class="insta">Find us on Instagram</h3>
+
+</Layout>
+		
 	</body>
 </html>
+
+<style>
+	.forside_billede {
+		display: flex;
+            justify-content: center; /* Centrerer vandret */
+            align-items: center; /* Centrerer lodret */
+            flex-direction: column;
+			margin: 0 auto;
+			width: 99%;
+			margin-top: 10px;
+	}
+
+	.holy {
+		margin-top: 15px;
+	}
+
+	.forside_billeder_1 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.forside_1 {
+		width: 32.5%;
+		margin-top: 50px;
+	}
+
+	.forside_logo {
+		width: 100%;
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+
+	.insta {
+		color: #B2113C;
+	}
+
+
+</style>
+
