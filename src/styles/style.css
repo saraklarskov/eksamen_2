@@ -51,7 +51,7 @@ p {
 }
 
 @media (min-width: 800px) {
-  body {
+  main {
     margin: 10rem;
   }
 }
