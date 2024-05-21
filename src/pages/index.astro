@@ -1,5 +1,7 @@
 ---
+import Gridinsta from "../components/Gridinsta.astro";
 import Layout from "../layouts/Layout.astro";
+import Slide from "../components/Slide.astro";
 ---
 <Layout>
 <img src="pics/forside_sko.png" alt="" class="forside_billede">
@@ -15,35 +17,15 @@ import Layout from "../layouts/Layout.astro";
 
 <img src="pics/logo1.png" alt="" class="forside_logo">
 
-<h2 class="insta">Find us on Instagram</h2>
+<Slide />
 
-<div class="insta_grid">
-	<img src="pics/insta1.png" alt="">
-	<img src="pics/insta2.png" alt="">
-	<img src="pics/insta3.png" alt="">
-	<img src="pics/insta4.png" alt="">
-	<img src="pics/insta5.png" alt="">
-	<img src="pics/insta6.png" alt="">
-	<img src="pics/insta2.png" alt="">
-	<img src="pics/insta8.png" alt="">
-	<img src="pics/insta9.png" alt="">
-</div>
+<h2 class="insta">Find us on Instagram</h2>
+<Gridinsta />
 
 </Layout>
 </html>
 
 <style>
-
-	.insta_grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-        justify-content: center; /* Centrerer vandret */
-		gap: 10px;
-	}
-
-	.insta_grid img {
-		width: 100%;
-	}
 	.forside_billede {
 			width: 100%;
 			margin-top: 10px;
@@ -53,8 +35,10 @@ import Layout from "../layouts/Layout.astro";
 		margin-top: 15px;
 	}
 
-	.forside_billeder_1 {
-		display: flex;
+	.forside_billeder_1 {
+	display: flex;
+    justify-content: center;
+	gap: 5px;
 
 	}
 
@@ -92,15 +76,6 @@ import Layout from "../layouts/Layout.astro";
 			gap: 20px;
 		}
 
-.insta_grid {
-	margin: 200px;
-	margin-top: 20px;
-}
-
-.insta {
-margin-left: 200px;
-}
-
 .drop {
 	margin-top: 20px;
 }
@@ -108,6 +83,10 @@ margin-left: 200px;
 .forside_logo {
 	margin-top: 100px; 
 	margin-bottom: 100px;
+}
+
+.insta {
+	margin-left: 200px;
 }
 	}
 
