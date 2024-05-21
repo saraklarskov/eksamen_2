@@ -12,6 +12,7 @@
     <div class="bar"></div>
   </div>
 </div>
+</nav>
 
 <div class="desk-menu">
   <img src="pics/logofinal.png" alt="" class="add">
@@ -24,23 +25,24 @@
         <li class="remove"><a href="terms">Terms and conditions</a></li>
         <li class="remove"><a href="faq">FAQ</a></li>
     </ul>
-    </div>
-    <hr>
+</div>
+<hr>
 
-</nav>
 </header>
 
 
 <style>
 
-header{
-  padding: 11px;
-  position: sticky;
-  background-color: white;
+header {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    padding: 10px 20px;
+    margin: 0; /* Tilføj dette for at sikre ingen margin */
 }
-
 .logo {
-  width: 20%;
+  width: 25%;
 }
 
 .burger-menu{
@@ -95,8 +97,6 @@ header{
   }
 
   .menu-list.active {
-    position: fixed;
-    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -167,10 +167,20 @@ gap: 40px;
     text-decoration: underline;
 }
 
-.menu-list li:active {
+.menu-list li a:active {
     color: #b2113c; 
 }
+header {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 97%;
+    z-index: 1000;
+    padding: 10px 20px;
+    margin: 0; /* Tilføj dette for at sikre ingen margin */
 }
+}
+
 </style>
 
 <script>
