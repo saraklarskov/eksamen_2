@@ -1,7 +1,6 @@
 ---
 
 ---
-
 <div class="insta_grid">
 	<img src="pics/insta1.png" alt="">
 	<img src="pics/insta2.png" alt="">
@@ -13,3 +12,30 @@
 	<img src="pics/insta8.png" alt="">
 	<img src="pics/insta9.png" alt="">
 </div>
+
+
+<style>
+
+	.insta_grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center; /* Centrerer vandret */
+		gap: 10px;
+	}
+
+	.insta_grid img {
+		width: 100%;
+	}
+
+    @media (min-width: 800px) {
+        .insta_grid {
+	margin: 200px;
+	margin-top: 20px;
+}
+
+.insta {
+margin-left: 200px;
+}
+    }
+
+</style>
