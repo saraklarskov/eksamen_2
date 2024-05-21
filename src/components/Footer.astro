@@ -1,42 +1,65 @@
 ---
 
 ---
-<hr>
 
 <footer>
-<article class="footer_text">
-    <ul class="left_column">
-    <li><a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
-    <li><a href="https://www.tiktok.com/@colada_archive?is_from_webapp=1&sender_device=pc">TikTok</a></li>
-    <li><a href="#">Email</a></li>
-    </ul>
+    <hr>
 
-    <ul class="right_column">
-        <li><a class="right_text" href="#">Terms and conditions</a></li>
-        <li><a class="right_text" href="#">About us</a> </li>     
-        <li><a class="right_text" href="#">FAQ</a></li>
+<article class="footer_text">
+
+    <div class="left_column">
+    <h2>Keep in touch</h2>
+    <ul>
+    <li><a class="links_footer" href="#">Contact us</a></li>
     </ul>
+</div>
+
+<div class="middle_column">
+    <h2>Find us on social media</h2>
+    <ul>
+        <li><a class="links_footer" href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
+    <li><a class="links_footer" href="https://www.tiktok.com/@colada_archive?is_from_webapp=1&sender_device=pc">TikTok</a></li>
+    </ul>
+</div>
+
+    <div class="right_column">
+    <h2>Want to know more?</h2>
+    <ul>
+        <li><a class="links_footer" href="#">Terms and conditions</a></li>
+        <li><a class="links_footer" href="#">About us</a> </li>     
+        <li><a class="links_footer" href="#">FAQ</a></li>
+    </ul>
+</div>
+
+
+
 </article>
 
 <div class="container">
     <img class="right-img" src="pics/logofinal.png" alt="logo">
+    <img class="logo_desk" src="pics/colada.png" alt="logo">
+    <img class="logo_desk" src="pics/archive.png" alt="logo">
 </div>
 </footer>
 
 <style>
+
+    footer{
+        margin: 11px
+    }
 hr {
     border: none; /* Fjern standard kant */
     height: 1px; /* Angiv højden på linjen */
     background-color: #333; /* Angiv farven på linjen */
-    margin: 5px; /* Tilføj noget margin over og under linjen */
+    margin: 5px 0; /* Tilføj noget margin over og under linjen */
 }
 .footer_text{
     display: flex;
-    justify-content: space-between;  
+    flex-direction: column;
     }
-.right_column {
+/* .right_column {
     text-align: right;
-}
+} */
 
 
 .container {
@@ -45,26 +68,88 @@ hr {
 }
 
 .right-img {
+    display: block;
     max-width: 100%; /* Sikrer at billedet ikke overstiger containerens bredde */
     height: auto; /* Bevarer billedets proportioner */
-    width: 40%;
-    margin-top: 2rem;
+    width: 50%;
+    margin-top: 30px;
 }
 
 a{
-    text-transform: uppercase;
+  
+
+}
+
+.links_footer{
     font-size: 0.8rem;
+    text-transform: uppercase;
     color: black;
     font-family: "Poppins", sans-serif;
-    line-height: 1.5rem;
+    text-decoration: none;
 }
 
 li {
     list-style: none;
 }
 
-.right_text{
-    text-decoration: none;
+h2{
+    font-size: 1rem;
 }
+
+
+.left_column, .middle_column, .right_column{
+    margin-top: 40px;
+}
+
+
+.logo_desk{
+    display: none;
+}
+
+
+@media (min-width: 800px){
+    footer{
+        margin: 30px;
+    }
+    h2{
+    font-size: 1.2rem;
+}
+
+a{
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:active{
+    color: #b2113c; 
+}
+
+.footer_text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo_desk{
+    display: block;
+    width: 48%;
+    margin-top: 60px;
+}
+
+.right-img{
+    display: none;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+}
+
 
 </style>
