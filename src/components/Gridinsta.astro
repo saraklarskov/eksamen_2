@@ -2,21 +2,67 @@
 
 ---
 <div class="insta_grid">
-	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta1.webp" alt="insta"> </a>
-	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta2.webp" alt="insta"></a>
-	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta3.webp" alt="insta"></a>
-	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta4.webp" alt="insta"></a>
-	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta5.webp" alt="insta"></a>
-	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta6.webp" alt="insta"></a>
-	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta7.webp" alt="insta"></a>
-	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta8.webp" alt="insta"></a>
-	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta9.webp" alt="insta"></a>
+	<div class="image-container">
+	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta1.webp" alt="insta" class="image-normal">
+	<img src="pics/hoverinstagram.webp" alt="hover" class="image-hover"></a>
+	</div>
+	<div class="image-container">
+	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta2.webp" alt="insta" class="image-normal">
+	<img src="pics/hoverinstagram.webp" alt="hover" class="image-hover"></a>
+	</div>
+	<div class="image-container">
+	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta3.webp" alt="insta" class="image-normal">
+	<img src="pics/hoverinstagram.webp" alt="hover" class="image-hover"></a>
+	</div>
+	<div class="image-container">
+	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta4.webp" alt="insta" class="image-normal">
+	<img src="pics/hoverinstagram.webp" alt="hover" class="image-hover"></a>
+	</div>
+	<div class="image-container">
+	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta5.webp" alt="insta" class="image-normal">
+	<img src="pics/hoverinstagram.webp" alt="hover" class="image-hover"></a>
+	</div>
+	<div class="image-container">
+	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta6.webp" alt="insta" class="image-normal">
+	<img src="pics/hoverinstagram.webp" alt="hover" class="image-hover"></a>
+	</div>
+	<div class="image-container">
+	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta7.webp" alt="insta" class="image-normal">
+	<img src="pics/hoverinstagram.webp" alt="hover" class="image-hover"></a>
+	</div>
+	<div class="image-container">
+	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta8.webp" alt="insta" class="image-normal">
+	<img src="pics/hoverinstagram.webp" alt="hover" class="image-hover"></a>
+	</div>
+	<div class="image-container">
+	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta9.webp" alt="insta" class="image-normal">
+	<img src="pics/hoverinstagram.webp" alt="hover" class="image-hover"></a>
+	</div>
 </div>
 
 
 <style>
 
+.image-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+}
 
+.image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.image-hover {
+    opacity: 0;
+}
+
+.image-container:hover .image-hover {
+    opacity: 1;
+}
 	.insta_grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
