@@ -3,27 +3,38 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <h2>CONTACT US</h2>
+  <h1>CONTACT US</h1>
 
   <form action="/tak.astro">
     <div class="input">
-      <input type="text" id="name" name="name" value="NAME" />
+      <input type="text" id="name" name="name" placeholder="Name" />
     </div>
     <div class="input">
-      <input type="text" id="email" name="email" value="EMAIL" />
+      <input type="text" id="email" name="email" placeholder="Email" />
     </div>
     <div class="input">
-      <input type="text" id="message" name="message" value="MESSAGE" />
+      <input type="text" id="message" name="message" placeholder="Message" />
     </div>
     <div id="sendknap">
       <input type="submit" value="SEND" />
     </div>
   </form>
+  <p>
+    You can also reach us via Instagram direct message @colada_archive or via
+    our email coladaarchive@gmail.com
+  </p>
 </Layout>
 
 <style>
+  h1 {
+    margin-left: 27%;
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-left: 5%;
+    margin-bottom: 7rem;
+  }
   form {
-    margin-top: 2rem;
   }
   input {
     color: #000;
@@ -33,16 +44,48 @@ import Layout from "../layouts/Layout.astro";
     max-width: 100%;
     width: 80%;
     margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    margin-right: -0.5rem;
   }
   #sendknap input {
     margin-top: 2em;
     background: black;
     color: #fffef9;
-    padding: 1em 1em;
+    padding: 1em 1.7em;
+    width: 93.5%;
+  }
+  #message {
+    height: 70px;
   }
   @media (min-width: 800px) {
+    h1 {
+      margin-left: 40%;
+    }
+    p {
+      margin-left: 10%;
+      margin-top: 2rem;
+    }
+    form {
+      margin-top: 2rem;
+      margin-left: 15rem;
+    }
     input {
-      width: 80%;
+      padding: 1em 1.7em;
+      max-width: 100%;
+      width: 60%;
+      margin-bottom: 1rem;
+      margin-left: 0.5rem;
+      margin-right: -0.5rem;
+    }
+    #sendknap input {
+      margin-top: 2em;
+      padding: 1em 1.7em;
+      width: 65.5%;
+    }
+    #sendknap:hover input {
+      background: #fffef9;
+      color: #000;
+      border: 1px solid #000;
     }
   }
 </style>
