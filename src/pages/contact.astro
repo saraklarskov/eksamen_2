@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<body>
+  <h2>CONTACT US</h2>
+
+  <form action="/tak.astro">
+    <div class="input">
+      <input type="text" id="fname" name="fname" value="NAME" />
+    </div>
+    <div class="input">
+      <input type="text" id="lname" name="lname" value="EMAIL" />
+    </div>
+    <div class="input">
+      <input type="text" id="message" name="fname" value="MESSAGE" />
+    </div>
+    <input type="submit" value="SEND" />
+  </form>
+</body>
+
+<style>
+  .input {
+    color: #000;
+    border: 1px solid #bfbfbf;
+    background: #fff;
+    padding: 1em 1.7em;
+    max-width: 100%;
+  }
+</style>
