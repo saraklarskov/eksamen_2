@@ -1,0 +1,42 @@
+---
+//@ts-nocheck
+import Layout from '../layouts/Layout.astro';
+export async function getStaticPaths(){
+    const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_", {
+    method: "GET",
+    headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljdHRzZXpydmx6dGxhamJrZHh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU5MzY2NjksImV4cCI6MjAzMTUxMjY2OX0.W2Dcw1gmLKcXLWOcWXBdxYBuBiVOjgi8xfwwII3329o"
+    }
+}).then(response => response.json());
+
+    return data.map((shoe) => {
+        return{
+            params: {slug: shoe.slug},
+            props: {myData: shoe},
+
+        };
+    });
+} 
+const {myData} = Astro.props;
+console.log(myData);
+---
+
+
+<Layout title={myData.title}>
+    <div class="singleview">
+        <img src={myData.image1} alt={myData.title} />      
+    <h2>{myData.title}</h2>
+    <h2>{myData.brand}</h2>
+    <h2>{myData.type}</h2>
+    <p>{myData.material}</p>
+<p>{myData.story}</p>
+<p>{myData.spots}</p>
+</div>
+
+</Layout>
+
+<style>
+  .singleview {
+    margin: 100px;
+  }
+</style>
