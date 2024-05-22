@@ -1,14 +1,50 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+// // fetcher data - henter URL fra supabase, skriv  rest/v1/tabelnavn ALTID
+const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_", {
+    method: "GET",
+    headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljdHRzZXpydmx6dGxhamJrZHh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU5MzY2NjksImV4cCI6MjAzMTUxMjY2OX0.W2Dcw1gmLKcXLWOcWXBdxYBuBiVOjgi8xfwwII3329o"
+    }
+}
+).then(res=>res.json());
 
-// fetcher data - henter URL fra supabase, skriv  rest/v1/tabelnavn ALTID
-const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_", 
-  {
-    // "get" henter og header sender api til supabase. then-> tager response fra fetch og laver til json (array)
-    method: 'GET',
-    headers: {apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljdHRzZXpydmx6dGxhamJrZHh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU5MzY2NjksImV4cCI6MjAzMTUxMjY2OX0.W2Dcw1gmLKcXLWOcWXBdxYBuBiVOjgi8xfwwII3329o"},
-  }).then(response=>response.json())
 
+// fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_")
+// .then((response) => response.json())
+// .then((data) => showProduct(data));
 
+// function ShowProduct(product) {
 
-console.log(data)
+// }
 ---
+
+<Layout>
+    <h1>Shoes</h1>
+    <h3 class="filter">Filter +</h3>
+    <div class="shoe">
+{data.map((oneshoe)=>{return <Card data={oneshoe} />})}
+</div>
+
+
+</Layout>
+
+<style>
+    .shoe {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+.filter {
+    margin-bottom: 30px;
+}
+    @media (min-width: 800px){
+        .shoe {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .filter {
+    margin-bottom: 60px;
+}
+    }
+</style>
