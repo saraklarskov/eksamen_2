@@ -1,0 +1,14 @@
+---
+
+// fetcher data - henter URL fra supabase, skriv  rest/v1/tabelnavn ALTID
+const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_", 
+  {
+    // "get" henter og header sender api til supabase. then-> tager response fra fetch og laver til json (array)
+    method: 'GET',
+    headers: {apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljdHRzZXpydmx6dGxhamJrZHh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU5MzY2NjksImV4cCI6MjAzMTUxMjY2OX0.W2Dcw1gmLKcXLWOcWXBdxYBuBiVOjgi8xfwwII3329o"},
+  }).then(response=>response.json())
+
+
+
+console.log(data)
+---
