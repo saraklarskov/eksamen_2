@@ -2,29 +2,47 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<body>
+<Layout>
   <h2>CONTACT US</h2>
 
   <form action="/tak.astro">
     <div class="input">
-      <input type="text" id="fname" name="fname" value="NAME" />
+      <input type="text" id="name" name="name" value="NAME" />
     </div>
     <div class="input">
-      <input type="text" id="lname" name="lname" value="EMAIL" />
+      <input type="text" id="email" name="email" value="EMAIL" />
     </div>
     <div class="input">
-      <input type="text" id="message" name="fname" value="MESSAGE" />
+      <input type="text" id="message" name="message" value="MESSAGE" />
     </div>
-    <input type="submit" value="SEND" />
+    <div id="sendknap">
+      <input type="submit" value="SEND" />
+    </div>
   </form>
-</body>
+</Layout>
 
 <style>
-  .input {
+  form {
+    margin-top: 2rem;
+  }
+  input {
     color: #000;
     border: 1px solid #bfbfbf;
-    background: #fff;
+    background: #fffef9;
     padding: 1em 1.7em;
     max-width: 100%;
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+  #sendknap input {
+    margin-top: 2em;
+    background: black;
+    color: #fffef9;
+    padding: 1em 1em;
+  }
+  @media (min-width: 800px) {
+    input {
+      width: 80%;
+    }
   }
 </style>
