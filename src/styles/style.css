@@ -34,6 +34,13 @@ h3 {
   text-transform: uppercase;
 }
 
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
 h5 {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
