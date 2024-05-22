@@ -35,45 +35,46 @@
 	<img src="pics/hoverinstagram.webp" alt="hover" class="image-hover"></a>
 	</div>
 	<div class="image-container">
-	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta9.webp" alt="insta" class="image-normal">
-	<img src="pics/hoverinstagram.webp" alt="hover" class="image-hover"></a>
+	<a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="pics/insta9.webp" alt="insta" class="image-normal"></a>
 	</div>
 </div>
 
 
 <style>
 
+.insta_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 10px;
+}
+
 .image-container {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .image-container img {
-    position: absolute;
     width: 100%;
-    height: 100%;
-    transition: opacity 0.3s ease;
+    height: auto;
+    display: block;
+    transition: opacity 0.5s ease;
 }
 
 .image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .image-container:hover .image-hover {
     opacity: 1;
 }
-	.insta_grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-        justify-content: center; /* Centrerer vandret */
-		gap: 10px;
-	}
-
-	.insta_grid img {
-		width: 100%;
-	}
-
     @media (min-width: 800px) {
         .insta_grid {
 	margin: 200px;
