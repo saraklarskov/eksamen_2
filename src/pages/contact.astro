@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
   <h1>CONTACT US</h1>
 
-  <form action="/tak.astro">
+  <form action="tak">
     <div class="input">
       <input type="text" id="name" name="name" placeholder="Name" />
     </div>
@@ -19,9 +19,10 @@ import Layout from "../layouts/Layout.astro";
       <input type="submit" value="SEND" />
     </div>
   </form>
+
   <p>
-    You can also reach us via Instagram direct message @colada_archive or via
-    our email coladaarchive@gmail.com
+    You can also reach us via Instagram direct message <a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">@colada_archive</a> or via
+    our email <a href="mailto:coladaarchive@gmail.com">coladaarchive@gmail.com</a>
   </p>
 </Layout>
 
@@ -34,10 +35,21 @@ import Layout from "../layouts/Layout.astro";
     margin-left: 5%;
     margin-bottom: 7rem;
   }
-  form {
+
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+
+  a:hover{
+    text-decoration: underline;
+  }
+  a:active{
+    text-decoration: underline;
+    color: #b2113c;
   }
   input {
-    color: #000;
+    color:  #000;
     border: 1px solid #bfbfbf;
     background: #fffef9;
     padding: 1em 1.7em;
@@ -49,7 +61,7 @@ import Layout from "../layouts/Layout.astro";
   }
   #sendknap input {
     margin-top: 2em;
-    background: black;
+    background:  #000;
     color: #fffef9;
     padding: 1em 1.7em;
     width: 93.5%;
@@ -62,7 +74,7 @@ import Layout from "../layouts/Layout.astro";
       margin-left: 40%;
     }
     p {
-      margin-left: 10%;
+      margin-left: 17%;
       margin-top: 2rem;
     }
     form {
