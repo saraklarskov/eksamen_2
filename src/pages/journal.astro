@@ -6,13 +6,16 @@ import Grid2 from "../components/Grid2.astro";
 <Layout>
 <h1 class="jour">Our journal</h1>
 
-<img src="pics/style.webp" alt="Billede af en masse sko">
+<div class="journal1">
+    <img src="pics/style.webp" alt="Billede af en masse sko">
+    <div class="text1">
+    <h2>How to style</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam.</p>
+    </div>
+</div>
 
-<h2>How to style</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam.</p>
 
 <Grid2 />
-
 
 <img src="pics/carrie.png" alt="Billede af Carrie Bradshaw">
 <h1>Seen on Sex and the city</h1>
@@ -24,8 +27,26 @@ import Grid2 from "../components/Grid2.astro";
 </Layout>
 
 <style>
-p {
+/* p {
         margin-bottom: 50px;
+    } */
+
+
+.journal1{
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 800px){
+    .journal1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    position: relative;
+    bottom: 0;
     }
 
+    .text1{
+        align-self: end;
+    }
+}
 </style>
