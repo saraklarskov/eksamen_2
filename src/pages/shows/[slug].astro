@@ -52,18 +52,25 @@ console.log(myData);
   <div class="tekst">
     <div class="hej">
  <h3>{myData.brand}</h3>
+ <br>
  <h1>{myData.type}</h1>
+ <br>
  <h3>{myData.price}</h3>
+ <br>
 
  <Button variant="primary">add to cart</Button>
-
-<h2>Description</h2>
+ <br>
+<h2 class="desc">Description</h2>
+<br>
 
 <p><span class="fed">Size: </span>{myData.size}</p>
+<br>
 <p><span class="fed">Measurements: </span>{myData.measurements}</p>
+<br>
 <p><span class="fed">Color: </span>{myData.color}</p>
+<br>
 <p><span class="fed">Material: </span> {myData.material}</p>
-<p>{myData.story}</p>
+<br>
 <p><span class="fed">Spots: </span>{myData.spots}</p>
 </div>
 </div>
@@ -76,6 +83,11 @@ console.log(myData);
     font-weight: 600;
   }
   @media (min-width: 800px){
+
+
+    .desc {
+      margin-top: 20px;
+    }
     .prev, .next {
       display: none;
     }
@@ -87,12 +99,13 @@ console.log(myData);
     }
 
     img {
-      margin: 10px -180px;
+      margin: -14px -180px;
       width:130%;
     }
 
     .tekst {
-      margin-top: 100px;
+      margin-top: 30px;
+      
     }
 
     .hej {
