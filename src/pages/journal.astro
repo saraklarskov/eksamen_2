@@ -4,49 +4,102 @@ import Grid2 from "../components/Grid2.astro";
 ---
 
 <Layout>
-<h1 class="jour">Our journal</h1>
+  <h1 class="jour">Our journal</h1>
 
-<div class="journal1">
-    <img src="pics/style.webp" alt="Billede af en masse sko">
+  <div class="journal1">
+    <img src="pics/style.webp" alt="Billede af en masse sko" />
     <div class="text1">
-    <h2>How to style</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam.</p>
+      <h2>How to style</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam.</p>
     </div>
-</div>
+  </div>
 
+  <div class="journal2">
+    <div class="grid_1">
+      <img src="pics/poster.webp" alt="Picture of pop up poster" />
+      <h2>Pop up</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam
+        dapibus lorem.
+      </p>
+    </div>
+    <div class="grid_1">
+      <img
+        src="pics/cofounders.png"
+        alt="Picture of the founders of Colada Archive"
+      />
+      <h2>founders</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam
+        dapibus lorem.
+      </p>
+    </div>
+  </div>
 
-<Grid2 />
-
-<img src="pics/carrie.png" alt="Billede af Carrie Bradshaw">
-<h1>Seen on Sex and the city</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam dapibus lorem.</p>
-
-<Grid2 />
-
-</div>
+  <div class="journal3">
+    <img
+      src="pics/produkter/maryjaneOn.webp"
+      alt="Picture of shoes from sex and the city"
+    />
+    <h2>Seen on Sex and the city</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam
+      dapibus lorem.
+    </p>
+  </div>
 </Layout>
 
 <style>
-/* p {
-        margin-bottom: 50px;
-    } */
-
-
-.journal1{
+  .journal1,
+  .journal2,
+  .journal3 {
     margin-bottom: 2rem;
-}
-
-@media (min-width: 800px){
-    .journal1{
+  }
+  .journal2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    position: relative;
-    bottom: 0;
+    column-gap: 20px;
+  }
+
+  .journal3 img {
+    width: 100%;
+    height: auto;
+  }
+  @media (min-width: 800px) {
+    .journal1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      position: relative;
+      bottom: 0;
+      margin-bottom: 10rem;
+    }
+    .journal2 {
+      display: flex;
+      justify-content: flex-end;
     }
 
-    .text1{
-        align-self: end;
+    .journal3 {
+      margin-left: 30%;
     }
-}
+    .journal3 img {
+      width: 40%;
+      height: auto;
+      margin-bottom: 2rem;
+    }
+    .grid_1 img {
+      width: 50%;
+    }
+
+    .grid_1 {
+      align-self: end;
+    }
+    .text1 {
+      align-self: end;
+    }
+
+    p {
+      margin-bottom: 50px;
+    }
+  }
 </style>
