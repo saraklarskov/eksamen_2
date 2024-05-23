@@ -18,7 +18,7 @@
   <a href="/"><img src="pics/logofinal.png" alt="logo til desktop" class="add"></a>
     <ul class="menu-list">
         <li class="remove"><a href="/">Frontpage</a></li>
-        <li><a href="shoes">Shoes</a></li>
+        <li class="shoearrow"><a href="shoes">Shoes</a> <img class="dropdown" src="pics/icons/downarrow.svg" alt="drop down"></li>
         <li><a href="journal">Journal</a></li>
         <li><a href="about">About</a></li>
         <li><a href="cart">Cart</a></li>
@@ -75,6 +75,18 @@ header {
     transition: transform 0.3s ease; /* Transition for smooth rotation */
     z-index: 100;
   }
+
+  .dropdown{
+    width: 5%;
+    height: auto;
+    margin-left: 0.4rem;
+  }
+
+  .shoearrow {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
 
   .cross .bar:nth-child(1) {
     transform: rotate(50deg) translate(4px, 3px);
@@ -201,5 +213,6 @@ header {
         }
       });
     });
+
   </script>
   
