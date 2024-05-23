@@ -1,7 +1,7 @@
 ---
 //@ts-nocheck
 import Layout from "../../layouts/Layout.astro";
-import Slideshow from "../components/Slideshow.astro";
+import Button from "../../components/Button.astro";
 export async function getStaticPaths(){
     const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_", {
     method: "GET",
@@ -22,7 +22,7 @@ const {myData} = Astro.props;
 console.log(myData);
 ---
 
-<Layout title={myData.id}>
+<Layout>
 
   <div class="single">
   <div class="slideshow-container">
@@ -41,6 +41,8 @@ console.log(myData);
     <div class="mySlides">
       <img src={myData.image4}>
     </div>
+
+   
   
     <!-- Next and previous buttons -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -53,20 +55,26 @@ console.log(myData);
  <h1>{myData.type}</h1>
  <h3>{myData.price}</h3>
 
+ <Button variant="primary">add to cart</Button>
+
 <h2>Description</h2>
 
-<p>{myData.size}</p>
-<p>{myData.measurements}</p>
-<p>{myData.color}</p>
-<p>{myData.material}</p>
+<p><span class="fed">Size: </span>{myData.size}</p>
+<p><span class="fed">Measurements: </span>{myData.measurements}</p>
+<p><span class="fed">Color: </span>{myData.color}</p>
+<p><span class="fed">Material: </span> {myData.material}</p>
 <p>{myData.story}</p>
-<p>{myData.spots}</p>
+<p><span class="fed">Spots: </span>{myData.spots}</p>
 </div>
 </div>
 </div>
 </Layout>
 
 <style>
+
+  .fed {
+    font-weight: 600;
+  }
   @media (min-width: 800px){
     .prev, .next {
       display: none;
@@ -79,7 +87,7 @@ console.log(myData);
     }
 
     img {
-      margin: 60px -180px -60px;
+      margin: 10px -180px;
       width:130%;
     }
 
@@ -89,6 +97,7 @@ console.log(myData);
 
     .hej {
       position: fixed;
+      width: 500px;
     }
   }
   </style>

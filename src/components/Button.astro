@@ -9,57 +9,25 @@ const {variant} = Astro.props;
 
 <style>
 button {
-  width: 100px;
-    border: none;
-    border-radius: 25px;
-    height: 30px;
+    padding: 10px 40px;
+    border: 1px solid #000; 
+    text-decoration: none;
+    color: #FFFEF9;
+    background-color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #FFFEF9;
+    color: #000;
 }
 
 .primary {
-    color: black;
-    border: 1px solid white;
+    background-color: #FFFEF9;
+    color: #000;
 }
 
 
-.secondary {
-    background-color: #00F0FF;
-}
-
-.tertiary {
-    color: black;
-    border: 1px solid white;
-}
 </style>
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    let previousButton = null; // Variabel til at spore den tidligere klikkede knap
-
-    const buttons = document.querySelectorAll('.primary, .secondary, .tertiary');
-
-    buttons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            // Hvis der er en tidligere klikket knap, og den ikke er den samme som den aktuelle knap
-            if (previousButton && previousButton !== button) {
-                // Skift farven på den tidligere knap til tertiary
-                previousButton.classList.remove('secondary');
-                previousButton.classList.add('tertiary');
-            }
-
-            // Skift farven på den aktuelle klikkede knap til secondary
-            button.classList.remove('tertiary');
-            button.classList.add('secondary');
-
-            // Opdater tidligereButton til den aktuelle klikkede knap
-            previousButton = button;
-        });
-
-        // Gendan tidligere valgt knap ved sideindlæsning
-        if (button.classList.contains('secondary')) {
-            previousButton = button;
-        }
-    });
-});
-
-</script>
