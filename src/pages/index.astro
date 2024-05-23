@@ -14,7 +14,10 @@ import Slide from "../components/Slide.astro";
 	<img src="pics/sko_prove.png" alt="Billede af news sko" class="forside_1">
 </div>
 
+<div class="droparrow">
 <h2 class="drop">View our latest drop</h2>
+<img src="pics/icons/arrow.svg" alt="arrow" class="arrowclass">
+</div>
 
 <Slide />
 
@@ -57,8 +60,26 @@ import Slide from "../components/Slide.astro";
 		margin-bottom: 40px;
 	}
 
+	.arrowclass{
+		width:5%;
+		height: auto;
+		margin-left: 0.5rem;
+	}
+
+	.droparrow{
+		display: flex;
+		flex-direction: row;
+	}
+
 	.insta {
 		color: #B2113C;
+	}
+
+	@media (min-width: 550px) {
+		.arrowclass{
+			width: 3%;
+			margin-top: 0.3rem;
+		}
 	}
 
 
@@ -78,19 +99,31 @@ import Slide from "../components/Slide.astro";
 			gap: 20px;
 		}
 
-.drop {
-	margin-top: 20px;
-}
+		.arrowclass{
+			width: 3%;
+			margin-top: 1rem;
+		}
 
-.forside_logo {
-	margin-top: 100px; 
-	margin-bottom: 100px;
-}
+		.drop {
+			margin-top: 20px;
+		}
 
-.insta {
-	margin-left: 200px;
-}
-	}
+		.forside_logo {
+			margin-top: 100px; 
+			margin-bottom: 100px;
+		}
+
+		.insta {
+			margin-left: 200px;
+		}
+			}
+
+		@media (min-width: 1200px) {
+			.arrowclass{
+			width: 2%;
+			margin-top: 1rem;
+		}
+		} 
 
 
 </style>
