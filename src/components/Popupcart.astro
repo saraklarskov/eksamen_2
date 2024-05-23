@@ -1,37 +1,21 @@
----
-const {variant} = Astro.props;
----
+<div class="product">
+    <h2>Produkt 1</h2>
+    <button class="add-to-cart" data-product="Produkt 1">Add to Cart</button>
+</div>
+<div class="product">
+    <h2>Produkt 2</h2>
+    <button class="add-to-cart" data-product="Produkt 2">Add to Cart</button>
+</div>
 
-
-<button class={variant} data-product="Produkt 1">  
-    <slot />
-</button>
-
+<div id="cart" class="cart">
+    <h3>Din kurv</h3>
+    <ul id="cart-items"></ul>
+    <button id="view-cart-btn">View Your Cart</button>
+</div>
+</div>
 
 
 <style>
-button {
-    padding: 10px 40px;
-    border: 1px solid #000; 
-    text-decoration: none;
-    color: #FFFEF9;
-    background-color: #000;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-button:hover {
-    background-color: #FFFEF9;
-    color: #000;
-}
-
-.primary {
-    background-color: #FFFEF9;
-    color: #000;
-}
-
-.add-to-cart {
-}
-
 .product {
     margin: 20px;
 }
@@ -81,7 +65,7 @@ button:hover {
 </style>
 
 <script>
-   document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     const cart = document.getElementById('cart');
     const cartItems = document.getElementById('cart-items');
@@ -113,5 +97,6 @@ button:hover {
         window.location.href = '/cart'; // Ændr URL'en til din kurvside
     });
 });
+
 
 </script>
