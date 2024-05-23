@@ -23,7 +23,7 @@ import Grid2 from "../components/Grid2.astro";
         dapibus lorem.
       </p>
     </div>
-    <div class="grid_1">
+    <div class="grid_2">
       <img
         src="pics/cofounders.png"
         alt="Picture of the founders of Colada Archive"
@@ -47,6 +47,24 @@ import Grid2 from "../components/Grid2.astro";
       dapibus lorem.
     </p>
   </div>
+
+  <!-- <div class="journal4">
+    <div class="grid_1">
+      <img src="pics/" alt="Picture of pop up poster" />
+      <h2>A day out</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam
+        dapibus lorem.
+      </p>
+    </div>
+    <div class="grid_2">
+      <img src="pics/" alt="Picture of the founders of Colada Archive" />
+      <h2>A night out</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam
+        dapibus lorem.
+      </p>
+    </div> -->
 </Layout>
 
 <style>
@@ -75,24 +93,32 @@ import Grid2 from "../components/Grid2.astro";
       margin-bottom: 10rem;
     }
     .journal2 {
-      display: flex;
-      justify-content: flex-end;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
     }
 
     .journal3 {
       margin-left: 30%;
     }
     .journal3 img {
-      width: 40%;
+      width: 60%;
       height: auto;
       margin-bottom: 2rem;
     }
-    .grid_1 img {
-      width: 50%;
+    .grid_1 img,
+    .grid_2 img {
+      width: 100%;
     }
 
     .grid_1 {
-      align-self: end;
+      /* align-self: end; */
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+    .grid_2 {
+      /* align-self: end; */
+      grid-column-start: 3;
+      grid-column-end: 4;
     }
     .text1 {
       align-self: end;
