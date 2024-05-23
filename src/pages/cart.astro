@@ -1,0 +1,106 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+
+    <Layout>
+
+<h1>Your cart</h1>
+<a href="shoes">Continue shopping</a></li>
+<hr>
+<hr>
+<div class="checkbox_tac">
+    <div class="checkbox-container">
+            <input type="checkbox" id="round-checkbox" class="round-checkbox">
+            <label for="round-checkbox" class="round-checkbox-label"></label>
+    </div>
+    <p>I agree to terms and conditions</p>
+</div>
+<br>
+<a class="box" href="checkout">Check Out</a>
+
+    </Layout>
+
+
+    <style>
+a {
+ font-size: 0.8rem;
+ text-decoration: underline;
+}
+
+.box {
+    padding: 10px 40px;
+    border: 1px solid #000; 
+    text-decoration: none;
+    color: #FFFEF9;
+    background-color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.box:hover {
+    background-color: #FFFEF9;
+    color: #000;
+}
+
+.checkbox-container {
+    position: relative;
+    margin-right: 10px;
+}
+
+.round-checkbox {
+    display: none;
+}
+
+.round-checkbox-label {
+    width: 20px;
+    height: 20px;
+    background-color: #FFFEF9;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    position: relative;
+}
+
+.round-checkbox-label::after {
+    content: '';
+    width: 5px;
+    height: 10px;
+    border: solid #000;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+}
+
+.round-checkbox:checked + .round-checkbox-label::after {
+    opacity: 1;
+}
+
+.checkbox_tac{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+@media (min-width:800px){
+    .checkbox_tac{
+     justify-content: flex-end;
+     margin-right: 111px;
+
+    }
+
+    .box{
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 715px;
+    }
+    
+}
+
+
+    </style>

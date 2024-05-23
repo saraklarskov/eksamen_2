@@ -53,6 +53,14 @@ p {
   font-weight: 400;
   font-style: normal;
   line-height: 1.5rem;
+  font-size: 0.8rem;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
 }
 
 main {
