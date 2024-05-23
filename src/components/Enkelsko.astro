@@ -2,9 +2,9 @@
 const {data} = Astro.props;
 console.log(data);
 ---
-
-
-<article>
-    <h1>{data.title}</h1>
-</article>
+<a href={`shoes/${data.slug}`}>
+<article class="vark">
+    <h2>{data.title}</h2>
+    <p>{data.story}</p>
+</a>
 

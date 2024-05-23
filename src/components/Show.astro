@@ -1,0 +1,56 @@
+---
+const {data} = Astro.props;
+console.log(data);
+---
+<a href={`shows/${data.slug}`}>
+<article class="vark">
+    <h2>{data.title}</h2>
+    <p>{data.area}</p>
+    <img src={`/600/${data.image.replace('.jpg', '.webp')}`} class="hej"/>
+</a>
+
+<style>
+
+.hej {
+    display: none;
+}
+
+.vark:hover .hej {
+    display: block;
+    width: 400px;
+}
+
+
+
+.vark {
+    width: 80%;
+    border: none;
+    border-bottom: 0.5px solid white;
+    margin: 50px auto; /* Centrer artiklen vandret */
+}
+
+a {
+    text-decoration: none;
+    line-height: 3rem;
+}
+
+.vark:hover, .vark:hover h2, .vark:hover p {
+    color: #0FF0FF; /* Ændr farven på h3-elementet til lys grå ved hover */
+}
+
+.vark:hover .placering, .vark:hover {
+    border-color: #0FF0FF; /* Ændr kantfarven på .placering-elementet til lys grå ved hover */
+}
+
+
+.placering {
+    width: 100px;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.placering p {
+    text-align: center;
+}
+</style>

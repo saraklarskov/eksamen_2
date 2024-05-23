@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout> 
+  <section class="singleview">
+    <img src="" alt="navn" />
+    <h1>Nummer + navn på verk</h1>
+    <h1>Navn på kunstner</h1>
+    <h1>Stedsnavn</h1>
+    <article class="verktxt">
+      <div class="venstre">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+          laudantium, omnis pariatur expedita quisquam maiores rerum esse,
+          repudiandae dignissimos adipisci hic facere id eligendi nihil debitis
+          magni modi, corrupti cumque!
+        </p>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+          laudantium, omnis pariatur expedita quisquam maiores rerum esse,
+          repudiandae dignissimos adipisci hic facere id eligendi nihil debitis
+          magni modi, corrupti cumque!
+        </p>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+          laudantium, omnis pariatur expedita quisquam maiores rerum esse,
+          repudiandae dignissimos adipisci hic facere id eligendi nihil debitis
+          magni modi, corrupti cumque!
+        </p>
+      </div>
+      <div class="hoyre">
+        <p>Lys:</p>
+        <p>navn på lysmand</p>
+        <br />
+        <br />
+        <p>Links:</p>
+        <p>noen links</p>
+        <br />
+        <br />
+        <p>Tak til:</p>
+        <p>Navn Navnesen, Navn Navnesen, Navn Navnesen & Navn Navnesen</p>
+      </div>
+    </article>
+  </section>
+</Layout>
+
+<style>
+  .singleview {
+    margin: 50px;
+  }
+  h1 {
+    border-bottom: 1px solid white;
+  }
+  .verktxt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+</style>

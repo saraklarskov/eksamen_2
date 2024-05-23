@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Show from "../components/Show.astro";
 // // fetcher data - henter URL fra supabase, skriv  rest/v1/tabelnavn ALTID
 const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_", {
     method: "GET",
@@ -10,23 +11,22 @@ const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colad
 }
 ).then(res=>res.json());
 
-
-// fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_")
-// .then((response) => response.json())
-// .then((data) => showProduct(data));
-
-// function ShowProduct(product) {
-
-// }
 ---
 
 <Layout>
     <h1>Shoes</h1>
     <h3 class="filter">Filter +</h3>
-    <div class="shoe">
+
+
+<div class="shoe">
 {data.map((oneshoe)=>{return <Card data={oneshoe} />})}
 </div>
 
+<section class="shows">
+    {data.map(show=>{
+return <Show data={show} />;
+    })}
+</section>
 
 </Layout>
 

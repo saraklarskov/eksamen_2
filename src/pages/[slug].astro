@@ -1,18 +1,18 @@
 ---
 //@ts-nocheck
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 export async function getStaticPaths(){
-    const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_", {
+    const data = await fetch("https://ckutyzunqqammitjtjki.supabase.co/rest/v1/cphlightfestival", {
     method: "GET",
     headers: {
-        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljdHRzZXpydmx6dGxhamJrZHh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU5MzY2NjksImV4cCI6MjAzMTUxMjY2OX0.W2Dcw1gmLKcXLWOcWXBdxYBuBiVOjgi8xfwwII3329o"
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNrdXR5enVucXFhbW1pdGp0amtpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NjMxMjUsImV4cCI6MjAyNjMzOTEyNX0.Pvn7T70nYxGUe80GQtHwEQs4I0aj_DiOc4VmAlT7IpQ"
     }
 }).then(response => response.json());
 
-    return data.map((shoe) => {
+    return data.map((show) => {
         return{
-            params: {slug: shoe.slug},
-            props: {myData: shoe},
+            params: {slug: show.slug},
+            props: {myData: show},
 
         };
     });
@@ -21,22 +21,33 @@ const {myData} = Astro.props;
 console.log(myData);
 ---
 
-
 <Layout title={myData.title}>
     <div class="singleview">
         <img src={myData.image1} alt={myData.title} />      
     <h2>{myData.title}</h2>
-    <h2>{myData.brand}</h2>
-    <h2>{myData.type}</h2>
-    <p>{myData.material}</p>
-<p>{myData.story}</p>
-<p>{myData.spots}</p>
+    <h2>{myData.artist}</h2>
+    <h2>{myData.area}</h2>
+    <div class="verktxt">
+    <p>{myData.description}</p>
+    <div class="mindre">
+<p>{myData.light}</p>
+<p>{myData.links}</p>
+<p>Tak til {myData.thanks}</p>
 </div>
-
+</div>
+</div>
 </Layout>
 
 <style>
   .singleview {
     margin: 100px;
+  }
+  h2 {
+    border-bottom: 0.5px solid white;
+  }
+  .verktxt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
   }
 </style>
