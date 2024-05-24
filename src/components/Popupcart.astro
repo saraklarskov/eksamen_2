@@ -1,24 +1,25 @@
-<div class="product">
-    <h2>Produkt 1</h2>
-    <button class="add-to-cart" data-product="Produkt 1">Add to Cart</button>
-</div>
-<div class="product">
-    <h2>Produkt 2</h2>
-    <button class="add-to-cart" data-product="Produkt 2">Add to Cart</button>
-</div>
+---
+const {data} = Astro.props;
+console.log(data);
+---
 
 <div id="cart" class="cart">
-    <h3>Din kurv</h3>
-    <ul id="cart-items"></ul>
+    <h3>{data.brand}</h3>
+    <img src={data.image1} alt="">
+    <ul id="cart-items">
+<h2>{data.brand}</h2>
+    </ul>
     <button id="view-cart-btn">View Your Cart</button>
 </div>
-</div>
+
+
 
 
 <style>
 .product {
     margin: 20px;
 }
+
 
 .cart {
     position: fixed;
