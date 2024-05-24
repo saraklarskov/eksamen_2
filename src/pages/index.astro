@@ -6,17 +6,13 @@ import Button from "../components/Button.astro";
 ---
 
 <Layout>
-  <img
-    src="pics/frontPicture.webp"
-    alt="Billede af sko"
-    class="forside_billede"
-  />
-  <h1 class="holy">the holy grail of vintage designer shoes</h1>
+  <img src="pics/frontPicture.webp" alt="Billede af sko"class="forside_billede"/>
+  <h1 class="holy">The holy grail of vintage designer shoes</h1>
 
   <div class="forside_billeder_1">
-    <img src="pics/sko_prove.png" alt="Billede af news sko" class="forside_1" />
-    <img src="pics/sko_prove.png" alt="Billede af news sko" class="forside_1" />
-    <img src="pics/sko_prove.png" alt="Billede af news sko" class="forside_1" />
+    <a href="shoes"><img src="pics/produkter/silver1.webp" alt="Billede af news sko" class="forside_1" /></a>
+    <a href="shoes"><img src="pics/produkter/orange1.webp" alt="Billede af news sko" class="forside_1" /></a>
+    <a href="shoes"><img src="pics/produkter/snake1.webp" alt="Billede af news sko" class="forside_1" /></a>
   </div>
 
   <a class="shoeclass" href="shoes">
@@ -54,11 +50,10 @@ import Button from "../components/Button.astro";
   .forside_billeder_1 {
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 1rem;
   }
 
   .forside_1 {
-    width: 32.5%;
     margin-top: 50px;
   }
 
@@ -107,7 +102,6 @@ import Button from "../components/Button.astro";
     .info{
       margin: 5% 10% 5% 10%;
     }
-
   }
 
   @media (min-width: 800px) {
@@ -116,11 +110,13 @@ import Button from "../components/Button.astro";
       font-size: 36px;
     }
 
-    .forside_billeder_1 {
+    .forside_billeder_1{
       display: flex;
       justify-content: center; /* Centrerer vandret */
       align-items: center; /* Centrerer lodret */
-      gap: 20px;
+      width: 80%;
+      margin-left: 10%;
+      gap: 1rem;
     }
 
     .arrowclass {
@@ -130,6 +126,7 @@ import Button from "../components/Button.astro";
 
     .drop {
       margin-top: 20px;
+      margin-left: 10%;
     }
 
     .forside_logo {
