@@ -86,4 +86,10 @@ body {
     line-height: 2rem;
     font-size: 1rem;
   }
+
+  .details_web {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+
 }
