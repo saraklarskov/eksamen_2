@@ -72,6 +72,11 @@ body {
   background-color: #fffef9;
 }
 
+.details_mobile {
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
 @media (min-width: 800px) {
   main {
     margin: 0rem 10rem;

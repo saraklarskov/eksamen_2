@@ -4,18 +4,53 @@ console.log(data);
 ---
 
 <div id="cart" class="cart">
+    <p class="details_mobile">Just added to your cart</p>
+    <hr>
+    <div class="popup_style">
+    <img class="popup_pic" src={data.image1} alt="">
+   <div class="info">
     <h3>{data.brand}</h3>
-    <img src={data.image1} alt="">
+    <p class="details_mobile">Size: {data.size}</p>
+<h4>{data.price}</h4>    </div>
     <ul id="cart-items">
 <h2>{data.brand}</h2>
     </ul>
-    <button id="view-cart-btn">View Your Cart</button>
+</div>
+<div class="subtotal">
+<h3>Subtotal:</h3>
+<h3>{data.price}</h3>
+</div>
+<div class="button_flex">
+    <button id="view-cart-btn">Check out</button>
+</div>
 </div>
 
 
 
 
 <style>
+
+.button_flex{
+    display: flex;
+    justify-content: flex-end;
+}
+hr{
+    margin-bottom: 10px;
+}
+.info{
+        display: flex;
+        flex-direction: column;
+    }
+
+.popup_style {
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+}
+
+.subtotal{
+    justify-content: space-between;
+    display: flex;
+}
 .product {
     margin: 20px;
 }
@@ -23,9 +58,70 @@ console.log(data);
 
 .cart {
     position: fixed;
-    top: 100px; /* Flyt kurven længere ned */
+    top: 50px; /* Flyt kurven længere ned */
     right: 10px;
-    width: 200px;
+    width: 265px;
+    padding: 10px;
+    background-color: #FFFEF9;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.cart.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#cart-items {
+    list-style-type: none; /* Fjern punktopstillinger */
+    padding: 0; /* Fjern indvendig margen */
+}
+
+#cart-items li {
+    padding: 5px 0; /* Tilføj eventuelt lidt polstring til list items */
+}
+
+#view-cart-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 45px;
+    background-color: #FFFEF9;
+    border: 1px solid black;
+    cursor: pointer;
+    text-align: center;
+}
+
+#view-cart-btn:hover {
+    background-color: black;
+    color: #FFFEF9;
+}
+
+.popup_pic{
+    width: 111px;
+    height: 111px;
+}
+
+
+@media (min-width:800px){
+
+    .subtotal{
+margin-top: 33px;
+}
+
+.info{
+    justify-content: space-between;
+}
+
+.product {
+    margin: 20px;
+}
+
+.cart {
+    position: fixed;
+    top: 62px; /* Flyt kurven længere ned */
+    right: 15.5px;
+    width: 300px;
     padding: 10px;
     background-color: #FFFEF9;
     border: 1px solid #ccc;
@@ -62,6 +158,9 @@ console.log(data);
     background-color: black;
     color: #FFFEF9;
 }
+}
+
+
 
 </style>
 
@@ -88,7 +187,7 @@ console.log(data);
             // Fjern klassen 'show' efter 4 sekunder (4000 millisekunder)
             setTimeout(() => {
                 cart.classList.remove('show');
-            }, 4000);
+            }, 20000);
         });
     });
 
