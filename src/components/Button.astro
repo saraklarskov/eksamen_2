@@ -3,7 +3,7 @@ const {variant} = Astro.props;
 ---
 
 
-<button class={variant} data-product="Produkt 1">  
+<button class={variant} data-product="">  
     <slot />
 </button>
 
@@ -29,8 +29,8 @@ button:hover {
     color: #000;
 }
 
-.add-to-cart {
-}
+
+@media (min-width:800px){
 
 .product {
     margin: 20px;
@@ -38,8 +38,8 @@ button:hover {
 
 .cart {
     position: fixed;
-    top: 100px; /* Flyt kurven længere ned */
-    right: 10px;
+    top: 62px; /* Flyt kurven længere ned */
+    right: 15.5px;
     width: 200px;
     padding: 10px;
     background-color: #FFFEF9;
@@ -77,41 +77,42 @@ button:hover {
     background-color: black;
     color: #FFFEF9;
 }
+}
 
 </style>
 
 <script>
-   document.addEventListener('DOMContentLoaded', () => {
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
-    const cart = document.getElementById('cart');
-    const cartItems = document.getElementById('cart-items');
-    const viewCartBtn = document.getElementById('view-cart-btn');
+//    document.addEventListener('DOMContentLoaded', () => {
+//     const addToCartButtons = document.querySelectorAll('.add-to-cart');
+//     const cart = document.getElementById('cart');
+//     const cartItems = document.getElementById('cart-items');
+//     const viewCartBtn = document.getElementById('view-cart-btn');
 
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const product = button.getAttribute('data-product');
+//     addToCartButtons.forEach(button => {
+//         button.addEventListener('click', () => {
+//             const product = button.getAttribute('data-product');
 
-            // Tøm kurven før tilføjelse af nyt produkt
-            cartItems.innerHTML = '';
+//             // Tøm kurven før tilføjelse af nyt produkt
+//             cartItems.innerHTML = '';
 
-            const listItem = document.createElement('li');
-            listItem.textContent = product;
-            cartItems.appendChild(listItem);
+//             const listItem = document.createElement('li');
+//             listItem.textContent = product;
+//             cartItems.appendChild(listItem);
 
-            cart.classList.add('show');
+//             cart.classList.add('show');
 
-            // Fjern klassen 'show' efter 4 sekunder (4000 millisekunder)
-            setTimeout(() => {
-                cart.classList.remove('show');
-            }, 4000);
-        });
-    });
+//             // Fjern klassen 'show' efter 4 sekunder (4000 millisekunder)
+//             setTimeout(() => {
+//                 cart.classList.remove('show');
+//             }, 20000);
+//         });
+//     });
 
-    // Event listener for "View Your Cart" button
-    viewCartBtn.addEventListener('click', () => {
-        // Handlingen, når knappen klikkes, fx navigering til en kurvside
-        window.location.href = '/cart'; // Ændr URL'en til din kurvside
-    });
-});
+//     // Event listener for "View Your Cart" button
+//     viewCartBtn.addEventListener('click', () => {
+//         // Handlingen, når knappen klikkes, fx navigering til en kurvside
+//         window.location.href = '/cart'; // Ændr URL'en til din kurvside
+//     });
+// });
 
 </script>
