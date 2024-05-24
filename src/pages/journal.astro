@@ -4,67 +4,76 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <h1 class="jour">Our journal</h1>
+  
+<a class="stylepic" href="/">
   <div class="journal1 tolvkolonner">
-    <img src="pics/style.webp" alt="Billede af en masse sko" />
+    <img src="pics/style.webp" alt="Billede af en masse sko"/>
     <div class="text1">
+      <a href="/">
       <h2>How to style</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam.</p>
+      <p>Socks or no socks? Dresses, skirts or jeans? See how to styles your shoes for different occations.</p>
     </div>
   </div>
+</a>
 
   <div class="journal2 tolvkolonner">
     <div class="grid_1">
-      <img src="pics/poster.webp" alt="Picture of pop up poster" />
-      <h2>Pop up</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam
-        dapibus lorem.
-      </p>
-    </div>
+      <a href="/">
+        <img src="pics/poster.webp" alt="Picture of pop up poster"/>
+        <h2>Pop up</h2>
+        <p>Check out some of our pop-up stores around Copenhagen. We love meeting our sweet customers.</p>
+      </a>
+      </div>
     <div class="grid_2">
+      <a href="/">
       <img
         src="pics/aboutimg2.webp"
         alt="Picture of the founders of Colada Archive"
       />
       <h2>founders</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam
-        dapibus lorem.
+        Meet us and learn the story behind Colada Archive.
       </p>
+    </a>
     </div>
   </div>
-
+<a class="sacpic" href="/">
   <div class="journal3 tolvkolonner">
     <img
-      src="pics/produkter/maryjaneOn.webp"
-      alt="Picture of shoes from sex and the city"
-    />
+      src="pics/style.webp" alt="Picture of sex and the city"/>
+    <div class="sac">
+      <a href="/">
     <h2>Seen on Sex and the city</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam
-      dapibus lorem.
+      The most iconic series with the most iconic shoes. See some of the styles Carrie Bradshaw herself has been wearing.
     </p>
+    </a>
   </div>
+  </div>
+</a>
 
-  <div class="journal4">
+  <div class="journal4 tolvkolonner">
     <div class="grid_3">
-      <img src="pics/day.webp" alt="Picture of....." />
+      <a href="/">
+      <img src="pics/day.webp" alt="Picture of day outfit" />
       <h2>A day out</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam
-        dapibus lorem.
+      <p>How to wear your heels all day and what to wear for the perfect day out outfit.
       </p>
+    </a>
     </div>
     <div class="grid_4">
-      <img src="pics/night.webp" alt="Picture of ....." />
+         <a href="/">
+      <img src="pics/night.webp" alt="Picture of night outfit" />
       <h2>A night out</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam
-        dapibus lorem.
+        How to make your outfit go from day to night. A basic going out fit with the perfect shoes to match.
       </p>
+    </a>
     </div>
   </div>
 </Layout>
+
+<a href="#"></a>
 
 <style>
   .journal1,
@@ -72,28 +81,92 @@ import Layout from "../layouts/Layout.astro";
   .journal3 {
     margin-bottom: 2rem;
   }
-  /* .journal2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-  } */
-
   .journal3 img {
     width: 100%;
     height: auto;
   }
+.journal2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5%;
+}
+
+.journal4{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5%;
+}
+
   @media (min-width: 800px) {
     .tolvkolonner {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(8, 1fr);
+      column-gap: 1rem;
+      margin-bottom: 0;
     }
-    .journal1 {
+
+    .stylepic{
+      grid-column-start: 1;
+      grid-column-end: 6;
+    }
+
+    .journal1{
+      margin-bottom: 5rem;
+    }
+    .text1{
+      grid-column-start: 6;
+      grid-column-end: -1;
+      align-self: end;
+    }
+    .grid_1{
+      grid-column-start: 3;
+      grid-column-end: 6;
+    }
+    .grid_2{
+      grid-column-start: -1;
+      grid-column-end: 6;
+    }
+    .journal3{
+      margin-top: 5rem;
+      grid-template-rows: 1fr 1fr;}
+
+    .sacpic{
       grid-column-start: 2;
-      span: 5;
+      grid-column-end: -2;
+      grid-row-start: 1;
     }
-    .journal2 {
+    .sac{
+      grid-column-start: 2;
+      grid-column-end: 7;
+      grid-row-start: 2;
+      margin-bottom: 0;
     }
-    .journal3 {
+
+    .journal4{
+      margin-top: 5rem;
+    }
+
+    .grid_3{
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+
+    .grid_4{
+      grid-column-start: 6;
+      grid-column-end: -1;
+      margin-bottom: 5rem;
     }
   }
+
+  @media (min-width: 1200px){
+    .journal3{
+      margin-top: 5rem;
+      grid-template-rows: 1fr;}
+  }
+  .journal3{
+      margin-top: 5rem;
+      grid-template-rows: 1fr;}
+  .sac{
+      grid-column-end: 5;
+    }
 </style>
