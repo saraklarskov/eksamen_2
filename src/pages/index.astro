@@ -4,141 +4,147 @@ import Layout from "../layouts/Layout.astro";
 import Slide from "../components/Slide.astro";
 import Button from "../components/Button.astro";
 ---
+
 <Layout>
-<img src="pics/frontPicture.webp" alt="Billede af sko" class="forside_billede">
-<h1 class="holy">the holy grail of vintage designer shoes</h1>
+  <img
+    src="pics/frontPicture.webp"
+    alt="Billede af sko"
+    class="forside_billede"
+  />
+  <h1 class="holy">the holy grail of vintage designer shoes</h1>
 
-<div class="forside_billeder_1">
-	<img src="pics/sko_prove.png" alt="Billede af news sko" class="forside_1">
-	<img src="pics/sko_prove.png" alt="Billede af news sko" class="forside_1">
-	<img src="pics/sko_prove.png" alt="Billede af news sko" class="forside_1">
-</div>
+  <div class="forside_billeder_1">
+    <img src="pics/sko_prove.png" alt="Billede af news sko" class="forside_1" />
+    <img src="pics/sko_prove.png" alt="Billede af news sko" class="forside_1" />
+    <img src="pics/sko_prove.png" alt="Billede af news sko" class="forside_1" />
+  </div>
 
-<a class="shoeclass" href="shoes">
-<div class="droparrow">
-<h2 class="drop">View our latest drop</h2>
-<img src="pics/icons/arrow.svg" alt="arrow" class="arrowclass">
-</div>
-</a>
+  <a class="shoeclass" href="shoes">
+    <div class="droparrow">
+      <h2 class="drop">View our latest drop</h2>
+      <img src="pics/icons/arrow.svg" alt="arrow" class="arrowclass" />
+    </div>
+  </a>
 
+  <Slide />
 
+  <p class="info">
+    Colada Archive is a Copenhagen-based brand that specialize in curating
+    vintage designer heels, handpicked for their quality, style, and timeless
+    appeal. Each pair tells its own story, reflecting the elegance and
+    craftsmanship of a bygone era. Our mission is to make finding the perfect
+    vintage heels an effortless experience.
+  </p>
 
-<Slide />
-
-	<p class="info">Colada Archive is a Copenhagen-based brand that specialize in curating vintage designer heels, handpicked for their quality, style, and timeless appeal. Each pair tells its own story, reflecting the elegance and craftsmanship of a bygone era. Our mission is to make finding the perfect vintage heels an effortless experience.</p>
-
-<h2 class="insta">Find us on Instagram</h2>
-<Gridinsta />
-
+  <h2 class="insta">Find us on Instagram</h2>
+  <Gridinsta />
 </Layout>
-</html>
 
 <style>
-	.forside_billede {
-			width: 100%;
-			margin-top: 10px;
-			margin-bottom: 40px;
-	}
+  .forside_billede {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
 
-	.holy {
-		margin-top: 15px;
-	}
+  .holy {
+    margin-top: 15px;
+  }
 
-	.forside_billeder_1 {
-	display: flex;
+  .forside_billeder_1 {
+    display: flex;
     justify-content: center;
-	gap: 5px;
+    gap: 5px;
+  }
 
-	}
+  .forside_1 {
+    width: 32.5%;
+    margin-top: 50px;
+  }
 
-	.forside_1 {
-		width: 32.5%;
-		margin-top: 50px;
-	}
+  .forside_logo {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 
-	.forside_logo {
-		width: 100%;
-		margin-top: 40px;
-		margin-bottom: 40px;
-	}
+  .info {
+    margin-bottom: 3rem;
+  }
+  .arrowclass {
+    width: 5%;
+    height: auto;
+    margin-left: 0.5rem;
+  }
 
-	.arrowclass{
-		width:5%;
-		height: auto;
-		margin-left: 0.5rem;
-	}
+  .droparrow {
+    display: flex;
+    flex-direction: row;
+  }
 
-	.droparrow{
-		display: flex;
-		flex-direction: row;
-	}
+  .shoeclass {
+    text-decoration: none;
+    color: #333;
+  }
 
-	.shoeclass{
-		text-decoration: none;
-		color: #333;
-	}
+  .shoeclass:hover {
+    text-decoration: underline;
+  }
 
-	.shoeclass:hover{
-		text-decoration: underline;
-	}
+  .shoeclass:active {
+    color: #b2113c;
+  }
 
-	.shoeclass:active{
-		color: #B2113C;
-	}
+  .insta {
+    color: #b2113c;
+  }
 
-	.info{
-		margin: 10px 280px 200px 280px;
-	}
+  @media (min-width: 550px) {
+    .arrowclass {
+      width: 3%;
+      margin-top: 0.3rem;
+    }
+  }
 
-	.insta {
-		color: #B2113C;
-	}
+  @media (min-width: 800px) {
+    .holy {
+      text-align: center;
+      font-size: 36px;
+    }
 
-	@media (min-width: 550px) {
-		.arrowclass{
-			width: 3%;
-			margin-top: 0.3rem;
-		}
-	}
+    .forside_billeder_1 {
+      display: flex;
+      justify-content: center; /* Centrerer vandret */
+      align-items: center; /* Centrerer lodret */
+      gap: 20px;
+    }
 
+    .arrowclass {
+      width: 3%;
+      margin-top: 1rem;
+    }
 
-	@media (min-width: 800px) {
+    .drop {
+      margin-top: 20px;
+    }
 
-		.holy {
-			text-align: center;
-			font-size: 36px;
-		}
+    .forside_logo {
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
 
-		.forside_billeder_1 {
-			display: flex;
-            justify-content: center; /* Centrerer vandret */
-            align-items: center; /* Centrerer lodret */
-			gap: 20px;
-		}
+    .insta {
+      margin-left: 200px;
+    }
+    .info {
+      margin: 10px 280px 200px 280px;
+    }
+  }
 
-		.arrowclass{
-			width: 3%;
-			margin-top: 1rem;
-		}
-
-		.drop {
-			margin-top: 20px;
-		}
-
-		.forside_logo {
-			margin-top: 100px; 
-			margin-bottom: 100px;
-		}
-
-		.insta {
-			margin-left: 200px;
-		}
-			}
-
-		@media (min-width: 1200px) {
-			.arrowclass{
-			width: 2%;
-			margin-top: 1rem;
-		}
-		} 
+  @media (min-width: 1200px) {
+    .arrowclass {
+      width: 2%;
+    }
+    margin-top: 1rem;
+  }
 </style>
