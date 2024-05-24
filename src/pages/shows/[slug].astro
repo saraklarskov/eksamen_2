@@ -3,6 +3,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Button from "../../components/Button.astro";
 import Popupcart from "../../components/Popupcart.astro";
+import Cartinfo from "../../components/Cartinfo.astro";
 export async function getStaticPaths(){
     const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_", {
     method: "GET",
@@ -77,6 +78,7 @@ console.log(myData);
 </div>
 
 <Popupcart data={myData} />
+
 
 </Layout>
 

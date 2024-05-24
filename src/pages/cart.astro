@@ -1,31 +1,43 @@
 ---
 import Layout from "../layouts/Layout.astro";
+// import Cartinfo from "../components/Cartinfo.astro";
+
+// Hent data fra Supabase
+const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_", {
+    method: "GET",
+    headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljdHRzZXpydmx6dGxhamJrZHh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU5MzY2NjksImV4cCI6MjAzMTUxMjY2OX0.W2Dcw1gmLKcXLWOcWXBdxYBuBiVOjgi8xfwwII3329o"
+    }
+}).then(res => res.json());
+const {myData} = Astro.props;
+console.log(myData);
 ---
-
-
-    <Layout>
-
+<Layout>
 <h1>Your cart</h1>
-<a href="shoes">Continue shopping</a></li>
+<a href="shoes">Continue shopping</a>
 <hr>
+<h1>{data.brand}</h1>
 <hr>
+
+<!-- <Cartinfo data={myData} /> -->
+
+
+
 <div class="checkbox_tac">
     <div class="checkbox-container">
-            <input type="checkbox" id="round-checkbox" class="round-checkbox">
-            <label for="round-checkbox" class="round-checkbox-label"></label>
+        <input type="checkbox" id="round-checkbox" class="round-checkbox">
+        <label for="round-checkbox" class="round-checkbox-label"></label>
     </div>
     <p>I agree to terms and conditions</p>
 </div>
 <br>
 <a class="box" href="checkout">Check Out</a>
+</Layout>
 
-    </Layout>
-
-
-    <style>
+<style>
 a {
- font-size: 0.8rem;
- text-decoration: underline;
+    font-size: 0.8rem;
+    text-decoration: underline;
 }
 
 .box {
@@ -81,26 +93,21 @@ a {
     opacity: 1;
 }
 
-.checkbox_tac{
+.checkbox_tac {
     display: flex;
     justify-content: flex-start;
 }
 
-
 @media (min-width:800px){
-    .checkbox_tac{
-     justify-content: flex-end;
-     margin-right: 111px;
-
+    .checkbox_tac {
+        justify-content: flex-end;
+        margin-right: 111px;
     }
 
-    .box{
+    .box {
         display: flex;
         justify-content: flex-end;
         margin-left: 715px;
     }
-    
 }
-
-
-    </style>
+</style>
