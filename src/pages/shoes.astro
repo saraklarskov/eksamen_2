@@ -18,6 +18,7 @@ const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colad
 
     <section class="shows">
         {data.map(show=>{
+            if(show.brand == "Prada")
     return <Show data={show} />;
         })}
     </section>

@@ -59,7 +59,7 @@ console.log(myData);
  <h3>{myData.price}</h3>
  <br>
 
- <Button variant="primary">add to cart</Button>
+ <Button variant="add-to-cart">add to cart</Button>
 
 <h2>Description</h2>
 
@@ -76,11 +76,8 @@ console.log(myData);
 </div>
 </div>
 
-<Popupcart />
-<div id="cart" class="cart">
-  <h3>Din kurv</h3>
-  <ul id="cart-items"></ul>
-</div>
+<Popupcart data={myData} />
+
 </Layout>
 
 <style>
