@@ -14,20 +14,73 @@ const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colad
 
 <Layout>
     <h1>Shoes</h1>
-<Filter></Filter>
-    <section class="prada">
+<!-- <Filter /> -->
+
+<section class="shows">
+    {data.map(show=>{
+        if(show)
+return <Show data={show} />;
+    })}
+</section>
+
+<!-- <div class="hej">
+    <section class="Prada">
         {data.map(show=>{
             if(show.brand == "Prada")
     return <Show data={show} />;
         })}
     </section>
 
-    <section class="miu">
+    <section class="MiuMiu">
         {data.map(show=>{
             if(show.brand == "Miu Miu")
     return <Show data={show} />;
         })}
     </section>
+
+    <section class="Gucci">
+        {data.map(show=>{
+            if(show.brand == "Gucci")
+    return <Show data={show} />;
+        })}
+    </section>
+
+    <section class="Dior">
+        {data.map(show=>{
+            if(show.brand == "Dior")
+    return <Show data={show} />;
+        })}
+    </section>
+
+    <section class="Celine">
+        {data.map(show=>{
+            if(show.brand == "Celine")
+    return <Show data={show} />;
+        })}
+    </section>
+
+    <section class="Chanel">
+        {data.map(show=>{
+            if(show.brand == "Chanel")
+    return <Show data={show} />;
+        })}
+    </section>
+
+    <section class="JimmyChoo">
+        {data.map(show=>{
+            if(show.brand == "Jimmy Choo")
+    return <Show data={show} />;
+        })}
+    </section>
+
+    <section class="ManoloBlahnik">
+        {data.map(show=>{
+            if(show.brand == "Manolo Blahnik")
+    return <Show data={show} />;
+        })}
+    </section>
+</div> -->
+
 </Layout>
 
 <style>

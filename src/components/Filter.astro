@@ -5,7 +5,7 @@
 <div class="container">
     <h2 class="toggle-header">Filter +</h2>
     <div class="toggle-content">
-        <div class="type1">
+        <!-- <div class="type1">
             <h2 data-typ="type">Product type</h2>
             <h3 data-typ="Boot">boots</h3>
             <h3 data-typ="Heel">heels</h3>
@@ -26,7 +26,7 @@
             <h3 data-brand="EU 39">39</h3>
             <h3 data-brand="EU 40">40</h3>
             <h3 data-brand="EU 41">41</h3>
-        </div>
+        </div> -->
         <div class="brand">
             <h2 data-brand="brand">Brand</h2>
             <h3 data-brand="Celine">celine</h3>
@@ -34,8 +34,8 @@
             <h3 data-brand="Dior">dior</h3>
             <h3 data-brand="Gucci">gucci</h3>
             <h3 data-brand="Jimmy Choo">jimmy choo</h3>
-            <h3 data-brand="Manolo Blahnik">manolo blahnik</h3>
-            <h3 data-brand="Miu Miu">miu miu</h3>
+            <h3 data-brand="ManoloBlahnik">manolo blahnik</h3>
+            <h3 data-brand="MiuMiu">miu miu</h3>
             <h3 data-brand="Prada">prada</h3>
         </div>
     </div>
@@ -91,12 +91,23 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-let typer = document.querySelectorAll(".type1 h3");
+let typer = document.querySelectorAll(".brand h3");
 typer.forEach(type => {
-    type.addEventListener("click", function(){
-        skotype = type.dataset.typ;
-        alert(skotype);
-        document.querySelector(".prada").style.
+    type.addEventListener("click", function(evt){
+       // skotype = type.dataset.typ;
+        const thisIsClicked =evt.currentTarget.dataset.brand;
+    //        alert(evt.currentTarget.dataset.brand);
+         document.querySelector(".Prada").style.display ="none"
+         document.querySelector(".MiuMiu").style.display ="none"
+         document.querySelector(".Gucci").style.display ="none"
+         document.querySelector(".Dior").style.display ="none"
+         document.querySelector(".Celine").style.display ="none"
+         document.querySelector(".Chanel").style.display ="none"
+         document.querySelector(".JimmyChoo").style.display ="none"
+         document.querySelector(".ManoloBlahnik").style.display ="none"
+      
+         document.querySelector(`.${thisIsClicked}`).style.display= "block"
+
     })
 });
 
