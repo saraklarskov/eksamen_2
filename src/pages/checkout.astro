@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+
+
+
+<Layout>
+
+    <h1>The last step</h1>
+
+    <h2>Contact info</h2>
+
+    <form action="/action_page.php">
+
+        <div class="input">
+            <input type="email" id="email" name="email" placeholder="Email" />
+          </div>
+
+          <div class="tlf">
+            <input type="tel" id="phone" name="telephone number" placeholder="Phone">
+          </div>
+
+          <h2>Shipping</h2>
+
+
+        <input list="countries" name="countries" placeholder="Country">
+        <datalist id="countries">
+          <option value="Austria">
+          <option value="Belgium">
+          <option value="Bulgaria">
+          <option value="Croatia">
+          <option value="Cyprus">
+          <option value="Czehc Republic">
+          <option value="Denmark">
+          <option value="Estonia">
+          <option value="Finland">
+          <option value="France">
+          <option value="Germany">
+          <option value="Greece">
+          <option value="Hungary">
+          <option value="Ireland">
+          <option value="Italy">
+          <option value="Latvia">
+          <option value="Lithuania">
+          <option value="Luxemburg">
+          <option value="Malta">
+          <option value="Netherlands">
+          <option value="Poland">
+          <option value="Romania">
+          <option value="Slovakia">
+          <option value="Slovenia">
+          <option value="Spain">
+          <option value="Sweden">
+        </datalist>
+
+        <div class="input">
+            <input type="text" id="name" name="name" placeholder="Full name" />
+          </div>
+          <div class="input">
+            <input type="text" id="message" name="message" placeholder="Address" />
+          </div>
+
+          <div class="input">
+            <input type="number" id="message" name="message" placeholder="Postal code" />
+          </div>
+
+          <div class="checkbox_tac">
+            <div class="checkbox-container">
+                    <input type="checkbox" id="round-checkbox" class="round-checkbox">
+                    <label for="round-checkbox" class="round-checkbox-label"></label>
+            </div>
+            <p>Save this information for next time</p>
+        </div>
+
+        <h2>Payment</h2>
+
+        <div class="input">
+            <input type="number" id="message" name="message" placeholder="Card number" />
+          </div>
+          <div class="input">
+            <input type="number" id="message" name="message" placeholder="Exp. Date (DD/MM)" />
+          </div>
+          <div class="input">
+            <input type="number" id="message" name="message" placeholder="Security code" />
+          </div>
+          <div class="input">
+            <input type="text" id="name" name="name" placeholder="Name on card" />
+          </div>
+      </form>
+</Layout>
+
+
+<style>
+
+input::placeholder {
+    text-transform: uppercase;
+}
+
+
+input {
+    color:  #000;
+    border: 0.5px solid black;
+    background: #fffef9;
+    padding: 1em 1.7em;
+    max-width: 100%;
+    width: 80%;
+    margin-bottom: 1rem;
+   
+  }
+
+
+.checkbox-container {
+    position: relative;
+    margin-right: 4px;
+}
+
+.round-checkbox {
+    display: none;
+}
+
+.round-checkbox-label {
+    width: 15px;
+    height: 15px;
+    background-color: #FFFEF9;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    position: relative;
+}
+
+.round-checkbox-label::after {
+    content: '';
+    width: 4px;
+    height: 8px;
+    border: solid #000;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+}
+
+.round-checkbox:checked + .round-checkbox-label::after {
+    opacity: 1;
+}
+
+.checkbox_tac{
+    display: flex;
+    justify-content: flex-start;
+}
+</style>
