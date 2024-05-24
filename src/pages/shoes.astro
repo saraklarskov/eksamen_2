@@ -14,15 +14,20 @@ const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colad
 
 <Layout>
     <h1>Shoes</h1>
-    <h3 class="filter">Filter +</h3>
-
-    <section class="shows">
+<Filter></Filter>
+    <section class="prada">
         {data.map(show=>{
             if(show.brand == "Prada")
     return <Show data={show} />;
         })}
     </section>
 
+    <section class="miu">
+        {data.map(show=>{
+            if(show.brand == "Miu Miu")
+    return <Show data={show} />;
+        })}
+    </section>
 </Layout>
 
 <style>
