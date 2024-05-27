@@ -26,16 +26,15 @@ return <Show data={show} />;
     })}
 </section> -->
 
-
 <section class="shows">
-    {data.map(show => {
-        return (
+    {data
+        .sort((a, b) => b.available - a.available) // Sorter skoene efter tilgængelighed
+        .map(show => (
             <div class={`show-container ${show.available === 0 ? 'sold_out' : ''}`}>
                 <Show data={show} />
                 {show.available === 0 && <h4 class="sold-out-text">Sold out</h4>}
             </div>
-        );
-    })}
+        ))}
 </section>
 
 
