@@ -124,16 +124,6 @@ import Button from "../components/Button.astro";
       font-size: 36px;
     }
 
-    .forside_billeder_1{
-      display: flex;
-      justify-content: center; /* Centrerer vandret */
-      align-items: center; /* Centrerer lodret */
-      width: 80%;
-      margin-left: 10%;
-      gap: 1rem;
-    }
-
-
     .arrowclass {
       width: 3%;
       margin-top: 1rem;
@@ -155,6 +145,31 @@ import Button from "../components/Button.astro";
     .info {
       margin: 5% 15% 5% 15%
     }
+
+    .forside_billeder_1{
+      display: flex;
+      justify-content: center; /* Centrerer vandret */
+      align-items: center; /* Centrerer lodret */
+      width: 80%;
+      margin: 0 auto;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+
+    .forside_billeder_1 img{
+      width: 100%;
+      height: auto;
+      margin-bottom: 0.5rem;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .forside_billeder_1 img:hover{
+      transform: scale(1.05);
+    }
+
+
   }
 
   @media (min-width: 1200px) {
