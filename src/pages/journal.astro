@@ -18,18 +18,22 @@ import Layout from "../layouts/Layout.astro";
 
   <div class="journal2 tolvkolonner">
     <div class="grid_1">
+      <div class="zoom">
       <a href="/">
         <img src="pics/poster.webp" alt="Picture of pop up poster"/>
+      </div>
         <h2>Pop up</h2>
         <p>Check out some of our pop-up stores around Copenhagen. We love meeting our sweet customers.</p>
       </a>
       </div>
     <div class="grid_2">
+      <div class="zoom">
       <a href="/">
       <img
         src="pics/aboutimg2.webp"
         alt="Picture of the founders of Colada Archive"
       />
+      </div>
       <h2>founders</h2>
       <p>
         Meet us and learn the story behind Colada Archive.
@@ -54,16 +58,22 @@ import Layout from "../layouts/Layout.astro";
 
   <div class="journal4 tolvkolonner">
     <div class="grid_3">
+      <div class="zoom">
       <a href="/">
       <img src="pics/day.webp" alt="Picture of day outfit" />
+      </div>
+      <div>
       <h2>A day out</h2>
       <p>How to wear your heels all day and what to wear for the perfect day out outfit.
       </p>
+    </div>
     </a>
     </div>
     <div class="grid_4">
+      <div class="zoom">
          <a href="/">
       <img src="pics/night.webp" alt="Picture of night outfit" />
+         </div>
       <h2>A night out</h2>
       <p>
         How to make your outfit go from day to night. A basic going out fit with the perfect shoes to match.
@@ -105,103 +115,22 @@ import Layout from "../layouts/Layout.astro";
       margin-bottom: 0;
     }
 
-    .stylepic, .grid_1{
+.sacpic, .stylepic, .zoom {
       overflow: hidden;
       width: 100%;
     }
 
-    .stylepic img, .grid_1 img{
+
+    .stylepic img, .grid_1 img, .grid_2 img, .grid_3 img, .grid_4 img, .sacpic img{
       width: 100%;
       height: auto;
       object-fit: cover;
       transition: transform 0.3s ease;
     }
 
-    .stylepic img:hover, .grid_1 img:hover{
+    .stylepic img:hover, .grid_1 img:hover, .grid_2 img:hover, .grid_3 img:hover, .grid_4 img:hover, .sacpic img:hover{
       transform: scale(1.05);
     }
-
-    /* .grid_1{
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .grid_1 img{
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .grid_1 img:hover{
-      transform: scale(1.05);
-    } */
-
-    .grid_2{
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .grid_2 img{
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .grid_2 img:hover{
-      transform: scale(1.05);
-    }
-
-    .sacpic{
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .sacpic img{
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .sacpic img:hover{
-      transform: scale(1.05);
-    }
-
-
-    .grid_3{
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .grid_3 img{
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .grid_3 img:hover{
-      transform: scale(1.05);
-    }
-
-    .grid_4{
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .grid_4 img{
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .grid_4 img:hover{
-      transform: scale(1.05);
-    }
-
 
 
     .stylepic{
