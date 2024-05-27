@@ -3,9 +3,8 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-
+  <h1>CONTACT US</h1>
   <div class="contact_us">
-    <h1>CONTACT US</h1>
 
     <form action="tak">
       <div class="input">
@@ -53,7 +52,7 @@ import Layout from "../layouts/Layout.astro";
     background: #fffef9;
     padding: 1em 1.7em;
     /* max-width: 100%; */
-    width: 90%;
+    width: 86%;
     margin-bottom: 1rem;
   }
 
@@ -80,10 +79,14 @@ import Layout from "../layouts/Layout.astro";
   }
 
   @media (min-width: 800px) {
+
+    h1 {
+      text-align: center;
+    }
     .contact_us {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: center;
       padding: 0; /* Remove padding for larger screens */
     }
 
@@ -92,7 +95,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     input {
-      width: 100%; /* Ensure input fields take full width of form */
+      width: 93%; /* Ensure input fields take full width of form */
     }
 
     #sendknap input {
