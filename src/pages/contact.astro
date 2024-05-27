@@ -5,24 +5,23 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
 
   <div class="contact_us">
-  <h1>CONTACT US</h1>
+    <h1>CONTACT US</h1>
 
-  <form action="tak">
-    <div class="input">
-      <input type="text" id="name" name="name" placeholder="Name" />
-    </div>
-    <div class="input">
-      <input type="email" id="email" name="email" placeholder="Email" />
-    </div>
-    <div class="input">
-      <input type="text" id="message" name="message" placeholder="Message" />
-    </div>
-    <div id="sendknap">
-      <input type="submit" value="SEND" />
-    </div>
-  </form>
-</div>
-
+    <form action="tak">
+      <div class="input">
+        <input type="text" id="name" name="name" placeholder="Name" />
+      </div>
+      <div class="input">
+        <input type="email" id="email" name="email" placeholder="Email" />
+      </div>
+      <div class="input">
+        <input type="text" id="message" name="message" placeholder="Message" />
+      </div>
+      <div id="sendknap">
+        <input type="submit" value="SEND" />
+      </div>
+    </form>
+  </div>
 
   <p>
     You can also reach us via Instagram direct message <a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">@colada_archive</a> or via
@@ -31,46 +30,42 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-  h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
   p {
     margin-bottom: 7rem;
+    text-align: center;
   }
 
-  a{
+  a {
     text-decoration: none;
     color: #000;
   }
 
-  a:hover{
+  a:hover {
     text-decoration: underline;
   }
-  a:active{
+  a:active {
     text-decoration: underline;
     color: #b2113c;
   }
   input {
-    color:  #000;
+    color: #000;
     border: 1px solid black;
     background: #fffef9;
     padding: 1em 1.7em;
-    max-width: 100%;
-    width: 87.8%;
+    /* max-width: 100%; */
+    width: 90%;
     margin-bottom: 1rem;
-  
   }
 
-  input::placeholder{
-    text-transform:uppercase;
+  input::placeholder {
+    text-transform: uppercase;
     font-family: "Poppins", sans-serif;
     color: #666666;
   }
 
   #sendknap input {
     margin-top: 2em;
-    background:  #000;
+    background: #000;
     color: #fffef9;
     padding: 1em 1.7em;
     width: 100%;
@@ -79,42 +74,37 @@ import Layout from "../layouts/Layout.astro";
     height: 70px;
   }
 
-
-  .contact_us{
-      margin: 0 auto;
-    }
+  .contact_us {
+    margin: 0 auto;
+    padding: 0 1em; /* Add padding for small screens */
+  }
 
   @media (min-width: 800px) {
-    h1 {
-      margin: 0 auto;
+    .contact_us {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0; /* Remove padding for larger screens */
     }
-    p {
-      margin-top: 2rem;
-    }
-    form {
-      margin-top: 2rem;
-      /* margin-left: 15rem; */
-    }
-    input {
-      padding: 1em 1.7em;
-      max-width: 100%;
-      width: 60%;
-      margin-bottom: 1rem;
-      margin: 0 auto;
-    }
-    #sendknap input {
-      margin-top: 2em;
-      padding: 1em 1.7em;
-      width: 65.5%;
-      transition: background-color 0.3s, color 0.3s;
 
+    form {
+      width: 60%; /* Increase form width */
     }
+
+    input {
+      width: 100%; /* Ensure input fields take full width of form */
+    }
+
+    #sendknap input {
+      width: 100%;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
     #sendknap:hover input {
       background: #fffef9;
       color: #000;
       border: 1px solid #000;
     }
-
-   
   }
 </style>
+
