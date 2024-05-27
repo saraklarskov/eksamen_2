@@ -6,9 +6,9 @@ import Layout from "../layouts/Layout.astro";
   <h1 class="jour">Our journal</h1>
   
 <a class="stylepic" href="/">
-  <div class="journal1 tolvkolonner">
+  <div class="journal1 tolvkolonner hover1">
     <img src="pics/style.webp" alt="Billede af en masse sko"/>
-    <div class="text1">
+  <div class="text1">
       <a href="/">
       <h2>How to style</h2>
       <p>Socks or no socks? Dresses, skirts or jeans? See how to styles your shoes for different occations.</p>
@@ -104,6 +104,105 @@ import Layout from "../layouts/Layout.astro";
       column-gap: 1rem;
       margin-bottom: 0;
     }
+
+    .stylepic{
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .stylepic img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .stylepic img:hover{
+      transform: scale(1.05);
+    }
+
+    .grid_1{
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .grid_1 img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .grid_1 img:hover{
+      transform: scale(1.05);
+    }
+
+    .grid_2{
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .grid_2 img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .grid_2 img:hover{
+      transform: scale(1.05);
+    }
+
+    .sacpic{
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .sacpic img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .sacpic img:hover{
+      transform: scale(1.05);
+    }
+
+
+    .grid_3{
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .grid_3 img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .grid_3 img:hover{
+      transform: scale(1.05);
+    }
+
+    .grid_4{
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .grid_4 img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .grid_4 img:hover{
+      transform: scale(1.05);
+    }
+
+
 
     .stylepic{
       grid-column-start: 1;
