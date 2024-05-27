@@ -193,9 +193,7 @@ margin-top: 33px;
     // Event listener for "View Your Cart" button
     viewCartBtn.addEventListener('click', () => {
         // Handlingen, når knappen klikkes, fx navigering til en kurvside
-        window.location.href = '/cart'; // Ændr URL'en til din kurvside
+        window.location.href = '/cart/'+{data.id}; // Ændr URL'en til din kurvside
     });
 });
-
-
 </script>

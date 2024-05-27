@@ -1,56 +1,68 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const {data} = Astro.props;
+console.log(data);
 ---
 
+<Layout>
+    <h1>Your cart</h1>
+    <a href="shoes">Continue shopping</a>
+    <hr>
 
-    <Layout>
+    <div id="cart-items">
+        <!-- Dynamically inserted cart items will appear here -->
+    </div>
 
-<h1>Your cart</h1>
-<a href="shoes">Continue shopping</a></li>
-<hr>
-<hr>
-<div class="checkbox_tac">
-    <div class="checkbox-container">
+    <hr>
+    <div class="checkbox_tac">
+        <div class="checkbox-container">
             <input type="checkbox" id="round-checkbox" class="round-checkbox">
             <label for="round-checkbox" class="round-checkbox-label"></label>
+        </div>
+        <p>I agree to terms and conditions</p>
     </div>
-    <p>I agree to terms and conditions</p>
-</div>
-<br>
-<a class="box" href="checkout">Check Out</a>
+    <br>
+    <a class="box" href="checkout">Check Out</a>
+</Layout>
 
-    </Layout>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const cartItemsContainer = document.getElementById("cart-items");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+    if (cart.length > 0) {
+        cart.forEach(item => {
+            const cartItem = document.createElement("div");
+            cartItem.className = "cart-item";
+            cartItem.innerHTML = `
+                <img src=${Astro.props.data.image1} alt="${Astro.props.data.brand}" class="cart-item-image">
+                <div class="cart-item-details">
+                    <h2>${Astro.props.data.brand}</h2>
+                    <p>Price: ${Astro.props.data.price}</p>
+                </div>
+            `;
+            cartItemsContainer.appendChild(cartItem);
+        });
+    } else {
+        cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+    }
+});
+</script>
 
-    <style>
-a {
- font-size: 0.8rem;
- text-decoration: underline;
-}
-
+<style>
+h1 { text-align: center; }
+a { font-size: 0.8rem; text-decoration: underline; }
 .box {
     padding: 10px 40px;
-    border: 1px solid #000; 
+    border: 1px solid #000;
     text-decoration: none;
     color: #FFFEF9;
     background-color: #000;
     transition: background-color 0.3s, color 0.3s;
 }
-
-.box:hover {
-    background-color: #FFFEF9;
-    color: #000;
-}
-
-.checkbox-container {
-    position: relative;
-    margin-right: 10px;
-}
-
-.round-checkbox {
-    display: none;
-}
-
+.box:hover { background-color: #FFFEF9; color: #000; }
+.checkbox-container { position: relative; margin-right: 10px; }
+.round-checkbox { display: none; }
 .round-checkbox-label {
     width: 20px;
     height: 20px;
@@ -64,7 +76,6 @@ a {
     transition: background-color 0.3s, border-color 0.3s;
     position: relative;
 }
-
 .round-checkbox-label::after {
     content: '';
     width: 5px;
@@ -76,31 +87,14 @@ a {
     transition: opacity 0.3s;
     position: absolute;
 }
+.round-checkbox:checked + .round-checkbox-label::after { opacity: 1; }
+.checkbox_tac { display: flex; justify-content: flex-start; }
+.cart-item { display: flex; align-items: center; margin-bottom: 1em; }
+.cart-item-image { width: 100px; height: auto; margin-right: 1em; }
+.cart-item-details { flex-grow: 1; }
 
-.round-checkbox:checked + .round-checkbox-label::after {
-    opacity: 1;
+@media (min-width: 800px) {
+    .checkbox_tac { justify-content: flex-end; margin-right: 111px; }
+    .box { display: flex; justify-content: flex-end; margin-left: 715px; }
 }
-
-.checkbox_tac{
-    display: flex;
-    justify-content: flex-start;
-}
-
-
-@media (min-width:800px){
-    .checkbox_tac{
-     justify-content: flex-end;
-     margin-right: 111px;
-
-    }
-
-    .box{
-        display: flex;
-        justify-content: flex-end;
-        margin-left: 715px;
-    }
-    
-}
-
-
-    </style>
+</style>

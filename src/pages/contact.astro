@@ -6,7 +6,6 @@ import Layout from "../layouts/Layout.astro";
 
   <div class="contact_us">
     <h1>CONTACT US</h1>
-
     <form action="tak">
       <div class="input">
         <input type="text" id="name" name="name" placeholder="Name" />
@@ -30,6 +29,10 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
+
+  h1 {
+    margin-top: 80px;
+  }
   p {
     margin-bottom: 7rem;
     text-align: center;
@@ -43,33 +46,34 @@ import Layout from "../layouts/Layout.astro";
   a:hover {
     text-decoration: underline;
   }
+
   a:active {
     text-decoration: underline;
     color: #b2113c;
   }
+
   input {
     color: #000;
     border: 1px solid black;
     background: #fffef9;
-    padding: 1em 1.7em;
-    /* max-width: 100%; */
-    width: 90%;
+    width: 100%;
     margin-bottom: 1rem;
+    height: 30px;
   }
 
   input::placeholder {
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
     color: #666666;
+    padding: 10px;
   }
 
   #sendknap input {
-    margin-top: 2em;
     background: #000;
     color: #fffef9;
-    padding: 1em 1.7em;
     width: 100%;
   }
+
   #message {
     height: 70px;
   }
@@ -80,11 +84,14 @@ import Layout from "../layouts/Layout.astro";
   }
 
   @media (min-width: 800px) {
+
+    h1 {
+      margin-top: 0px;
+    }
     .contact_us {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0; /* Remove padding for larger screens */
     }
 
     form {
@@ -93,6 +100,7 @@ import Layout from "../layouts/Layout.astro";
 
     input {
       width: 100%; /* Ensure input fields take full width of form */
+      height: 50px;
     }
 
     #sendknap input {
@@ -107,4 +115,3 @@ import Layout from "../layouts/Layout.astro";
     }
   }
 </style>
-
