@@ -1,11 +1,11 @@
 ---
-
+const {header} = Astro.props
 ---
 
 <div class="container">
-    <h2 class="toggle-header">how can i place an order?</h2>
+    <h2 class="toggle-header">{header}</h2>
     <div class="toggle-content">
-        <p>Dette er den tekst, der foldes ud, når du klikker på overskriften.</p>
+        <slot />
     </div>
 </div>
 
