@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
+
+  <div class="contact_us">
   <h1>CONTACT US</h1>
 
   <form action="tak">
@@ -19,6 +21,8 @@ import Layout from "../layouts/Layout.astro";
       <input type="submit" value="SEND" />
     </div>
   </form>
+</div>
+
 
   <p>
     You can also reach us via Instagram direct message <a href="https://www.instagram.com/colada_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">@colada_archive</a> or via
@@ -28,11 +32,10 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
   h1 {
-    margin-left: 27%;
+    text-align: center;
     margin-bottom: 2rem;
   }
   p {
-    margin-left: 5%;
     margin-bottom: 7rem;
   }
 
@@ -54,40 +57,50 @@ import Layout from "../layouts/Layout.astro";
     background: #fffef9;
     padding: 1em 1.7em;
     max-width: 100%;
-    width: 80%;
+    width: 87.8%;
     margin-bottom: 1rem;
-    margin-left: 0.5rem;
-    margin-right: -0.5rem;
+  
   }
+
+  input::placeholder{
+    text-transform:uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #666666;
+  }
+
   #sendknap input {
     margin-top: 2em;
     background:  #000;
     color: #fffef9;
     padding: 1em 1.7em;
-    width: 93.5%;
+    width: 100%;
   }
   #message {
     height: 70px;
   }
+
+
+  .contact_us{
+      margin: 0 auto;
+    }
+
   @media (min-width: 800px) {
     h1 {
-      margin-left: 40%;
+      margin: 0 auto;
     }
     p {
-      margin-left: 17%;
       margin-top: 2rem;
     }
     form {
       margin-top: 2rem;
-      margin-left: 15rem;
+      /* margin-left: 15rem; */
     }
     input {
       padding: 1em 1.7em;
       max-width: 100%;
       width: 60%;
       margin-bottom: 1rem;
-      margin-left: 0.5rem;
-      margin-right: -0.5rem;
+      margin: 0 auto;
     }
     #sendknap input {
       margin-top: 2em;
@@ -101,5 +114,7 @@ import Layout from "../layouts/Layout.astro";
       color: #000;
       border: 1px solid #000;
     }
+
+   
   }
 </style>
