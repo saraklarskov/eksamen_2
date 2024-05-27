@@ -13,6 +13,14 @@
 
 <style>
 
+.scroll-container, .scroll-container1 {
+    display: none;
+}
+@media (min-width: 800px){
+
+    .scroll-container, .scroll-container1 {
+    display: block;
+}
 
 .scroll-container, .scroll-container1 {
     position: relative;
@@ -22,7 +30,7 @@
 }
 
 .scroll-container {
-    margin-top: 200px;
+    margin-top: 50px;
 }
 .scroll-container1 {
     margin-bottom: 50px;
@@ -44,6 +52,7 @@
 .from-right {
     right: -200px;
     z-index: 1; /* Sørg for, at det andet billede ligger under det første */
+}
 }
 </style>
 
