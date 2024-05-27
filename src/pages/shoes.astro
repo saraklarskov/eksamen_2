@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Show from "../components/Show.astro";
-import Filter from "../components/Filter.astro";
 // // fetcher data - henter URL fra supabase, skriv  rest/v1/tabelnavn ALTID
 const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_", {
     method: "GET",
@@ -17,14 +16,7 @@ const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colad
 <!-- <Filter /> -->
 
 
-<Filter />
 
-<!-- <section class="shows">
-    {data.map(show=>{
-        if(show)
-return <Show data={show} />;
-    })}
-</section> -->
 
 <section class="shows">
     {data
