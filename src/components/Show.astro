@@ -2,6 +2,7 @@
 const {data} = Astro.props;
 console.log(data);
 ---
+
 <a href={`shows/${data.id}`}>
     <article class="vark">
         <img src={data.image1} alt="Billeder af sko" class="billede">
@@ -23,11 +24,23 @@ console.log(data);
     width: 100%;
     height: auto;
     margin-bottom: 0.5rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+}
+
+.billede:hover{
+    transform: scale(1.05);
 }
 
 .vark{
     margin-bottom: 2rem;
+    overflow: hidden;
+      width: 100%;
 }
+
+
+
     </style>
 
 
