@@ -4,8 +4,10 @@ console.log(data);
 ---
 
 <a href={`shows/${data.id}`}>
-    <article class="vark">
-        <img src={data.image1} alt="Billeder af sko" class="billede">
+    <article>
+        <div class="shoes">
+        <img src={data.image1} alt="Picture of shows" class="billede">
+        </div>
         <h4 class="marke">{data.brand}</h4>
         <h2 class="typ">{data.type}</h2>
         <div class="pris_size">
@@ -16,27 +18,32 @@ console.log(data);
 
 
     <style>
-        .pris_size {
+
+    .pris_size {
     display: flex;
     justify-content: space-between;
-}
-.billede {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    margin-bottom: 50px;
+    }
+    
 
-}
 
-.billede:hover{
-    transform: scale(1.05);
-}
+@media (min-width:800px){
+    .shoes{
+        overflow: hidden;
+        width: 100%;
+    }
 
-.vark{
-    margin-bottom: 2rem;
-    overflow: hidden;
-      width: 100%;
+    .billede {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .billede:hover{
+        transform: scale(1.05);
+    }
+
 }
 
     </style>
