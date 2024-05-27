@@ -5,61 +5,45 @@
 <div class="container">
     <h2 class="toggle-header">Filter +</h2>
     <div class="toggle-content">
-        <!-- <div class="type1">
-            <h2 data-typ="type">Product type</h2>
-            <h3 data-typ="Boot">boots</h3>
-            <h3 data-typ="Heel">heels</h3>
-            <h3 data-typ="Kitten heel">kitten heels</h3>
-            <h3 data-typ="Mule">mules</h3>
-            <h3 data-typ="Sling back">slingbacks</h3>
-            <h3 data-typ="Mary-Janes">Mary Janes</h3>
+        <div class="type">
+            <h2>Product type</h2>
+            <h3>boots</h3>
+            <h3>heels</h3>
+            <h3>kitten heels</h3>
+            <h3>mules</h3>
+            <h3>slingbacks</h3>
         </div>
         <div class="sizes">
-            <h2 data-brand="size">Sizes eu</h2>
-            <h3 data-brand="EU 35">35</h3>
-            <h3 data-brand="EU 36">36</h3>
-            <h3 data-brand="EU 36,5">36,5</h3>
-            <h3 data-brand="EU 37">37</h3>
-            <h3 data-brand="EU 37,5">37,5</h3>
-            <h3 data-brand="EU 38">38</h3>
-            <h3 data-brand="EU 38,5">38,5</h3>
-            <h3 data-brand="EU 39">39</h3>
-            <h3 data-brand="EU 40">40</h3>
-            <h3 data-brand="EU 41">41</h3>
-        </div> -->
+            <h2>Sizes eu</h2>
+            <h3>37</h3>
+            <h3>38</h3>
+            <h3>39</h3>
+            <h3>40</h3>
+            <h3>41</h3>
+        </div>
         <div class="brand">
-            <h2 data-brand="brand">Brand</h2>
-            <h3 data-brand="Celine">celine</h3>
-            <h3 data-brand="Chanel">chanel</h3>
-            <h3 data-brand="Dior">dior</h3>
-            <h3 data-brand="Gucci">gucci</h3>
-            <h3 data-brand="Jimmy Choo">jimmy choo</h3>
-            <h3 data-brand="ManoloBlahnik">manolo blahnik</h3>
-            <h3 data-brand="MiuMiu">miu miu</h3>
-            <h3 data-brand="Prada">prada</h3>
+            <h2>Brand</h2>
+            <h3>celine</h3>
+            <h3>chanel</h3>
+            <h3>dior</h3>
+            <h3>gucci</h3>
+            <h3>jimmy choo</h3>
+            <h3>manolo blahnik</h3>
+            <h3>miu miu</h3>
+            <h3>prada</h3>
         </div>
     </div>
 </div>
-
 
 <style>
     h2 {
         margin-top: 40px;
     }
 
-    .container {
-        position: relative;
-        z-index: 1;
-    }
-
     .toggle-content {
         display: none; /* Skjuler indholdet som standard */
         transition: max-height 0.3s ease-out;
         max-height: 0;
-        position: absolute;
-        width: 100%;
-        background-color: #fffef9;
-        z-index: 2;
     }
 
     .toggle-content.show {
@@ -75,8 +59,6 @@
 </style>
 
 <script>
-    let skotype;
-
 document.addEventListener("DOMContentLoaded", function() {
     const headers = document.querySelectorAll(".toggle-header");
 
@@ -90,27 +72,8 @@ document.addEventListener("DOMContentLoaded", function() {
             this.textContent = isVisible ? 'Filter -' : 'Filter +';
         });
     });
-
-let typer = document.querySelectorAll(".brand h3");
-typer.forEach(type => {
-    type.addEventListener("click", function(evt){
-       // skotype = type.dataset.typ;
-        const thisIsClicked =evt.currentTarget.dataset.brand;
-    //        alert(evt.currentTarget.dataset.brand);
-         document.querySelector(".Prada").style.display ="none"
-         document.querySelector(".MiuMiu").style.display ="none"
-         document.querySelector(".Gucci").style.display ="none"
-         document.querySelector(".Dior").style.display ="none"
-         document.querySelector(".Celine").style.display ="none"
-         document.querySelector(".Chanel").style.display ="none"
-         document.querySelector(".JimmyChoo").style.display ="none"
-         document.querySelector(".ManoloBlahnik").style.display ="none"
-      
-         document.querySelector(`.${thisIsClicked}`).style.display= "block"
-
-    })
 });
 
-console.log({typer})
-});
+
+
 </script>

@@ -16,74 +16,49 @@ const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colad
     <h1>Shoes</h1>
 <!-- <Filter /> -->
 
-<section class="shows">
+
+<Filter />
+
+<!-- <section class="shows">
     {data.map(show=>{
         if(show)
 return <Show data={show} />;
     })}
+</section> -->
+
+
+<section class="shows">
+    {data.map(show => {
+        return (
+            <div class={`show-container ${show.available === 0 ? 'sold_out' : ''}`}>
+                <Show data={show} />
+                {show.available === 0 && <h4 class="sold-out-text">Sold out</h4>}
+            </div>
+        );
+    })}
 </section>
 
-<!-- <div class="hej">
-    <section class="Prada">
-        {data.map(show=>{
-            if(show.brand == "Prada")
-    return <Show data={show} />;
-        })}
-    </section>
-
-    <section class="MiuMiu">
-        {data.map(show=>{
-            if(show.brand == "Miu Miu")
-    return <Show data={show} />;
-        })}
-    </section>
-
-    <section class="Gucci">
-        {data.map(show=>{
-            if(show.brand == "Gucci")
-    return <Show data={show} />;
-        })}
-    </section>
-
-    <section class="Dior">
-        {data.map(show=>{
-            if(show.brand == "Dior")
-    return <Show data={show} />;
-        })}
-    </section>
-
-    <section class="Celine">
-        {data.map(show=>{
-            if(show.brand == "Celine")
-    return <Show data={show} />;
-        })}
-    </section>
-
-    <section class="Chanel">
-        {data.map(show=>{
-            if(show.brand == "Chanel")
-    return <Show data={show} />;
-        })}
-    </section>
-
-    <section class="JimmyChoo">
-        {data.map(show=>{
-            if(show.brand == "Jimmy Choo")
-    return <Show data={show} />;
-        })}
-    </section>
-
-    <section class="ManoloBlahnik">
-        {data.map(show=>{
-            if(show.brand == "Manolo Blahnik")
-    return <Show data={show} />;
-        })}
-    </section>
-</div> -->
 
 </Layout>
 
 <style>
+
+.sold_out {
+    opacity: 0.5;
+}
+
+.show-container {
+    position: relative;
+}
+
+.sold-out-text {
+    position: absolute;
+    bottom: 110px;
+    right: 0;
+    margin: 0;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
     .shows {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -92,12 +67,17 @@ return <Show data={show} />;
 .filter {
     margin-bottom: 30px;
 }
+
     @media (min-width: 800px){
         .shows {
             grid-template-columns: 1fr 1fr 1fr;
         }
         .filter {
     margin-bottom: 60px;
+}
+
+.sold-out-text {
+    font-size: 17px;
 }
     }
 </style>

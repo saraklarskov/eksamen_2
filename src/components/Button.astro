@@ -30,8 +30,14 @@ button:hover {
     color: #000;
 }
 
+.sold-out {
+background-color: #000;
+color: #FFFEF9;
+}
+
 
 @media (min-width:800px){
+
 
 .product {
     margin: 20px;
@@ -74,7 +80,7 @@ button:hover {
     text-align: center;
 }
 
-#view-cart-btn:hover {
+#view-cart-btn:hover, .sold-out:hover {
     background-color: black;
     color: #FFFEF9;
 }
@@ -82,38 +88,3 @@ button:hover {
 
 </style>
 
-<script>
-//    document.addEventListener('DOMContentLoaded', () => {
-//     const addToCartButtons = document.querySelectorAll('.add-to-cart');
-//     const cart = document.getElementById('cart');
-//     const cartItems = document.getElementById('cart-items');
-//     const viewCartBtn = document.getElementById('view-cart-btn');
-
-//     addToCartButtons.forEach(button => {
-//         button.addEventListener('click', () => {
-//             const product = button.getAttribute('data-product');
-
-//             // Tøm kurven før tilføjelse af nyt produkt
-//             cartItems.innerHTML = '';
-
-//             const listItem = document.createElement('li');
-//             listItem.textContent = product;
-//             cartItems.appendChild(listItem);
-
-//             cart.classList.add('show');
-
-//             // Fjern klassen 'show' efter 4 sekunder (4000 millisekunder)
-//             setTimeout(() => {
-//                 cart.classList.remove('show');
-//             }, 20000);
-//         });
-//     });
-
-//     // Event listener for "View Your Cart" button
-//     viewCartBtn.addEventListener('click', () => {
-//         // Handlingen, når knappen klikkes, fx navigering til en kurvside
-//         window.location.href = '/cart'; // Ændr URL'en til din kurvside
-//     });
-// });
-
-</script>
