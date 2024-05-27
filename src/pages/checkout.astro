@@ -7,11 +7,14 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
 
-    <h1>The last step</h1>
-
-    <h2>Contact info</h2>
-
     <form action="/action_page.php">
+
+        <div class="grid_2">
+        <div class="col_1">
+
+        <h1>The last step</h1>
+
+        <h2>Contact info</h2>
 
         <div class="input">
             <input type="email" id="email" name="email" placeholder="Email" />
@@ -112,11 +115,18 @@ import Layout from "../layouts/Layout.astro";
           <div class="input">
             <input type="text" id="name_card" name="name" placeholder="Name on card" />
           </div>
+        </div>
+
+          <div class="col_2">
+
 
           <div class="discount-container">
             <input type="text" id="discount-code" placeholder="Enter discount code">
             <button id="apply-btn">Apply</button>
         </div>
+    </div>
+
+    </div>
 
       </form>
 </Layout>
@@ -127,6 +137,7 @@ import Layout from "../layouts/Layout.astro";
 input::placeholder {
     text-transform: uppercase;
     font-family: 'poppins';
+    color: #666666;
 }
 
 
@@ -195,8 +206,8 @@ input {
     width: 87.4%;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
-    font-weight: 200;
     font-size: 0.8rem;
+    color: #666666;
 }
 
 .circular-checkbox-container {
@@ -238,7 +249,7 @@ input {
 }
 
 #postal{
-    width: 75%;
+    width: 88%;
 }
 
 #city{
@@ -265,7 +276,6 @@ input {
     border: 0.5px solid black;
     outline: none;
     width: 200px;
-    background-color: white;
     color: black;
     text-transform: uppercase;
     font-family: 'Poppins', Arial, sans-serif; /* Poppins skrifttype */
@@ -291,6 +301,36 @@ input {
     color: black; 
 }
 
+h2 {
+    margin-top: 26px; 
+}
+
+
+
+@media (min-width: 800px){
+    .grid_2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .circular-checkbox-wrapper {
+        width: 90%;
+    }
+
+}
+
+
+@media (min-width: 1000px){
+    .circular-checkbox-wrapper {
+        width: 87%;
+    }
+}
+
+@media (min-width: 1200px){
+    .circular-checkbox-wrapper {
+        width: 85%;
+    }
+}
 
 
 </style>
