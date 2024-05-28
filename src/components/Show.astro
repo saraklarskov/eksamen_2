@@ -7,6 +7,8 @@ console.log(data);
     <article>
         <div class="shoes">
         <img src={data.image1} alt="Picture of shoe" class="billede">
+        <img src={data.image2} alt="Picture of shoe" class="hover-img">
+
         </div>
         <h4 class="typ">{data.type}</h4>
         <h2 class="marke">{data.brand}</h2>
@@ -24,25 +26,43 @@ console.log(data);
     justify-content: space-between;
     margin-bottom: 50px;
     }
+
+    .hover-img{
+        display: none;
+    }
     
 
 
 @media (min-width:800px){
-    .shoes{
-        overflow: hidden;
-        width: 100%;
-    }
 
-    .billede {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
+    .shoes {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
 
-    .billede:hover{
-        transform: scale(1.05);
-    }
+.shoes .billede,
+.shoes .hover-img {
+    width: 100%; /* Tilpas størrelsen efter behov */
+    display: block;
+}
+
+.shoes .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.shoes:hover .hover-img {
+    opacity: 1;
+}
+
+.shoes:hover .billede {
+    opacity: 1;
+}
 
 }
 
