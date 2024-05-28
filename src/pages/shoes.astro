@@ -40,11 +40,12 @@ const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colad
 
 .show-container {
     position: relative;
+    /* height: 300px; */
 }
 
 .sold-out-text {
     position: absolute;
-    bottom: 123px;
+    bottom: 25px;
     right: 0;
     margin: 0;
     padding: 5px;
@@ -59,6 +60,12 @@ const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colad
     margin-bottom: 30px;
 }
 
+/* @media (min-width: 400px){
+    .show-container {
+    height: 310px;
+}  
+} */
+
     @media (min-width: 800px){
         .shows {
             grid-template-columns: 1fr 1fr 1fr;
@@ -70,5 +77,9 @@ const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colad
 .sold-out-text {
     font-size: 17px;
 }
+
+/* .show-container {
+    height: 580px;
+} */
     }
 </style>

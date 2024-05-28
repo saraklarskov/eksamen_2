@@ -65,8 +65,9 @@ window.addEventListener("scroll", function() {
 
     var scrollImages = document.querySelectorAll('.scroll-image');
 
-    scrollImages.forEach(function(image) {
-        var imagePosition = image.getBoundingClientRect().top;
+    for (let i = 0; i < scrollImages.length; i++) {
+        var image = scrollImages[i];
+        var imagePosition = (image.getBoundingClientRect() as DOMRect).top;
         var imageCenter = imagePosition + image.offsetHeight / 2;
 
         var translateValue = (scrollPosition - imageCenter) / 4; // Juster her for at ændre bevægelseshastigheden
@@ -75,23 +76,23 @@ window.addEventListener("scroll", function() {
             if (scrollPosition > lastScrollTop) {
                 // Scroll down
                 if (image.classList.contains('from-left')) {
-                    image.style.transform = "translateX(" + translateValue + "px)";
+                    (image as HTMLElement).style.transform = "translateX(" + translateValue + "px)";
                 } else {
-                    image.style.transform = "translateX(-" + Math.abs(translateValue) + "px)";
+                    (image as HTMLElement).style.transform = "translateX(-" + Math.abs(translateValue) + "px)";
                 }
             } else {
                 // Scroll up
                 if (image.classList.contains('from-left')) {
-                    image.style.transform = "translateX(-" + Math.abs(translateValue) + "px)";
+                    (image as HTMLElement).style.transform = "translateX(-" + Math.abs(translateValue) + "px)";
                 } else {
-                    image.style.transform = "translateX(" + translateValue + "px)";
+                    (image as HTMLElement).style.transform = "translateX(" + translateValue + "px)";
                 }
             }
         } else {
             // Hide images when out of view
-            image.style.transform = "translateX(-100%)";
+            (image as HTMLElement).style.transform = "translateX(-100%)";
         }
-    });
+    }
 
     lastScrollTop = scrollPosition;
 });

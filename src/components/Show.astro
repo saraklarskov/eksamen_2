@@ -9,16 +9,28 @@ console.log(data);
             <img src={data.image1} alt="Picture of shoe" class="billede">
             <img src={data.image2} alt="" class="hover-img">
         </div>
-        <h4 class="typ">{data.type}</h4>
-        <h2 class="marke">{data.brand}</h2>
-        <div class="pris_size">
-            <h4 class="pris">{data.price}</h4>
-            <h4 class="size">{data.size}</h4>
-        </div>
+        {data.available ? (
+            <div>
+                <h4 class="typ">{data.type}</h4>
+                <h2 class="marke">{data.brand}</h2>
+                <div class="pris_size">
+                    <h4 class="pris">{data.price}</h4>
+                    <h4 class="size">{data.size}</h4>
+                </div>
+            </div>
+        ) : (
+            <div class="udsolgt">
+                <h2 class="marke udsolgt">{data.brand}</h2>
+            </div>
+        )}
     </article>
 </a>
 
     <style>
+
+.udsolgt {
+    text-decoration: line-through;
+}
     .pris_size {
     display: flex;
     justify-content: space-between;
@@ -27,6 +39,10 @@ console.log(data);
 
     .hover-img{
         display: none;
+    }
+
+    .marke {
+        font-size: 19px;
     }
     
 @media (min-width:800px){
