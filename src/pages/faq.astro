@@ -7,21 +7,32 @@ import Faqcard from "../components/Faqcard.astro";
     <h1>Frequently Asked Questions</h1>
 
     <Faqcard 
-        header="How can I place an order?"><p>You can place an order through Instagram by sending us a direct message (DM) on our profile [here](Link to Instagram), specifying which heels you are interested in.</p>
+        header="How can I place an order?"><p>You can place an order through Instagram by sending us a direct message (DM) on our profile [here](Link to Instagram), specifying which heels you are interested in.</p><hr>
     </Faqcard>
     <Faqcard 
-        header="What is the return policy?"><p>We do not offer returns, but feel free to ask us anything about the shoes to ensure it’s the right match for you.</p>
+        header="What is the return policy?"><p>We do not offer returns, but feel free to ask us anything about the shoes to ensure it’s the right match for you.</p><hr>
     </Faqcard>
     <Faqcard
-    header="How can I track my order?"><p>We will send you a tracking number once the order has been dispatched.</p>
+    header="How can I track my order?"><p>We will send you a tracking number once the order has been dispatched.</p><hr>
     </Faqcard>
     <Faqcard
-    header="Do you ship worldwide?"><p>Currently, we only ship within the EU. However, we hope to expand our shipping options to include worldwide delivery soon.</p>
+    header="Do you ship worldwide?"><p>Currently, we only ship within the EU. However, we hope to expand our shipping options to include worldwide delivery soon.</p><hr>
     </Faqcard>
-    <Faqcard header="What are the available payment options?"><p>For Danish customers, we accept MobilePay. For international customers, we offer payment through bank transfer.</p></Faqcard>
-    <Faqcard header="How long will they last?"><p>As all of our items are vintage, they have lived a life before reaching your hands. With proper care, including visits to a shoemaker for maintenance and avoiding exposure to damaging elements like rain, your shoes can last for many years.</p></Faqcard>
+    <Faqcard header="What are the available payment options?"><p>For Danish customers, we accept MobilePay. For international customers, we offer payment through bank transfer.</p><hr></Faqcard>
+    <Faqcard header="How long will they last?"><p>As all of our items are vintage, they have lived a life before reaching your hands. With proper care, including visits to a shoemaker for maintenance and avoiding exposure to damaging elements like rain, your shoes can last for many years.</p><hr></Faqcard>
 
 </Layout>
 
 
+<style>
+p, hr {
+    width: 51%;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #333;
+}
+</style>
 

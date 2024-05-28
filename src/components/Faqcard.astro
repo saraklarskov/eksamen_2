@@ -15,7 +15,8 @@ const {header} = Astro.props
     }
 
     h2:hover{
-        text-decoration:underline;
+        text-decoration: underline;
+        cursor: pointer;
     }
 
     .toggle-content {
@@ -32,6 +33,7 @@ const {header} = Astro.props
 
 .toggle-header.clicked {
     color: #B2113C; /* Skift farven til rød når klassen 'clicked' er tilføjet */
+    text-decoration: none;
 }
 </style>
 
