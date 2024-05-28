@@ -3,6 +3,7 @@ const {data} = Astro.props;
 console.log(data);
 ---
 
+
 <a href={`shows/${data.id}`} class="shoe-link">
     <article>
         <div class="shoes">
@@ -10,23 +11,24 @@ console.log(data);
             <img src={data.image2} alt="" class="hover-img">
         </div>
         <h4 class="typ">{data.type}</h4>
-        <h2 class="marke">{data.brand}</h2>
+        <h2 class={`marke ${data.available === 0 ? 'udsolgt' : ''}`}>{data.brand}</h2>
         <div class="pris_size">
-        <h4 class="pris">{data.price}</h4>
-        <h4 class="size">{data.size}</h4>
-        </article>
-    </a>
+            <h4 class={`pris ${data.available === 0 ? 'udsolgt' : ''}`}>{data.price}</h4>
+            {data.available !== 0 && <h4 class="size">{data.size}</h4>}
+        </div>
+    </article>
+</a>
 
 
-    <style>
+<style>
+    .udsolgt {
+        text-decoration: line-through;
+    }
 
-.udsolgt {
-    text-decoration: line-through;
-}
     .pris_size {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
     }
 
     .hover-img{
@@ -36,42 +38,38 @@ console.log(data);
     .marke {
         font-size: 19px;
     }
-    
-@media (min-width:800px){
 
-    .shoes {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    display: inline-block;
-}
+    @media (min-width:800px){
+        .shoes {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            display: inline-block;
+        }
 
-.shoes .billede,
-.shoes .hover-img {
-    width: 100%; /* Tilpas størrelsen efter behov */
-    display: block;
-}
+        .shoes .billede,
+        .shoes .hover-img {
+            width: 100%; /* Tilpas størrelsen efter behov */
+            display: block;
+        }
 
-.shoes .hover-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
+        .shoes .hover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
 
-.shoes:hover .hover-img {
-    opacity: 1;
-}
+        .shoes:hover .hover-img {
+            opacity: 1;
+        }
 
-.shoes:hover .billede {
-    opacity: 1;
-}
-
-}
-
-    </style>
-
+        .shoes:hover .billede {
+            opacity: 1;
+        }
+    }
+</style>
    
         
    
