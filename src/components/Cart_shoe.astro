@@ -3,15 +3,15 @@ const {data} = Astro.props;
 ---
 <section class="cart_shoe">
     <article class="prove">
-    <article class="cart_infos">  
+    <section class="cart_infos">  
         <br>  
         <img src={data.image1} alt="" class="cart_img">
-    </article>
-    <article class="cart_brand">
+    </section>
+    <section class="cart_brand">
         <h4>{data.typ}</h4>
         <h3>{data.brand}</h3>
         <h4>Size: {data.size}</h4>
-    </article>
+    </section>
 </article>
 
     <article class="cart_price">

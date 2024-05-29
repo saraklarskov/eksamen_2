@@ -19,37 +19,37 @@ const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colad
 
 <Layout>
 
-    <form action="/action_page.php">
+<form action="/action_page.php">
         <h1>The last step</h1>
-        <section class="grid_2">
-        <article class="col_1">
+<section class="grid_2">
+    <article class="col_1">
 
         <h2>Contact info</h2>
 
-        <article class="input">
+        <section class="input">
             <input type="email" id="email" name="email" placeholder="Email" />
-        </article>
+        </section>
 
-          <article class="tlf">
+          <section class="tlf">
             <input type="tel" id="phone" name="telephone number" placeholder="Phone">
-          </article>
+          </section>
 
           <h2>Shipping</h2>
 
-          <article class="circular-checkbox-wrapper">
+          <section class="circular-checkbox-wrapper">
             <article class="circular-checkbox-container">
                 <input type="checkbox" id="circularCheckbox1">
                 <label for="circularCheckbox1"></label>
             </article>
             <span>Ship to</span>
-        </article>
-        <article class="circular-checkbox-wrapper">
+        </section>
+        <section class="circular-checkbox-wrapper">
             <article class="circular-checkbox-container">
                 <input type="checkbox" id="circularCheckbox2">
                 <label for="circularCheckbox2"></label>
             </article>
             <span>Pick up in Copenhagen</span>
-        </article>
+        </section>
 
 
         <input list="countries" name="countries" placeholder="Country">
@@ -82,14 +82,14 @@ const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colad
           <option value="Sweden">
         </datalist>
 
-        <article class="input">
+        <section class="input">
             <input type="text" id="name" name="name" placeholder="Full name" />
-        </article>
-          <article class="input">
+        </section>
+          <section class="input">
             <input type="text" id="address" name="address" placeholder="Address" />
-          </article>
+          </section>
 
-          <article class="post_city">
+          <section class="post_city">
           <article class="input">
             <input type="number" id="postal" name="postal" placeholder="Postal code" />
           </article>
@@ -97,35 +97,35 @@ const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colad
           <article class="input">
             <input type="text" id="city" name="city" placeholder="City" />
           </article>
-        </article>
+        </section>
 
-          <article class="checkbox_tac">
+          <section class="checkbox_tac">
             <article class="checkbox-container">
                     <input type="checkbox" id="round-checkbox" class="round-checkbox">
                     <label for="round-checkbox" class="round-checkbox-label"></label>
             </article>
             <p>Save this information for next time</p>
-        </article>
+        </section>
 
         <h2>Payment</h2>
 
-        <article class="input">
+        <section class="input">
             <input type="number" id="card" name="message" placeholder="Card number" />
-        </article>
+        </section>
 
-        <article class="post_city">
+        <section class="post_city">
           <article class="input">
             <input type="number" id="exp" name="message" placeholder="Exp. Date (DD/MM)" />
           </article>
           <article class="input">
             <input type="number" id="cvv" name="message" placeholder="Security code" />
           </article>
-        </article>
+        </section>
 
-          <article class="input">
+          <section class="input">
             <input type="text" id="name_card" name="name" placeholder="Name on card" />
-          </article>
-        </article>
+          </section>
+    </article>
 
           <article class="col_2">
 
@@ -133,28 +133,28 @@ const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colad
 
             {data.map((cartShoe)=>{return <Checkout_cart data={cartShoe} />})}
 
-          <article class="discount-container">
+          <section class="discount-container">
             <input type="text" id="discount-code" placeholder="Enter discount code">
             <button id="apply-btn">Apply</button>
-          </article>
+          </section>
 
-        <article class="total">
+        <section class="total">
             <h3>Shipping</h3>
             <h4>Free</h4>
-        </article>
+        </section>
     
-    <article class="total">
+    <section class="total">
         <article class="sub">
     <h3>Subtotal</h3>
     <p class="details">Including 25% moms</p>
         </article>
     <h3>5.700,00 DKK</h3>
-    </article>
+    </section>
+
     <Button variant="buy_now">Buy now</Button>
-</article>
 </section>
 
-      </form>
+</form>
 </Layout>
 
 
