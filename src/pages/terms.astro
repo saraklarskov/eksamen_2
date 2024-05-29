@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
+
 <Layout>
     <h1>Terms and conditions</h1>
     
@@ -20,7 +21,7 @@ import Layout from "../layouts/Layout.astro";
                 <h2>orders</h2>
                 <br>
                 <p>All products are handpicked and carefully curated. We have put lots of love and effort in finding the perfect vintage shoes. Each shoe has its own story. Before purchasing feel free to ask us anything through mail or Instagram DM, to make sure it is a perfect match for you.  Please note that purchasing is binding once you have started that want to buy and the heels are not reserved until payment has been done. Thank you for your understanding.</p>
-                </section>
+            </section>
     
             <br>
     
@@ -28,7 +29,7 @@ import Layout from "../layouts/Layout.astro";
                 <h2>refund</h2>
                 <br>
                 <p>We do not offer refund, as we do not want to encourage unnecessary purchase or return.</p>
-            </article>
+            </section>
     
             <br>
     
@@ -40,60 +41,54 @@ import Layout from "../layouts/Layout.astro";
             <br>
         </article>
     
-        <article class="pictures">
+        <section class="pictures">
             <img src="/pics/giftbag.webp" alt="giftbag" class="giftbag">
-        </article>
+        </section>
     </section>
+</Layout>
     
-    </Layout>
-    
-    <style>
-    
-    .giftbag {
-        width: 70%;
-        margin: 50px auto 0; /* Auto margin til venstre og højre for at centrere billedet */
-        display: block; /* Sørg for, at billedet vises som et blok-element */
+<style>
+.giftbag {
+    width: 70%;
+    margin: 50px auto 0; /* Auto margin til venstre og højre for at centrere billedet */
+    display: block; /* Sørg for, at billedet vises som et blok-element */
+}
+
+.term {
+    margin-bottom: 70px;
+    margin-top: 30px;
+}
+
+.try, .sko_billede {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .try {
+        display: block;
+        height: 400px;
     }
-    
-    .term {
-        margin-bottom: 70px;
-        margin-top: 30px;
-    }
-    
-    .try, .sko_billede {
+
+    .try_1 {
         display: none;
     }
-    
-    @media (min-width: 800px){
-        .try {
-            display: block;
-            height: 400px;
-        }
-    
-        .try_1 {
-            display: none;
-        }
-    
-        .samlet_1 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px; /* Justerer mellemrum mellem kolonner */
-            align-items: start; /* Justerer indholdet til toppen */
-        }
-    
-        .teksten {
-            padding-right: 20px; /* Tilføjer padding til teksten for bedre pladsfordeling */
-        }
-    
-        .giftbag {
-            width: 90%;
-            margin: 50px auto 0; /* Justerer margin for bedre placering */
-            display: block;
-        }
-    
-        .sko_billede {
-            display: block;
-        }
-    
+
+    .samlet_1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px; /* Justerer mellemrum mellem kolonner */
+        align-items: start; /* Justerer indholdet til toppen */
     }
-    </style>
+
+    .teksten {
+        grid-column: 1 / 2; /* Placerer teksten i første kolonne */
+        padding-right: 20px; /* Tilføjer padding til teksten for bedre pladsfordeling */
+    }
+
+    .giftbag {
+        width: 70%;
+        margin: 50px auto 0; /* Justerer margin for bedre placering */
+        display: block;
+    }
+}
+</style>
