@@ -2,12 +2,12 @@
 const {header} = Astro.props
 ---
 
-<div class="container">
+<section class="container">
     <h2 class="toggle-header">{header}</h2>
-    <div class="toggle-content">
+    <article class="toggle-content">
         <slot />
-    </div>
-</div>
+    </article>
+</section>
 
 <style>
     h2 {

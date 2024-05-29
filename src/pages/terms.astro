@@ -5,39 +5,46 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
 <h1>Terms and conditions</h1>
 
-<div class="samlet_1">
-<div class=""></div>
-<div class="together">
-    <div class="first_term">
-        <div class="term">
-<h2>Flaws and imperfections</h2>
-<p>All vintage items may come with flaws as all items are  pre-loved. This gives the item history and character. We hope that you will cherish and appreciate every detail in the shoes as much as we do. The colour of the product shown on pictures might vary a little compared to the actual color due to lighting. All flaws or imperfections will be in the description or/and visible on the pictures of the item.</p>
-    </div>
+<section class="samlet_1">
+    <div class="teksten">
+        <br>
+<article class="first_term">
+    <h2>Flaws and imperfections</h2>
+    <br>
+    <p>All vintage items may come with flaws as all items are  pre-loved. This gives the item history and character. We hope that you will cherish and appreciate every detail in the shoes as much as we do. The colour of the product shown on pictures might vary a little compared to the actual color due to lighting. All flaws or imperfections will be in the description or/and visible on the pictures of the item.</p>
+</article>
 
-<div class="term">
-<h2>orders</h2>
+<br>
+
+<article class="second_term">
+    <h2>orders</h2>
+    <br>
 <p>All products are handpicked and carefully curated. We have put lots of love and effort in finding the perfect vintage shoes. Each shoe has its own story. Before purchasing feel free to ask us anything through mail or Instagram DM, to make sure it is a perfect match for you.  Please note that purchasing is binding once you have started that want to buy and the heels are not reserved until payment has been done. Thank you for your understanding.</p>
-</div>
-</div>
-</div>
+</article>
 
-<div class="together_1">
-    <div class="second_term">
-<div class="term">
-<h2>refund</h2>
-<p>We do not offer refund, as we do not want to encourage unnecessary purchase or return.</p>
-</div>
+<br>
 
-<div class="term">
-<h2>Thank you</h2>
+<article class="third_term">
+    <h2>refund</h2>
+    <br>
+    <p>We do not offer refund, as we do not want to encourage unnecessary purchase or return.</p>
+</article>
+
+<br>
+
+<article class="fourth_term">
+    <h2>Thank you</h2>
+    <br>
 <p>Thank you so much for supporting Colada Archive. We are so grateful that you love our little love project as much as we do. As a small vintage designer shoe brand, every commitment matters greatly yo us.</p>
+</article>
+<br>
 </div>
-</div>
+
 <div class="pictures">
     <img src="/pics/giftbag.webp" alt="giftbag" class="giftbag">
 </div>
-</div>
-</div>
+</section>
+
 
 </Layout>
 
@@ -68,16 +75,19 @@ import Layout from "../layouts/Layout.astro";
     display: none;
 }
 
-.together, .together_1, .pictures {
+.samlet_1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
 }
+
 
 .together_1 {
     margin-bottom: 100px;
 }
-
+.giftbag {
+    width: 90%;
+        margin: 50px; /* Justerer margin for bedre placering */
+}
 
 .sko_billede {
     display: block;

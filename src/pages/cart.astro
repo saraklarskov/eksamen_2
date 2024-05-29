@@ -17,40 +17,39 @@ console.log(data)
 
 <Layout currentpage="cart">
 <h1>Your cart</h1>
-<a href="shoes" class="details">Continue shopping</a></li>
+<a href="/shoes" class="details">Continue shopping</a></li>
 
 <br>
 
-<div class="cart_info">
+<article class="cart_info">
 <p class="details">Product</p>
 <p class="details">Price</p>
-</div>
+</article>
 <hr>
 {data.map((oneShoe)=>{return <Cart_shoe data={oneShoe} />})}
 
 <hr>
-<div class="samlet">
+<article class="samlet">
 <h3 class="sub">Subtotal</h3>
 <h3 class="samlet_pris">5700 DKK</h3>
-</div>
+</article>
 
 <br>
 
-<div class="checkbox_tac">
-    <div class="checkbox-container">
+<section class="checkbox_tac">
+    <article class="checkbox-container">
             <input type="checkbox" id="round-checkbox" class="round-checkbox">
             <label for="round-checkbox" class="round-checkbox-label"></label>
-    </div>
+    </article>
     <br>
     <p>I agree to terms and conditions</p>
-</div>
+</section>
 <br>
 <a class="box" href="/checkout">Check Out</a>
+</Layout>
 
-    </Layout>
 
-
-    <style>
+<style>
 
 .samlet {
     display: flex;

@@ -3,27 +3,34 @@ const {data} = Astro.props;
 console.log(data);
 ---
 
-<div class="cart">
-    <p class="details">Just added to your cart</p>
-    <hr>
-    <div class="popup_style">
+<section class="cart">
+
+<p class="details">Just added to your cart</p>
+<hr>
+
+<article class="popup_style">
     <img class="popup_pic" src={data.image1} alt="Picture of what is in your cart">
-   <div class="info">
+<article class="info">
     <h3>{data.brand}</h3>
     <p class="details_mobile">Size: {data.size}</p>
-<h4>{data.price}</h4>    </div>
-    <ul id="cart-items">
-<h2>{data.brand}</h2>
-    </ul>
-</div>
-<div class="subtotal">
-<h3>Subtotal:</h3>
-<h3>{data.price}</h3>
-</div>
-<div class="button_flex">
+    <h4>{data.price}</h4>    
+</article>
+
+<ul id="cart-items">
+    <h2>{data.brand}</h2>
+</ul>
+</article>
+
+<article class="subtotal">
+   <h3>Subtotal:</h3>
+   <h3>{data.price}</h3>
+</article>
+
+<article class="button_flex">
     <button id="view-cart-btn">Check out</button>
-</div>
-</div>
+</article>
+
+</section>
 
 
 
