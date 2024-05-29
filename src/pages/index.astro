@@ -6,20 +6,20 @@ import Button from "../components/Button.astro";
 ---
 
 <Layout>
-  <img src="pics/frontPicture.webp" alt="Picture of shoe" class="forside_billede"/>
+  <img src="/pics/frontPicture.webp" alt="Picture of shoe" class="forside_billede"/>
   <h1 class="holy">The holy grail of vintage designer shoes</h1>
 
   <section class="forside_billeder_1">
     <article class="zoom">
-    <a href="shoes"><img src="pics/produkter/silver1.webp" alt="Picture of latest drop shoes" class="forside_1" /></a>
+    <a href="shoes"><img src="/pics/produkter/silver1.webp" alt="Picture of latest drop shoes" class="forside_1" /></a>
     </article>
 
     <article class="zoom">
-      <a href="shoes"><img src="pics/produkter/orange1.webp" alt="Picture of latest drop shoes" class="forside_1" /></a>
+      <a href="shoes"><img src="/pics/produkter/orange1.webp" alt="Picture of latest drop shoes" class="forside_1" /></a>
     </article>
 
   <article class="zoom">
-    <a href="shoes"><img src="pics/produkter/snake1.webp" alt="Picture of latest drop shoes" class="forside_1" /></a>
+    <a href="shoes"><img src="/pics/produkter/snake1.webp" alt="Picture of latest drop shoes" class="forside_1" /></a>
   </article>
 
 </section>
@@ -27,13 +27,13 @@ import Button from "../components/Button.astro";
   <a href="/shoes" class="shoeclass">
     <article class="droparrow">
       <h2 class="drop">View our latest drop</h2>
-      <img src="pics/icons/arrow.svg" alt="arrow" class="arrowclass" />
+      <img src="/pics/icons/arrow.svg" alt="arrow" class="arrowclass" />
     </article>
   </a>
 
   <Slide />
 
-  <img src="pics/logofinal.png" alt="Picture of logo" class="logo_middle">
+  <img src="/pics/logofinal.png" alt="Picture of logo" class="logo_middle">
   
   <p class="info">
     Colada Archive is a Copenhagen-based brand that specialize in curating
@@ -48,13 +48,10 @@ import Button from "../components/Button.astro";
 </Layout>
 
 <style>
-
-.arrowclass {
-  margin-bottom: 35px;
-}
   .logo_middle {
     width: 70%;
     margin: 0 auto;
+    margin-top: 40px;
   }
 
   .forside_billede {
@@ -64,13 +61,14 @@ import Button from "../components/Button.astro";
   }
 
   .holy {
-    margin-top: 15px;
+    margin-top: 30px;
   }
 
   .forside_billeder_1 {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-top: 40px;
   }
 
   .forside_logo {
@@ -80,7 +78,8 @@ import Button from "../components/Button.astro";
   }
 
   .info {
-    margin-bottom: 3rem;
+    margin-top: 30px;
+    margin-bottom: 40px;
   }
   .arrowclass {
     width: 5%;
@@ -187,7 +186,8 @@ import Button from "../components/Button.astro";
     }
 
     .info {
-      margin: 5px 162px 164px 162px;    }
+      margin: 5px 162px 40px 162px;    
+    }
   }
 
   

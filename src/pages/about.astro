@@ -54,7 +54,7 @@ import Layout from "../layouts/Layout.astro";
     .forst, .anden {
      display: grid;
      grid-template-columns: 1fr 1fr;
-     gap: 20px;
+     gap: 40px;
     }
 
     .text {
@@ -70,13 +70,49 @@ import Layout from "../layouts/Layout.astro";
         height: auto;
         /* margin: 0 auto; */
     }
-
-    .about_2 {
-        margin-top: -300px;
-    }
 .text2 {
-    margin-top: 80px;
+    margin-top: -380px;
+}
 }
 
+@media (min-width: 900px) {
+.text2 {
+    margin-top: -100px;
+}
+
+.about_text2 {
+    margin-top: 40px;
+}
+}
+
+@media (min-width: 1100px) {
+.text2 {
+    margin-top: 60px;
+}
+
+.about_2 {
+    margin-top: 0px;
+}
+}
+
+@media (min-width: 1200px){
+
+    .about_2 {
+        margin-top: -100px;
+    }
+
+    .text2{
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 1300px){
+    .about_2 {
+        margin-top: -150px;
+    }
+
+    .text2{
+        margin-top: 210px;
+    }
 }
 </style>
