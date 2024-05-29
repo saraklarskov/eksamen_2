@@ -6,6 +6,8 @@ import Faqcard from "../components/Faqcard.astro";
 <Layout>
     <h1>Frequently Asked Questions</h1>
 
+    <div class="prove">
+        <div class="faq_spg">
     <Faqcard 
         header="How can I place an order?"><p>You can place an order through Instagram by sending us a direct message (DM) on our profile [here](Link to Instagram), specifying which heels you are interested in.</p><hr>
     </Faqcard>
@@ -20,19 +22,52 @@ import Faqcard from "../components/Faqcard.astro";
     </Faqcard>
     <Faqcard header="What are the available payment options?"><p>For Danish customers, we accept MobilePay. For international customers, we offer payment through bank transfer.</p><hr></Faqcard>
     <Faqcard header="How long will they last?"><p>As all of our items are vintage, they have lived a life before reaching your hands. With proper care, including visits to a shoemaker for maintenance and avoiding exposure to damaging elements like rain, your shoes can last for many years.</p><hr></Faqcard>
-
+</div>
+<div class="billede">
+    <img src="/pics/2sko2.webp" alt="illustration af sko" class="mary">
+</div>
+</div>
 </Layout>
 
 
 <style>
-p, hr {
-    width: 51%;
+
+    .mary {
+        width: 70%;
+    margin: 50px auto 0; /* Auto margin til venstre og højre for at centrere billedet */
+    display: block; /* Sørg for, at billedet vises som et blok-element */
+    }
+hr {
+    width: 80%;
+    margin-top: 10px;
 }
 
 hr {
     border: none;
     height: 1px;
     background-color: #333;
+}
+
+
+@media (min-width: 800px) {
+    p {
+    width: 51%;
+}
+.prove {
+    display: flex;
+    flex-direction: row;
+}
+
+.mary {
+    width: 60%;
+    margin-left: 40px;
+}
+
+hr {
+    width: 60%;
+    margin-top: 10px;
+}
+
 }
 </style>
 
