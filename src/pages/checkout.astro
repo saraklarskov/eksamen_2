@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Checkout from "../components/Checkout.astro";
 ---
 
 
@@ -119,6 +120,8 @@ import Layout from "../layouts/Layout.astro";
 
           <div class="col_2">
 
+            <h2>In your cart</h2>
+            <Checkout />
 
           <div class="discount-container">
             <input type="text" id="discount-code" placeholder="Enter discount code">
@@ -303,6 +306,7 @@ input {
 
 h2 {
     margin-top: 26px; 
+    margin-bottom: 10px;
 }
 
 
