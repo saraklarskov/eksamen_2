@@ -1,34 +1,36 @@
 ---
 const {data} = Astro.props;
-
 ---
 <div class="cart_shoe">
     <div class="prove">
-    <div class="cart_infos">    
-        <img src="/pics/produkter/beigesnake.webp" alt="" class="cart_img">
+    <div class="cart_infos">  
+        <br>  
+        <img src={data.image1} alt="" class="cart_img">
     </div>
     <div class="cart_brand">
-        <h4>Mary-Janes</h4>
-        <h3>Manolo Blahnik</h3>
-        <h4>Size: </h4>
+        <h4>{data.typ}</h4>
+        <h3>{data.brand}</h3>
+        <h4>Size: {data.size}</h4>
     </div>
 </div>
 
     <div class="cart_price">
-        <h3>DKK 1900,-</h3>
+        <h3>{data.price}</h3>
     </div>
 </div>
 
 <style>
     .cart_img {
-        width: 94%;
+        width: 100px;
         height: auto;
     }
 
     .cart_shoe {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
+
 
     .cart_price {
         display: flex;
@@ -43,13 +45,15 @@ const {data} = Astro.props;
     margin: auto; /* Centers the cart_brand div horizontally */
   }
 
+
   .prove{
     display: flex;
+    width: 200px;
   }
 
   @media (min-width: 800px) {
     .cart_img {
-        width: 92%;
+        width: 200px;
     }
 
 .prove {
@@ -57,5 +61,7 @@ const {data} = Astro.props;
 flex-direction: row;
 width: 60%;
 }
+
+
   }
 </style>

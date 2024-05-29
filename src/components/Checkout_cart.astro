@@ -1,0 +1,65 @@
+---
+const {data} = Astro.props;
+---
+
+
+<div class="cart_shoe">
+    <div class="cart_infos">    
+        <img src={data.image1} alt="" class="cart_img">
+    </div>
+    <div class="cart_brand">
+        <h4>{data.typ}</h4>
+        <h3>{data.brand}</h3>
+        <h4>Size: {data.size}</h4>
+        <h3>{data.price}</h3>
+    </div>
+</div>
+
+
+
+<style>
+
+.cart_img {
+    width: 100px;
+}
+
+h3 {
+    width: 200px;
+}
+
+.cart_shoe{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 12px 0;
+    gap: 10px;
+}
+
+.cart_brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+    margin: auto; /* Centers the cart_brand div horizontally */
+}
+
+@media (min-width: 700px){
+
+    .cart_img {
+        width: 150px;
+    }
+}
+
+@media (min-width: 800px) {
+    .cart_img {
+        width: 100px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .cart_img {
+        width: 200px;
+    }
+}
+
+
+
+</style>

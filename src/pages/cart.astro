@@ -1,8 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Cart from "../components/Cart.astro";
-const {data} = Astro.props;
-console.log(data);
+import Cart_shoe from "../components/Cart_shoe.astro";
+
+// // fetcher data - henter URL fra supabase, skriv  rest/v1/tabelnavn ALTID
+const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_?cart=eq.checkout", {
+    method: "GET",
+    headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljdHRzZXpydmx6dGxhamJrZHh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU5MzY2NjksImV4cCI6MjAzMTUxMjY2OX0.W2Dcw1gmLKcXLWOcWXBdxYBuBiVOjgi8xfwwII3329o"
+    }
+}
+).then(res=>res.json());
+
+console.log(data)
 ---
 
 
@@ -10,19 +19,29 @@ console.log(data);
 <h1>Your cart</h1>
 <a href="shoes" class="details">Continue shopping</a></li>
 
+<br>
+
 <div class="cart_info">
 <p class="details">Product</p>
 <p class="details">Price</p>
 </div>
 <hr>
-<Cart />
+{data.map((oneShoe)=>{return <Cart_shoe data={oneShoe} />})}
 
 <hr>
+<div class="samlet">
+<h3 class="sub">Subtotal</h3>
+<h3 class="samlet_pris">5700 DKK</h3>
+</div>
+
+<br>
+
 <div class="checkbox_tac">
     <div class="checkbox-container">
             <input type="checkbox" id="round-checkbox" class="round-checkbox">
             <label for="round-checkbox" class="round-checkbox-label"></label>
     </div>
+    <br>
     <p>I agree to terms and conditions</p>
 </div>
 <br>
@@ -33,6 +52,10 @@ console.log(data);
 
     <style>
 
+.samlet {
+    display: flex;
+    justify-content: space-between;
+}
 .cart_info {
     display: flex;
     justify-content: space-between;
@@ -115,6 +138,7 @@ hr {
         justify-content: center;
         margin-left: 715px;
     }
+
     
 }
 

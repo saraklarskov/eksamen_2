@@ -1,6 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Checkout from "../components/Checkout.astro";
+import Checkout_cart from "../components/Checkout_cart.astro";
+import Button from "../components/Button.astro";
+
+
+// // fetcher data - henter URL fra supabase, skriv  rest/v1/tabelnavn ALTID
+const data = await fetch("https://ycttsezrvlztlajbkdxt.supabase.co/rest/v1/colada_archive_?cart=eq.checkout", {
+    method: "GET",
+    headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljdHRzZXpydmx6dGxhamJrZHh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU5MzY2NjksImV4cCI6MjAzMTUxMjY2OX0.W2Dcw1gmLKcXLWOcWXBdxYBuBiVOjgi8xfwwII3329o"
+    }
+}
+).then(res=>res.json());
 ---
 
 
@@ -9,11 +20,9 @@ import Checkout from "../components/Checkout.astro";
 <Layout>
 
     <form action="/action_page.php">
-
+        <h1>The last step</h1>
         <div class="grid_2">
         <div class="col_1">
-
-        <h1>The last step</h1>
 
         <h2>Contact info</h2>
 
@@ -121,7 +130,8 @@ import Checkout from "../components/Checkout.astro";
           <div class="col_2">
 
             <h2>In your cart</h2>
-            <Checkout />
+
+            {data.map((cartShoe)=>{return <Checkout_cart data={cartShoe} />})}
 
           <div class="discount-container">
             <input type="text" id="discount-code" placeholder="Enter discount code">
@@ -129,6 +139,20 @@ import Checkout from "../components/Checkout.astro";
         </div>
     </div>
 
+    <div class="total">
+        <h3>Shipping</h3>
+        <h4>Free</h4>
+    </div>
+
+<div class="total">
+    <div class="sub">
+<h3>Subtotal</h3>
+<p class="details">Including 25% moms</p>
+</div>
+<h3>1900,-</h3>
+</div>
+
+<Button variant="buy_now">Buy now</Button>
     </div>
 
       </form>
@@ -137,6 +161,10 @@ import Checkout from "../components/Checkout.astro";
 
 <style>
 
+.total {
+    display: flex;
+    justify-content: space-between;
+}
 input::placeholder {
     text-transform: uppercase;
     font-family: 'poppins';
@@ -206,7 +234,7 @@ input {
     border: 0.5px solid #000;
     padding: 0.8em 0.7em;
     margin-bottom: 1rem;
-    width: 87.4%;
+    width: 87.7%;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
     font-size: 0.8rem;
@@ -310,29 +338,56 @@ h2 {
 }
 
 
+@media (min-width: 700px) {
+    .circular-checkbox-wrapper {
+        width: 84%;
+    } 
+}
 
 @media (min-width: 800px){
     .grid_2{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 30px;
     }
 
     .circular-checkbox-wrapper {
         width: 90%;
     }
 
+    .col_2 {
+        width: 200px;
+    }
+}
+
+@media (min-width: 870px) {
+    .col_2 {
+        width: auto;
+    }
 }
 
 
 @media (min-width: 1000px){
     .circular-checkbox-wrapper {
-        width: 87%;
+        width: 88%;
+    }
+}
+
+@media (min-width: 1100px){
+    .circular-checkbox-wrapper {
+        width: 87.5%;
     }
 }
 
 @media (min-width: 1200px){
     .circular-checkbox-wrapper {
         width: 85%;
+    }
+}
+
+@media (min-width: 1600px){
+    .circular-checkbox-wrapper {
+        width: 84.2%;
     }
 }
 
