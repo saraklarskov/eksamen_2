@@ -4,7 +4,7 @@ console.log(data);
 ---
 
 <div id="cart" class="cart">
-    <p class="details_mobile">Just added to your cart</p>
+    <p class="details">Just added to your cart</p>
     <hr>
     <div class="popup_style">
     <img class="popup_pic" src={data.image1} alt="Picture of what is in your cart">
@@ -57,6 +57,7 @@ grid-template-columns: repeat(2, 1fr);
 
 
 .cart {
+    z-index: 20;
     position: fixed;
     top: 50px; /* Flyt kurven længere ned */
     right: 10px;
@@ -68,7 +69,7 @@ grid-template-columns: repeat(2, 1fr);
     transition: opacity 0.5s, visibility 0.5s;
 }
 
-.cart.show {
+.show {
     opacity: 1;
     visibility: visible;
 }
@@ -166,12 +167,13 @@ margin-top: 33px;
 <script>
  document.addEventListener('DOMContentLoaded', () => {
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
-    const cart = document.getElementById('cart');
+    const cart = document.querySelector('.cart');
     const cartItems = document.getElementById('cart-items');
     const viewCartBtn = document.getElementById('view-cart-btn');
 
     addToCartButtons.forEach(button => {
         button.addEventListener('click', () => {
+            console.log("li")
             const product = button.getAttribute('data-product');
 
             // Tøm kurven før tilføjelse af nyt produkt
