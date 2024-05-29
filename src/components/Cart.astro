@@ -21,13 +21,13 @@ const {data} = Astro.props;
 
 <style>
     .cart_img {
-        width: 80%;
+        width: 94%;
         height: auto;
     }
 
     .cart_shoe {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .cart_price {
@@ -43,14 +43,19 @@ const {data} = Astro.props;
     margin: auto; /* Centers the cart_brand div horizontally */
   }
 
+  .prove{
+    display: flex;
+  }
+
   @media (min-width: 800px) {
     .cart_img {
-        width: 50%;
+        width: 92%;
     }
 
 .prove {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+flex-direction: row;
+width: 60%;
 }
   }
 </style>
