@@ -1,8 +1,56 @@
 ---
 const {data} = Astro.props;
+
 ---
+<div class="cart_shoe">
+    <div class="prove">
+    <div class="cart_infos">    
+        <img src="/pics/produkter/beigesnake.webp" alt="" class="cart_img">
+    </div>
+    <div class="cart_brand">
+        <h4>Mary-Janes</h4>
+        <h3>Manolo Blahnik</h3>
+        <h4>Size: </h4>
+    </div>
+</div>
 
+    <div class="cart_price">
+        <h3>DKK 1900,-</h3>
+    </div>
+</div>
 
-<h3>Mary-Janes</h3>
-<h1>Manolo Blahnik</h1>
-<h3>Size</h3>
+<style>
+    .cart_img {
+        width: 80%;
+        height: auto;
+    }
+
+    .cart_shoe {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .cart_price {
+        display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .cart_brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+    margin: auto; /* Centers the cart_brand div horizontally */
+  }
+
+  @media (min-width: 800px) {
+    .cart_img {
+        width: 50%;
+    }
+
+.prove {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+  }
+</style>
