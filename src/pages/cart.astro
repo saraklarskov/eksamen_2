@@ -9,6 +9,11 @@ console.log(data);
 <Layout currentpage="cart">
 <h1>Your cart</h1>
 <a href="shoes" class="details">Continue shopping</a></li>
+
+<div class="cart_info">
+<p class="details">Product</p>
+<p class="details">Price</p>
+</div>
 <hr>
 <Cart />
 
@@ -27,6 +32,11 @@ console.log(data);
 
 
     <style>
+
+.cart_info {
+    display: flex;
+    justify-content: space-between;
+}
 a {
  text-decoration: underline;
 }
@@ -89,6 +99,9 @@ a {
     justify-content: flex-start;
 }
 
+hr {
+    margin: 10px 0;
+}
 
 @media (min-width:800px){
     .checkbox_tac{
