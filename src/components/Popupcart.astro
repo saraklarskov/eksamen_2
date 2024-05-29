@@ -1,201 +1,149 @@
 ---
-const {data} = Astro.props;
-console.log(data);
+const { data } = Astro.props;
 ---
 
 <div id="cart" class="cart">
     <p class="details_mobile">Just added to your cart</p>
     <hr>
     <div class="popup_style">
-    <img class="popup_pic" src={data.image1} alt="Picture of what is in your cart">
-   <div class="info">
-    <h3>{data.brand}</h3>
-    <p class="details_mobile">Size: {data.size}</p>
-<h4>{data.price}</h4>    </div>
-    <ul id="cart-items">
-<h2>{data.brand}</h2>
-    </ul>
+        <img class="popup_pic" src={data.image1} alt="Picture of what is in your cart">
+        <div class="info">
+            <h3>{data.brand}</h3>
+            <p class="details_mobile">Size: {data.size}</p>
+            <h4>{data.price}</h4>
+        </div>
+        <ul id="cart-items">
+            <h2>{data.brand}</h2>
+        </ul>
+    </div>
+    <div class="subtotal">
+        <h3>Subtotal:</h3>
+        <h3>{data.price}</h3>
+    </div>
+    <div class="button_flex">
+        <button id="view-cart-btn">Check out</button>
+    </div>
 </div>
-<div class="subtotal">
-<h3>Subtotal:</h3>
-<h3>{data.price}</h3>
-</div>
-<div class="button_flex">
-    <button id="view-cart-btn">Check out</button>
-</div>
-</div>
-
-
-
 
 <style>
-
-.button_flex{
-    display: flex;
-    justify-content: flex-end;
-}
-hr{
-    margin-bottom: 10px;
-}
-.info{
-        display: flex;
-        flex-direction: column;
-    }
-
-.popup_style {
-    display: grid;
-grid-template-columns: repeat(2, 1fr);
-}
-
-.subtotal{
-    justify-content: space-between;
-    display: flex;
-}
-.product {
-    margin: 20px;
-}
-
-
-.cart {
-    position: fixed;
-    top: 50px; /* Flyt kurven længere ned */
-    right: 10px;
-    width: 265px;
-    padding: 10px;
-    background-color: #FFFEF9;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s, visibility 0.5s;
-}
-
-.cart.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-#cart-items {
-    list-style-type: none; /* Fjern punktopstillinger */
-    padding: 0; /* Fjern indvendig margen */
-}
-
-#cart-items li {
-    padding: 5px 0; /* Tilføj eventuelt lidt polstring til list items */
-}
-
-#view-cart-btn {
-    display: block;
-    margin-top: 10px;
-    padding: 10px 45px;
-    background-color: #FFFEF9;
-    border: 1px solid black;
-    cursor: pointer;
-    text-align: center;
-}
-
-#view-cart-btn:hover {
-    background-color: black;
-    color: #FFFEF9;
-}
-
-.popup_pic{
-    width: 111px;
-}
-
-
-@media (min-width:800px){
-
-    .subtotal{
-margin-top: 33px;
-}
-
-.info{
-    justify-content: space-between;
-}
-
-.product {
-    margin: 20px;
-}
-
-.cart {
-    position: fixed;
-    top: 62px; 
-    right: 15.5px;
-    width: 300px;
-    padding: 10px;
-    background-color: #FFFEF9;
-    border: 1px solid #ccc;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s, visibility 0.5s;
-}
-
-.cart.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-#cart-items {
-    list-style-type: none; /* Fjern punktopstillinger */
-    padding: 0; /* Fjern indvendig margen */
-}
-
-#cart-items li {
-    padding: 5px 0; /* Tilføj eventuelt lidt polstring til list items */
-}
-
-#view-cart-btn {
-    display: block;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #FFFEF9;
-    border: 1px solid black;
-    cursor: pointer;
-    text-align: center;
-}
-
-#view-cart-btn:hover {
-    background-color: black;
-    color: #FFFEF9;
-}
-}
-
-
-
+  .button_flex {
+      display: flex;
+      justify-content: flex-end;
+  }
+  hr {
+      margin-bottom: 10px;
+  }
+  .info {
+      display: flex;
+      flex-direction: column;
+  }
+  .popup_style {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .subtotal {
+      justify-content: space-between;
+      display: flex;
+  }
+  .cart {
+      position: fixed;
+      top: 50px;
+      right: 10px;
+      width: 265px;
+      padding: 10px;
+      background-color: #FFFEF9;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s, visibility 0.5s;
+  }
+  .cart.show {
+      opacity: 1;
+      visibility: visible;
+  }
+  #cart-items {
+      list-style-type: none;
+      padding: 0;
+  }
+  #cart-items li {
+      padding: 5px 0;
+  }
+  #view-cart-btn {
+      display: block;
+      margin-top: 10px;
+      padding: 10px 45px;
+      background-color: #FFFEF9;
+      border: 1px solid black;
+      cursor: pointer;
+      text-align: center;
+  }
+  #view-cart-btn:hover {
+      background-color: black;
+      color: #FFFEF9;
+  }
+  .popup_pic {
+      width: 111px;
+  }
+  @media (min-width: 800px) {
+      .subtotal {
+          margin-top: 33px;
+      }
+      .info {
+          justify-content: space-between;
+      }
+      .cart {
+          position: fixed;
+          top: 62px;
+          right: 15.5px;
+          width: 300px;
+          padding: 10px;
+          background-color: #FFFEF9;
+          border: 1px solid #ccc;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.5s, visibility 0.5s;
+      }
+      .cart.show {
+          opacity: 1;
+          visibility: visible;
+      }
+      #view-cart-btn:hover {
+          background-color: black;
+          color: #FFFEF9;
+      }
+  }
 </style>
 
 <script>
- document.addEventListener('DOMContentLoaded', () => {
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
-    const cart = document.getElementById('cart');
-    const cartItems = document.getElementById('cart-items');
-    const viewCartBtn = document.getElementById('view-cart-btn');
+  document.addEventListener('DOMContentLoaded', () => {
+      const addToCartButtons = document.querySelectorAll('.add-to-cart');
+      const cart = document.getElementById('cart');
+      const cartItems = document.getElementById('cart-items');
+      const viewCartBtn = document.getElementById('view-cart-btn');
 
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const product = button.getAttribute('data-product');
+      addToCartButtons.forEach(button => {
+          button.addEventListener('click', () => {
+              const product = JSON.parse(button.getAttribute('data-product'));
 
-            // Tøm kurven før tilføjelse af nyt produkt
-            cartItems.innerHTML = '';
+              // Clear the cart before adding the new product
+              cartItems.innerHTML = '';
 
-            const listItem = document.createElement('li');
-            listItem.textContent = product;
-            cartItems.appendChild(listItem);
+              const listItem = document.createElement('li');
+              listItem.textContent = `${product.brand} - ${product.price}`;
+              cartItems.appendChild(listItem);
 
-            cart.classList.add('show');
+              cart.classList.add('show');
 
-            // Fjern klassen 'show' efter 4 sekunder (4000 millisekunder)
-            setTimeout(() => {
-                cart.classList.remove('show');
-            }, 20000);
-        });
-    });
+              // Remove 'show' class after 20 seconds (20000 milliseconds)
+              setTimeout(() => {
+                  cart.classList.remove('show');
+              }, 20000);
+          });
+      });
 
-    // Event listener for "View Your Cart" button
-    viewCartBtn.addEventListener('click', () => {
-        // Handlingen, når knappen klikkes, fx navigering til en kurvside
-        window.location.href = '/cart'; // Ændr URL'en til din kurvside
-    });
-});
-
-
+      // Event listener for "Check out" button
+      viewCartBtn.addEventListener('click', () => {
+          // Action when the button is clicked, e.g., navigate to a cart page
+          window.location.href = '/cart'; // Change the URL to your cart page
+      });
+  });
 </script>

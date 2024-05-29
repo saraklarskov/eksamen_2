@@ -3,9 +3,10 @@ const {variant} = Astro.props;
 ---
 
 
-<button class={variant} data-product="">  
+<button class={variant} data-product={Astro.props['data-product']}>
     <slot />
 </button>
+
 
 
 
@@ -70,6 +71,15 @@ color: #FFFEF9;
     padding: 5px 0; /* Tilføj eventuelt lidt polstring til list items */
 }
 
+#view-cart-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #FFFEF9;
+    border: 1px solid black;
+    cursor: pointer;
+    text-align: center;
+}
 #view-cart-btn {
     display: block;
     margin-top: 10px;
