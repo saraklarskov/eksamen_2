@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Cart from "../components/Cart.astro";
 const {data} = Astro.props;
 console.log(data);
 ---
@@ -9,6 +10,8 @@ console.log(data);
 <h1>Your cart</h1>
 <a href="shoes" class="details">Continue shopping</a></li>
 <hr>
+<Cart />
+
 <hr>
 <div class="checkbox_tac">
     <div class="checkbox-container">
