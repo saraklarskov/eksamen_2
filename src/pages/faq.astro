@@ -31,43 +31,50 @@ import Faqcard from "../components/Faqcard.astro";
 
 
 <style>
-
-    .mary {
-        width: 70%;
+.mary {
+    width: 70%;
     margin: 50px auto 0; /* Auto margin til venstre og højre for at centrere billedet */
     display: block; /* Sørg for, at billedet vises som et blok-element */
-    }
-hr {
-    width: 80%;
-    margin-top: 10px;
 }
 
 hr {
+    width: 80%;
+    margin-top: 10px;
     border: none;
     height: 1px;
     background-color: #333;
 }
 
+.prove {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrerer indholdet vandret */
+}
+
+.faq_spg {
+    width: 100%; /* Gør FAQ-sektionen bred */
+    max-width: 800px; /* Sæt en maksimal bredde for FAQ-sektionen */
+}
 
 @media (min-width: 800px) {
     p {
-    width: 51%;
-}
-.prove {
-    display: flex;
-    flex-direction: row;
-}
+        width: 61%;
+    }
 
-.mary {
-    width: 60%;
-    margin-left: 40px;
-}
+    .prove {
+        flex-direction: row;
+        align-items: flex-start; /* Justerer elementer til toppen */
+    }
 
-hr {
-    width: 60%;
-    margin-top: 10px;
-}
+    .mary {
+        width: 90%;
+        margin: 50px; /* Justerer margin for bedre placering */
+    }
 
+    hr {
+        width: 51%;
+        margin-top: 10px;
+    }
 }
 </style>
 
