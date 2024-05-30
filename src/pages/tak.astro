@@ -6,12 +6,13 @@ import Button from "../components/Button.astro";
 <Layout>
     <section class="thank">
         <h1>Thank you for reaching out!</h1>
-        <p>You can expect a reply within the next 5 working days.</p>
+        <p class="bottom">You can expect a reply within the next 5 working days.</p>
             <a href="/shoes"><Button variant="button">Continue shopping</Button></a>
     </section>
 </Layout>
 
 <style>
+
     section{
         display: flex;
         flex-direction: column;
@@ -48,6 +49,10 @@ import Button from "../components/Button.astro";
     @media (min-width: 550px){
 .thank {
     margin-top: 100px;
+}
+
+.bottom {
+    margin-bottom: 20px;
 }
     }
 
