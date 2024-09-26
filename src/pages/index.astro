@@ -2,7 +2,7 @@
 import Gridinsta from "../components/Gridinsta.astro";
 import Layout from "../layouts/Layout.astro";
 import Slide from "../components/Slide.astro";
-
+import 'animate.css';
 ---
 
 <Layout>
@@ -35,13 +35,16 @@ import Slide from "../components/Slide.astro";
 
   <img src="/pics/logofinal.png" alt="Picture of logo" class="logo_middle">
   
-  <p class="info">
-    Colada Archive is a Copenhagen-based brand that specializes in curating
-    vintage designer heels, handpicked because of their quality, style, and timeless
-    appeal. Each pair tells their own story, reflecting the elegance and
-    craftsmanship of a bygone era. Our mission is to make the finding of the perfect
-    vintage heels an effortless experience.
-  </p>
+  <div class="info">
+    <p class=" animate__animated animate__slideInUp">
+      Colada Archive is a Copenhagen-based brand that specializes in curating
+      vintage designer heels, handpicked because of their quality, style, and timeless
+      appeal. Each pair tells their own story, reflecting the elegance and
+      craftsmanship of a bygone era. Our mission is to make the finding of the perfect
+      vintage heels an effortless experience.
+    </p>
+  </div>
+
 
   <h2 class="insta">Find us on Instagram</h2>
   <Gridinsta />
@@ -78,8 +81,7 @@ import Slide from "../components/Slide.astro";
   }
 
   .info {
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 1rem;
   }
   .arrowclass {
     width: 5%;
@@ -115,7 +117,7 @@ import Slide from "../components/Slide.astro";
       margin-top: 0.3rem;
     }
     .info{
-      margin: 5% 10% 5% 10%;
+      margin: 5% 10%;
     }
   }
 
@@ -147,7 +149,7 @@ import Slide from "../components/Slide.astro";
       margin-left: 14.5%;
     }
     .info {
-      margin: 5% 15% 5% 15%;
+      margin: 2% 15% 9%;
     }
 
     .forside_billeder_1{
@@ -183,10 +185,6 @@ import Slide from "../components/Slide.astro";
   @media (min-width: 1200px) {
     .arrowclass {
       width: 2%;
-    }
-
-    .info {
-      margin: 5px 162px 40px 162px;    
     }
   }
 
