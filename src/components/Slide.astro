@@ -11,15 +11,27 @@ import 'animate.css';
     </section> -->
 
     <section class="animate__animated animate__slideInLeft styleimg1">
-        <img src="pics/colada.png" alt="Picture of logo 1" class="img1">
+        <div class="img-container animate__animated animate__slideInLeft styleimg1">
+            <img src="pics/colada.png" alt="Picture of logo 1" class="img1">
+        </div>
     </section>
     <section class="animate__animated animate__slideInRight styleimg2">
-    <img src="pics/archive.png" alt="Picture of logo 2" class="img2">
+        <div class="img-container animate__animated animate__slideInRight styleimg2">
+            <img src="pics/archive.png" alt="Picture of logo 2" class="img2">
+        </div>
     </section>
 
 
     <style>
 
+    @media (max-width: 799px) {
+    .styleimg1 {
+      display: none;
+    }
+    .styleimg2{
+        display: none;
+    }
+    }
     @media (min-width: 800px) {
         :root {
     --animate-duration: 2s;
@@ -27,23 +39,32 @@ import 'animate.css';
 
     .styleimg1{
         margin-top: 8rem;
-        margin-left: 6rem;
+        margin-left: 5%;
     }
 
     .styleimg2{
         margin-top: 0.5rem;
-        margin-left: 28.5rem;
+        margin-left: 16%;
     }
 
     .img1{
-        max-width:50rem;
+        width:100%;
+        height: auto; 
     }
 
     .img2{
-        max-width: 53rem;
+        width:104%;
+        height: auto; 
     }
     }
 
+
+    .img-container {
+        width: 53rem;
+        height: auto;
+    }
+
+    
     </style>
  
 
