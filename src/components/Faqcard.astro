@@ -1,52 +1,52 @@
 ---
-const {header} = Astro.props
+const { header } = Astro.props;
 ---
 
 <section class="container">
-    <h2 class="toggle-header">{header}</h2>
-    <article class="toggle-content">
-        <slot />
-    </article>
+  <h2 class="toggle-header">{header}</h2>
+  <article class="toggle-content">
+    <slot />
+  </article>
 </section>
 
 <style>
-    h2 {
-        margin-top: 40px;
-    }
+  h2 {
+    margin-top: 40px;
+  }
 
-    h2:hover{
-        text-decoration: underline;
-        cursor: pointer;
-    }
+  h2:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
-    .toggle-content {
-    display: none; /* Skjuler indholdet som standard */
+  .toggle-content {
+    display: none;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     max-height: 0;
-}
+  }
 
-.toggle-content.show {
-    display: block; /* Vis indholdet når det er aktivt */
-    max-height: 500px; /* Tilpass denne værdi efter behov */
-}
+  .toggle-content.show {
+    display: block;
+    max-height: 500px;
+  }
 
-.toggle-header.clicked {
-    color: #B2113C; /* Skift farven til rød når klassen 'clicked' er tilføjet */
+  .toggle-header.clicked {
+    color: #b2113c;
     text-decoration: none;
-}
+  }
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     const headers = document.querySelectorAll(".toggle-header");
 
-    headers.forEach(header => {
-        header.addEventListener("click", function() {
-            const content = this.nextElementSibling;
-            content.classList.toggle("show");
-            this.classList.toggle("clicked");
-        });
+    headers.forEach((header) => {
+      header.addEventListener("click", function () {
+        const content = this.nextElementSibling;
+        content.classList.toggle("show");
+        this.classList.toggle("clicked");
+      });
     });
-});
+  });
 </script>

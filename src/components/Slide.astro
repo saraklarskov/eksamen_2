@@ -1,58 +1,67 @@
-
 <div class="animateslide">
-    <section id="coladatextimg" class="coladatextimg">
-        <img src="pics/colada.png" alt="Picture of logo 1" class="scroll-image from-left">
-    </section>
+  <section id="coladatextimg" class="coladatextimg">
+    <img
+      src="pics/colada.png"
+      alt="Picture of logo 1"
+      class="scroll-image from-left"
+    />
+  </section>
 
-    <section id="archivetextimg" class="archivetextimg">
-    <img src="pics/archive.png" alt="Picture of logo 2" class="scroll-image from-right">
-    </section>
+  <section id="archivetextimg" class="archivetextimg">
+    <img
+      src="pics/archive.png"
+      alt="Picture of logo 2"
+      class="scroll-image from-right"
+    />
+  </section>
 </div>
 
-    <script>
-        window.addEventListener('scroll', () => {
-            const scrollPosition = window.scrollY;
-            const maxScroll = document.body.scrollHeight - window.innerHeight;
-            const moveDistance = scrollPosition / maxScroll *  50; 
+<script>
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const moveDistance = (scrollPosition / maxScroll) * 50;
 
-            const coladatextimg = document.getElementById('coladatextimg');
-            const archivetextimg = document.getElementById('archivetextimg');
+    const coladatextimg = document.getElementById("coladatextimg");
+    const archivetextimg = document.getElementById("archivetextimg");
 
-            //understående kode bevæger billed 1 fra a til b
-            coladatextimg.style.transform = `translateX(${moveDistance}vw)`;
+    //understående kode bevæger billed 1 fra a til b
+    coladatextimg.style.transform = `translateX(${moveDistance}vw)`;
 
-            //understående kode bevæger billed 2 fra b til a
-            archivetextimg.style.transform = `translateX(-${moveDistance}vw)`;
-        })
-    </script>
+    //understående kode bevæger billed 2 fra b til a
+    archivetextimg.style.transform = `translateX(-${moveDistance}vw)`;
+  });
+</script>
 
-    <style>
+<style>
+  .animateslide {
+    position: relative;
+    height: 35svh;
 
-    .animateslide{
-        position: relative;
-        height: 50svh;
+    width: 100%;
+    margin-top: 4rem;
+  }
 
-        width: 100%;
+  section {
+    position: absolute;
+    transition: transform 0.3s ease-out;
+
+    width: 40vw;
+  }
+
+  .coladatextimg {
+    top: 5px;
+    left: 0;
+  }
+
+  .archivetextimg {
+    top: clamp(1.875rem, 0.2679rem + 8.0357vw, 7.5rem);
+    right: 0;
+  }
+
+  @media (max-width: 1200px) {
+    .animateslide {
+      display: none;
     }
-
-    section{
-        position:absolute;
-        transition: transform 0.3s ease-out;
-
-        width: 40vw;
-    }
-
-    .coladatextimg{
-        top: 5px;
-        left: 0;
-    }
-
-    .archivetextimg{
-        top: clamp(1.875rem, 0.2679rem + 8.0357vw, 7.5rem);
-        right: 0;
-    }
-
-
-
-    </style>
- 
+  }
+</style>

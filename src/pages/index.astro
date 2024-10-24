@@ -2,27 +2,48 @@
 import Gridinsta from "../components/Gridinsta.astro";
 import Layout from "../layouts/Layout.astro";
 import Slide from "../components/Slide.astro";
-import 'animate.css';
+import "animate.css";
 ---
 
 <Layout>
-  <img src="/pics/frontPicture.webp" alt="Picture of shoe" class="forside_billede"/>
+  <img
+    src="/pics/frontPicture.webp"
+    alt="Picture of shoe"
+    class="forside_billede"
+  />
   <h1 class="holy">The holy grail of vintage designer shoes</h1>
 
   <section class="forside_billeder_1">
     <article class="zoom">
-    <a href="shoes"><img src="/pics/produkter/silver1.webp" alt="Picture of latest drop shoes" class="forside_1" /></a>
+      <a href="shoes"
+        ><img
+          src="/pics/produkter/silver1.webp"
+          alt="Picture of latest drop shoes"
+          class="forside_1"
+        /></a
+      >
     </article>
 
     <article class="zoom">
-      <a href="shoes"><img src="/pics/produkter/orange1.webp" alt="Picture of latest drop shoes" class="forside_1" /></a>
+      <a href="shoes"
+        ><img
+          src="/pics/produkter/orange1.webp"
+          alt="Picture of latest drop shoes"
+          class="forside_1"
+        /></a
+      >
     </article>
 
-  <article class="zoom">
-    <a href="shoes"><img src="/pics/produkter/snake1.webp" alt="Picture of latest drop shoes" class="forside_1" /></a>
-  </article>
-
-</section>
+    <article class="zoom">
+      <a href="shoes"
+        ><img
+          src="/pics/produkter/snake1.webp"
+          alt="Picture of latest drop shoes"
+          class="forside_1"
+        /></a
+      >
+    </article>
+  </section>
 
   <a href="/shoes" class="shoeclass">
     <section class="droparrow">
@@ -33,171 +54,168 @@ import 'animate.css';
 
   <Slide />
 
-  <img src="/pics/logofinal.png" alt="Picture of logo" class="logo_middle">
-  
+  <img src="/pics/logofinal.png" alt="Picture of logo" class="logo_middle" />
+
   <div class="info">
-    <p class=" animate__animated animate__slideInUp">
+    <p class="animate__animated animate__slideInUp">
       Colada Archive is a Copenhagen-based brand that specializes in curating
-      vintage designer heels, handpicked because of their quality, style, and timeless
-      appeal. Each pair tells their own story, reflecting the elegance and
-      craftsmanship of a bygone era. Our mission is to make the finding of the perfect
-      vintage heels an effortless experience.
+      vintage designer heels, handpicked because of their quality, style, and
+      timeless appeal. Each pair tells their own story, reflecting the elegance
+      and craftsmanship of a bygone era. Our mission is to make the finding of
+      the perfect vintage heels an effortless experience.
     </p>
   </div>
 
-<!-- instagram -->
   <h2 class="insta">Find us on Instagram</h2>
   <div class="instagramfeed">
-  <div class="elfsight-app-14871f48-d6f4-43ec-9c4f-43dabf798997" data-elfsight-app-lazy></div>
+    <div
+      class="elfsight-app-14871f48-d6f4-43ec-9c4f-43dabf798997"
+      data-elfsight-app-lazy
+    >
+    </div>
   </div>
 
-  <!-- <Gridinsta />
-</Layout> -->
-
-<style>
-  .logo_middle {
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 40px;
-  }
-
-  .forside_billede {
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 17px;
-  }
-
-  .holy {
-    margin-top: 30px;
-  }
-
-  .forside_billeder_1 {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 40px;
-  }
-
-  .forside_logo {
-    width: 100%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
-  .info {
-    margin-top: 1rem;
-  }
-  .arrowclass {
-    width: 5%;
-    height: auto;
-    margin-left: 0.5rem;
-  }
-
-  .droparrow {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .shoeclass {
-    text-decoration: none;
-    color: #333;
-  }
-
-  .shoeclass:hover {
-    text-decoration: underline;
-  }
-
-  .shoeclass:active {
-    color: #b2113c;
-  }
-
-  .insta {
-    color: #b2113c;
-  }
-  
-  .instagramfeed{
-    max-width: 58vw;
-    margin: auto;
-  }
-
-  @media (min-width: 550px) {
-    .arrowclass {
-      width: 3%;
-      margin-top: 0.3rem;
-    }
-    .info{
-      margin: 5% 10%;
-    }
-  }
-
-  @media (min-width: 800px) {
-
+  <style>
     .logo_middle {
-      display: none;
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 40px;
     }
+
+    .forside_billede {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 17px;
+    }
+
     .holy {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 50px;
+      margin-top: 30px;
     }
 
-    .arrowclass {
-      width: 2.5%;
-    }
-
-    .drop {
-      margin-left: 10%;
+    .forside_billeder_1 {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 40px;
     }
 
     .forside_logo {
-      margin-top: 100px;
-      margin-bottom: 100px;
+      width: 100%;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .info {
+      margin-top: 1rem;
+    }
+    .arrowclass {
+      width: 5%;
+      height: auto;
+      margin-left: 0.5rem;
+    }
+
+    .droparrow {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .shoeclass {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .shoeclass:hover {
+      text-decoration: underline;
+    }
+
+    .shoeclass:active {
+      color: #b2113c;
     }
 
     .insta {
-      margin-left: 14.5%;
-    }
-    .info {
-      margin: 2% 15% 9%;
+      color: #b2113c;
     }
 
-    .forside_billeder_1{
-      display: flex;
-      justify-content: center; /* Centrerer vandret */
-      align-items: center; /* Centrerer lodret */
-      width: 80%;
-      margin: 0 auto;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      overflow: hidden;
+    .instagramfeed {
+      max-width: 58vw;
+      margin: auto;
     }
 
-    .forside_billeder_1 img{
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      transition: transform 0.3s ease;
+    @media (min-width: 550px) {
+      .arrowclass {
+        width: 3%;
+        margin-top: 0.3rem;
+      }
+      .info {
+        margin: 5% 10%;
+      }
     }
 
-    .forside_billeder_1 img:hover{
-      transform: scale(1.05);
+    @media (min-width: 800px) {
+      .holy {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 50px;
+      }
+
+      .arrowclass {
+        width: 2.5%;
+      }
+
+      .drop {
+        margin-left: 10%;
+      }
+
+      .forside_logo {
+        margin-top: 100px;
+        margin-bottom: 100px;
+      }
+
+      .insta {
+        margin-left: 14.5%;
+      }
+      .info {
+        margin: 2% 15% 9%;
+      }
+
+      .forside_billeder_1 {
+        display: flex;
+        justify-content: center; /* Centrerer vandret */
+        align-items: center; /* Centrerer lodret */
+        width: 80%;
+        margin: 0 auto;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        overflow: hidden;
+      }
+
+      .forside_billeder_1 img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .forside_billeder_1 img:hover {
+        transform: scale(1.05);
+      }
+
+      .zoom {
+        overflow: hidden;
+        width: 100%;
+      }
     }
 
-    .zoom{
-      overflow: hidden;
-      width: 100%;
+    @media (min-width: 1200px) {
+      .logo_middle {
+        display: none;
+      }
+      .arrowclass {
+        width: 2%;
+      }
     }
+  </style>
 
-
-  }
-
-  @media (min-width: 1200px) {
-    .arrowclass {
-      width: 2%;
-    }
-  }
-
-  
-</style>
-
-<script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <script src="https://static.elfsight.com/platform/platform.js" async
+  ></script></Layout
+>

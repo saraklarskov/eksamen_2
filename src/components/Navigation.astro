@@ -1,72 +1,69 @@
 ---
-const {currentpage} = Astro.props;
+const { currentpage } = Astro.props;
 ---
 
 <header>
-<section class="navi">
-  <a href="/"><img class="logo" src="/pics/logofinal.png" alt="logo"> </a>
-  <nav class="navbar">
-    <article class="burger-menu">
-      <section class="bar"></section>
-      <section class="bar"></section>
-      <section class="bar"></section>
-    </article>
-  </nav>
-</section>
+  <section class="navi">
+    <a href="/"><img class="logo" src="/pics/logofinal.png" alt="logo" /> </a>
+    <nav class="navbar">
+      <article class="burger-menu">
+        <section class="bar"></section>
+        <section class="bar"></section>
+        <section class="bar"></section>
+      </article>
+    </nav>
+  </section>
 
-<section class="desk-menu">
-  <a href="/"><img src="/pics/logofinal.png" alt="logo for desktop" class="add"></a>
+  <section class="desk-menu">
+    <a href="/"
+      ><img src="/pics/logofinal.png" alt="logo for desktop" class="add" /></a
+    >
     <ul class="menu-list">
-        <li><a id="shoes" href="/shoes">Shoes</a></li>
-        <li><a id="journal" href="/journal">Journal</a></li>
-        <li><a id="about" href="/about">About</a></li>
-        <!-- <li><a id="cart" href="/cart">Cart</a></li> -->
-        <li class="remove"><a href="/terms">Terms and conditions</a></li>
-        <li class="remove"><a href="/faq">FAQ</a></li>
+      <li><a id="shoes" href="/shoes">Shoes</a></li>
+      <li><a id="journal" href="/journal">Journal</a></li>
+      <li><a id="about" href="/about">About</a></li>
+      <li class="remove"><a href="/terms">Terms and conditions</a></li>
+      <li class="remove"><a href="/faq">FAQ</a></li>
     </ul>
   </section>
-<hr>
-
+  <hr />
 </header>
-<script define:vars={{currentpage}}>
-        console.log("CURRENT PAGE",currentpage )
-        
-          document.querySelector(`#${currentpage}`).style.color = "#B2113C";
+<script define:vars={{ currentpage }}>
+  console.log("CURRENT PAGE", currentpage);
 
-  
+  document.querySelector(`#${currentpage}`).style.color = "#B2113C";
 </script>
 <style>
-
-header {
+  header {
     position: fixed;
     top: 0;
     background-color: #ffffff;
     z-index: 1000;
     padding: 10px 10px 5px;
-    margin: 0; /* Tilføj dette for at sikre ingen margin */
-}
-.logo {
-  width: 25%;
-}
+    margin: 0;
+  }
+  .logo {
+    width: 25%;
+  }
 
-.burger-menu{
-  margin-right: -4px;
-}
+  .burger-menu {
+    margin-right: -4px;
+  }
 
   .add {
     display: none;
   }
-    hr {
-      border: none;
+  hr {
+    border: none;
     height: 1px;
     background-color: #333;
     margin: 5px 0px 0px 0px;
-}
-    .navi {
-        display: flex;
-        justify-content: space-between;    
-    }
-.burger-menu {
+  }
+  .navi {
+    display: flex;
+    justify-content: space-between;
+  }
+  .burger-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -77,28 +74,28 @@ header {
     height: 2px;
     background-color: black;
     margin: 4px;
-    transition: transform 0.3s ease; /* Transition for smooth rotation */
+    transition: transform 0.3s ease;
     z-index: 100;
   }
 
-  .dropdown{
+  .dropdown {
     width: 5%;
     height: auto;
     margin-left: 0.4rem;
   }
 
   .shoearrow {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
 
   .cross .bar:nth-child(1) {
     transform: rotate(50deg) translate(3px, 2px);
   }
 
   .cross .bar:nth-child(2) {
-    display: none; /* Behold midterlinjen synlig */
+    display: none;
   }
 
   .cross .bar:nth-child(3) {
@@ -109,7 +106,7 @@ header {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: none; /* Hide menu list by default */
+    display: none;
   }
 
   .menu-list.active {
@@ -130,21 +127,19 @@ header {
     text-decoration: none;
     color: black;
   }
-  
 
-  a{
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: 25px;
+  a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 25px;
   }
 
-  @media (min-width: 800px){
-
-header {
-  margin: 30px;
-}
+  @media (min-width: 800px) {
+    header {
+      margin: 30px;
+    }
 
     .logo {
       display: none;
@@ -156,68 +151,64 @@ header {
       display: flex;
     }
 
+    .burger-menu {
+      display: none;
+    }
 
-.burger-menu{
-  display: none;
-}
+    .desk-menu {
+      display: flex;
+      justify-content: space-between;
+    }
 
-.desk-menu{
-  display: flex;
-    justify-content: space-between;
-}
+    .menu-list {
+      display: flex;
+      justify-content: end;
+      gap: 40px;
+    }
 
-.menu-list {
-  display: flex;
-  justify-content: end;
-gap: 40px;
-}
+    .menu-list a {
+      font-size: 20px;
+    }
 
-.menu-list a {
-  font-size: 20px;
-}
+    .remove {
+      display: none;
+    }
 
-.remove {
-  display: none;
-}
+    .menu-list li:hover {
+      text-decoration: underline;
+    }
 
-.menu-list li:hover {
-    text-decoration: underline;
-}
+    .menu-list li a:active,
+    li:active {
+      color: #b2113c;
+    }
 
-.menu-list li a:active, li:active {
-    color: #b2113c; 
-}
-
-
-header {
-    position: fixed;
-    top: 0;
-    background-color: #ffffff;
-    width: 97%;
-    z-index: 1000;
-    padding: 10px 20px 0px 20px;
-    margin: 0; /* Tilføj dette for at sikre ingen margin */
-}
-}
-
+    header {
+      position: fixed;
+      top: 0;
+      background-color: #ffffff;
+      width: 97%;
+      z-index: 1000;
+      padding: 10px 20px 0px 20px;
+      margin: 0;
+    }
+  }
 </style>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const burgerMenu = document.querySelector(".burger-menu");
-      const menuList = document.querySelector(".menu-list");
-  
-      burgerMenu.addEventListener("click", function () {
-        burgerMenu.classList.toggle("cross");
-        if (burgerMenu.classList.contains("cross")) {
-          // Burgermenuen er aktiv, tilføj "cross" klassen til alle ".bar" elementer
-          menuList.classList.add("active");
-        } else {
-          // Burgermenuen er ikke aktiv, fjern "cross" klassen fra alle ".bar" elementer
-          menuList.classList.remove("active");
-        }
-      });
-    });
+  document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const menuList = document.querySelector(".menu-list");
 
-  </script>
-  
+    burgerMenu.addEventListener("click", function () {
+      burgerMenu.classList.toggle("cross");
+      if (burgerMenu.classList.contains("cross")) {
+        // Burgermenuen er aktiv, tilføj "cross" klassen til alle ".bar" elementer
+        menuList.classList.add("active");
+      } else {
+        // Burgermenuen er ikke aktiv, fjern "cross" klassen fra alle ".bar" elementer
+        menuList.classList.remove("active");
+      }
+    });
+  });
+</script>
